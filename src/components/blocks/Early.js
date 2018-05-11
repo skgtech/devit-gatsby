@@ -1,25 +1,27 @@
 import React from 'react';
 
-const Early = () => {
+const Early = ({config}) => {
   return (
-    {% if site.data.config.tickets.enabled %}
-    <div class="early-birds">
-      <div class="early-birds__container">
-        <div class="early-birds__left">
-          <img class="early-birds__img" src="/assets/images/new/tickets.svg" alt="Early birds tickets" />
-        </div>
-        <div class="early-birds__right">
-          <div class="block__heading--dark">
-            Get your tickets now!
+    config.tickets.enabled
+    ? (
+      <div className="early-birds">
+        <div className="early-birds__container">
+          <div className="early-birds__left">
+            <img className="early-birds__img" src="/assets/images/new/tickets.svg" alt="Early birds tickets" />
           </div>
-          <p class="dark">
-            Whether it’s Frontend, Backend, DevOps or Mobile that you care about, join us to learn about the most modern practices and techniques. Secure your ticket now, while there is still availability.
-          </p>
-          <a target="_blank" rel="noopener" href="{{ site.data.config.tickets.url }}" class="block__cta">Buy tickets</a>
+          <div className="early-birds__right">
+            <div className="block__heading--dark">
+              Get your tickets now!
+            </div>
+            <p className="dark">
+              Whether it’s Frontend, Backend, DevOps or Mobile that you care about, join us to learn about the most modern practices and techniques. Secure your ticket now, while there is still availability.
+            </p>
+            <a target="_blank" rel="noopener" href={config.tickets.url} className="block__cta">Buy tickets</a>
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
+    )
+    : null
   );
 };
 

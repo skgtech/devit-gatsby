@@ -1,55 +1,67 @@
 import React from 'react';
 
-const Sponsors = () => {
+const Sponsors = ({sponsors, config}) => {
   return (
-    <div id="sponsors" class="cfs">
-      <div class="cfs__container text-center">
-        <div class="block__heading--dark">
+    <div id="sponsors" className="cfs">
+      <div className="cfs__container text-center">
+        <div className="block__heading--dark">
           Our sponsors
         </div>
-        <p class="dark">
+        <p className="dark">
           Thanks to all our sponsors for supporting us.
         </p>
 
-        <div class="cfs__sponsors">
-          {% if site.data.sponsors.2018.platinum %}
-            <div class="cfs__title">Platinum</div>
-            {% include
-              components/icons-stack.html
-              items=site.data.sponsors.2018.platinum
-            %}
-          {% endif %}
+        <div className="cfs__sponsors">
+          {
+            sponsors.year2018.platinum
+              ? (
+                <div className="cfs__title">Platinum</div>
+                // TODO fix icons-stack component to enable this
+                // {% include components/icons-stack.html items=sponsors.2018.platinum %}
+              )
+              : null
+          }
 
-          {% if site.data.sponsors.2018.gold %}
-            <div class="cfs__title">Gold</div>
-            {% include
-              components/icons-stack.html
-              items=site.data.sponsors.2018.gold
-            %}
-          {% endif %}
+          {
+            sponsors.year2018.gold
+            ? (
+              <div className="cfs__title">Gold</div>
+              // TODO fix icons-stack component to enable this
+              // {% include components/icons-stack.html items=sponsors.2018.gold %}
+            )
+            : null
+          }
 
-          {% if site.data.sponsors.2018.silver %}
-            <div class="cfs__title">Silver</div>
-            {% include
-              components/icons-stack.html
-              items=site.data.sponsors.2018.silver
-            %}
-          {% endif %}
+          {
+            sponsors.year2018.silver
+            ? (
+              <div className="cfs__title">Silver</div>
+              // TODO fix icons-stack component to enable this
+              // {% include components/icons-stack.html items=sponsors.2018.silver %}
+            )
+            : null
+          }
 
-          {% if site.data.sponsors.2018.bronze %}
-            <div class="cfs__title">Bronze</div>
-            {% include
-              components/icons-stack.html
-              items=site.data.sponsors.2018.bronze
-            %}
-          {% endif %}
+          {
+            sponsors.year2018.bronze
+            ? (
+              <div className="cfs__title">Bronze</div>
+              // TODO fix icons-stack component to enable this
+              // {% include components/icons-stack.html items=sponsors.2018.bronze %}
+            )
+            : null
+          }
         </div>
 
-        {% if site.data.config.sponsors.cfs %}
-          <a href="{{ site.data.config.sponsors.link_to_sponsorship }}" class="block__cta">
-            Apply to sponsor
-          </a>
-        {% endif %}
+        {
+          config.sponsors.cfs
+          ? (
+            <a href={config.sponsors.link_to_sponsorship} className="block__cta">
+              Apply to sponsor
+            </a>
+          )
+          : null
+        }
       </div>
     </div>
   );

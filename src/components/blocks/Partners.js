@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 const Supporters = () => (
-  <div class="supporters {% if include.center == true %}text-center{% endif %}">
-    <div class="container">
-      <div class="block__heading--dark">
+  <div className={`supporters ${include.center ? 'text-center' : ''}`}>
+    <div className="container">
+      <div className="block__heading--dark">
         We proudly support
       </div>
-      <div class="partners__container">
-        {% include components/icons-stack.html items=site.data.team.weSupport %}
+      <div className="partners__container">
+        {/* {% include components/icons-stack.html items=site.data.team.weSupport %} */}
       </div>
     </div>
   </div>
@@ -15,20 +15,22 @@ const Supporters = () => (
 
 const Partners = () => {
   return (
-    <div class="partners {% if include.center == true %}text-center{% endif %}">
-      <div class="container">
-        <div class="block__heading--dark">
+  <Fragment>
+    <div className={`partners ${include.center ? 'text-center' : ''}`}>
+      <div className="container">
+        <div className="block__heading--dark">
           Our partners
         </div>
         <p>
           We are lucky to have partnered with a lot of organizations across Thessaloniki. We want to thank them for helping us with DEVit every year.
         </p>
-        <div class="partners__container">
-          {% include components/icons-stack.html items=site.data.team.partners %}
+        <div className="partners__container">
+          {/* {% include components/icons-stack.html items=site.data.team.partners %} */}
         </div>
       </div>
     </div>
     <Supporters />
+  </Fragment>
   );
 };
 

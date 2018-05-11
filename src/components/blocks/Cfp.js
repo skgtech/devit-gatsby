@@ -1,65 +1,65 @@
 import React from 'react';
 
-const CFP = () => {
+const Cfp = () => {
   return (
-    <div class="cfp">
-      <div class="cfp__row">
-        <div class="container">
-          <div class="cfp__row--top-right">
-            <div class="block__heading--dark">
+    <div className="cfp">
+      <div className="cfp__row">
+        <div className="container">
+          <div className="cfp__row--top-right">
+            <div className="block__heading--dark">
               Our speakers
             </div>
-            <p class="dark">
+            <p className="dark">
               Each year we meticulously vet and select remarkable speakers to deliver the best talks on web development. We are very proud of the quality of the content that we offered over the years and we are happy to share it with you.
             </p>
-            <a href="#" class="block__cta">All past speakers</a>
+            <a href="#" className="block__cta">All past speakers</a>
           </div>
-          <div class="cfp__row--top-left">
-            <div class="cfp__speaker-top">
-              <img class="speaker__avatar" src="/assets/images/speakers/2015/Christian_Heilmann.jpg" alt="Speaker one" />
-              <div class="speaker__name">
+          <div className="cfp__row--top-left">
+            <div className="cfp__speaker-top">
+              <img className="speaker__avatar" src="/assets/images/speakers/2015/Christian_Heilmann.jpg" alt="Speaker one" />
+              <div className="speaker__name">
                 Christian Heilmann
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cfp__row cfp__row--orange">
-        <div class="container">
-          <div class="cfp__row--bottom-left">
-            <div class="cfp__speaker-bottom">
-              <div class="speaker__title">Founder and CEO</div>
-              <div class="tags">
-                <span class="tag">
+      <div className="cfp__row cfp__row--orange">
+        <div className="container">
+          <div className="cfp__row--bottom-left">
+            <div className="cfp__speaker-bottom">
+              <div className="speaker__title">Founder and CEO</div>
+              <div className="tags">
+                <span className="tag">
                   Frontend
                 </span>
-                <span class="tag">
+                <span className="tag">
                   Backend
                 </span>
-                <span class="tag">
+                <span className="tag">
                   Mobile
                 </span>
-                <span class="tag">
+                <span className="tag">
                   Will work for bananas
                 </span>
               </div>
-              <div class="speaker__social">
-                <a href="#" class="speaker__social__item fab fa-facebook-f"></a>
-                <a href="#" class="speaker__social__item fab fa-twitter"></a>
-                <a href="#" class="speaker__social__item fab fa-github"></a>
+              <div className="speaker__social">
+                <a href="#" className="speaker__social__item fab fa-facebook-f"></a>
+                <a href="#" className="speaker__social__item fab fa-twitter"></a>
+                <a href="#" className="speaker__social__item fab fa-github"></a>
               </div>
             </div>
           </div>
-          <div class="cfp__row--bottom-right">
-            <div class="block__heading">
+          <div className="cfp__row--bottom-right">
+            <div className="block__heading">
               Interested in speaking?
             </div>
-            <p class="light">
+            <p className="light">
               Even though we do not have an open call for papers, we are always looking to meet gifted speakers. If you are interested in speaking in the next edition of DEVit, feel free to fill our form
             </p>
-            <a href="#" class="block__more-cta">
+            <a href="#" className="block__more-cta">
                 Apply to talk
-              <i class="fas fa-long-arrow-alt-right"></i>
+              <i className="fas fa-long-arrow-alt-right"></i>
             </a>
           </div>
         </div>
@@ -68,4 +68,4 @@ const CFP = () => {
   );
 };
 
-export default CFP;
+export default Cfp;

@@ -10,38 +10,38 @@ const Speakers = () => {
       {% endfor %}
     {% endfor %}
 
-    <div id="speakers" class="speakers-container">
-      <div class="container text-center">
-        <div class="block__heading--dark">
+    <div id="speakers" className="speakers-container">
+      <div className="container text-center">
+        <div className="block__heading--dark">
           Meet our speakers
         </div>
-        <p class="dark">
+        <p className="dark">
           Each year we meticulously vet and select remarkable speakers to deliver the best talks on web development.
         </p>
       </div>
-      <div class="speakers-list">
+      <div className="speakers-list">
         {% for speaker in speakers | sort: 'last_name' %}
-        <div class="speakers-list__item">
+        <div className="speakers-list__item">
           {% include components/speaker.html speaker=speaker speaker_page=false %}
         </div>
         {% endfor %}
-        <div class="speakers-list__item">
+        <div className="speakers-list__item">
           {% include components/speaker-tba.html %}
         </div>
       </div>
     </div>
 
     {% if site.data.config.isCFPOpen == true %}
-    <div class="speakers__cfp">
-      <div class="block__heading">
+    <div className="speakers__cfp">
+      <div className="block__heading">
         Call for Papers
       </div>
-      <p class="light">
+      <p className="light">
         Be a DEVit speaker, share your experience with hundreds of peers!
       </p>
-      <a href="#" class="block__more-cta">
+      <a href="#" className="block__more-cta">
         Apply now
-        <i class="fas fa-long-arrow-alt-right"></i>
+        <i className="fas fa-long-arrow-alt-right"></i>
       </a>
     </div>
     {% endif %}

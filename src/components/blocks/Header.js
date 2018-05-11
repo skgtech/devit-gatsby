@@ -2,7 +2,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header class="header {% if include.page %}{{ include.page | append: '-header'}}{% endif %}">
+    // TODO: convert this to valid JS
+    <header className={`header {% if include.page %}{{ include.page | append: '-header'}}{% endif %}`}>
       {% include blocks/menu.html %}
     </header>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import 'normalize.css'
 
 import DefaultLayout from './default/index'
 
@@ -12,13 +13,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

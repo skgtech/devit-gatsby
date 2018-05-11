@@ -1,4 +1,5 @@
 import React from 'react';
+import Organizers from './Organizers';
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         DEVit is the leading web developer conference in South East Europe. Organized once per year, DEVit has become known for its top speaking talent, a mixture of world-class and world-renowned developers, highly specialized technology niches and developers who are on the edge of technology frontiers.
       </p>
 
-      {% include blocks/organizers.html %}
+      <Organizers />
 
       <a href="/about" className="block__more-cta">About us
         <i className="fas fa-long-arrow-alt-right"></i>

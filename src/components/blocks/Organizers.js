@@ -2,9 +2,9 @@ import React from 'react';
 
 const Organizers = () => {
   return (
-    <div class="organizers__logos">
+    <div className="organizers__logos">
       <p>organised by</p>
-      <ul class="list-inline">
+      <ul className="list-inline">
         <li>
           <a href="https://skgtech.io/" target="_blank">
             <img src="/assets/images/new/skgtech-logo.svg" alt="SKGTech" />

@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="footer__container">
-        <img class="footer__logo" src="/assets/images/new/devit-logo-white.svg" alt="DEVit logo" />
-        <div class="footer-row">
-          <div class="footer-row__column">
-            <div class="footer-menu">
-              <div class="footer-menu__header">
+    <footer className="footer">
+      <div className="footer__container">
+        <img className="footer__logo" src="/assets/images/new/devit-logo-white.svg" alt="DEVit logo" />
+        <div className="footer-row">
+          <div className="footer-row__column">
+            <div className="footer-menu">
+              <div className="footer-menu__header">
                 ABOUT US
               </div>
-              <ul class="footer-menu__list">
+              <ul className="footer-menu__list">
                 <li>
                   <a href="/about">About</a>
                 </li>
@@ -27,12 +27,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="footer-row__column">
-            <div class="footer-menu">
-              <div class="footer-menu__header">
+          <div className="footer-row__column">
+            <div className="footer-menu">
+              <div className="footer-menu__header">
                 DEVit 2018
               </div>
-              <ul class="footer-menu__list">
+              <ul className="footer-menu__list">
                 <li>
                   <a target="_blank" rel="noopener" href="{{ site.data.config.tickets.url }}">Buy tickets</a>
                 </li>
@@ -42,12 +42,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="footer-row__column">
-            <div class="footer-menu">
-              <div class="footer-menu__header">
+          <div className="footer-row__column">
+            <div className="footer-menu">
+              <div className="footer-menu__header">
                 PAST
               </div>
-              <ul class="footer-menu__list">
+              <ul className="footer-menu__list">
                 <li>
                   <a href="http://devitconf.org/2017">DEVit 2017</a>
                 </li>
@@ -60,52 +60,52 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="footer-row__column">
-            <div class="footer-menu">
-              <div class="footer-menu__header">
+          <div className="footer-row__column">
+            <div className="footer-menu">
+              <div className="footer-menu__header">
                 Social
               </div>
-              <ul class="social-icons">
+              <ul className="social-icons">
                 <li>
-                  <a target="_blank" rel="noopener" href="https://www.facebook.com/DEVitConf" class="fab fa-facebook-f"></a>
+                  <a target="_blank" rel="noopener" href="https://www.facebook.com/DEVitConf" className="fab fa-facebook-f"></a>
                 </li>
                 <li>
-                  <a target="_blank" rel="noopener" href="https://twitter.com/devitconf" class="fab fa-twitter"></a>
+                  <a target="_blank" rel="noopener" href="https://twitter.com/devitconf" className="fab fa-twitter"></a>
                 </li>
                 <li>
-                  <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCrKmMv6c6oqZPYC7zzbP-RQ" class="fab fa-youtube"></a>
+                  <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCrKmMv6c6oqZPYC7zzbP-RQ" className="fab fa-youtube"></a>
                 </li>
                 <li>
-                  <a target="_blank" rel="noopener" href="https://www.instagram.com/devitconf/" class="fab fa-instagram"></a>
+                  <a target="_blank" rel="noopener" href="https://www.instagram.com/devitconf/" className="fab fa-instagram"></a>
                 </li>
                 <li>
-                  <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/11399285/" class="fab fa-linkedin"></a>
+                  <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/11399285/" className="fab fa-linkedin"></a>
                 </li>
                 <li>
-                  <a target="_blank" rel="noopener" href="https://www.medium.com/@devitconf" class="fab fa-medium"></a>
+                  <a target="_blank" rel="noopener" href="https://www.medium.com/@devitconf" className="fab fa-medium"></a>
                 </li>
               </ul>
-              <div class="footer-menu__header">
-                <i class="fab fa-slack"></i> Slack
-                <form class="slack-form" method="post" action="#">
-                  <div class="input-group">
-                    <input name="email" type="email" class="slack-field" placeholder="Enter your email" />
-                    <span class="input-group-btn">
-                      <button class="slack-submit" type="submit">
-                        <i class="fas fa-long-arrow-alt-right"></i>
+              <div className="footer-menu__header">
+                <i className="fab fa-slack"></i> Slack
+                <form className="slack-form" method="post" action="#">
+                  <div className="input-group">
+                    <input name="email" type="email" className="slack-field" placeholder="Enter your email" />
+                    <span className="input-group-btn">
+                      <button className="slack-submit" type="submit">
+                        <i className="fas fa-long-arrow-alt-right"></i>
                       </button>
                     </span>
                   </div>
-                  <div class="slack-form__results"></div>
+                  <div className="slack-form__results"></div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <div class="copyrights">
-          <span class="copyrights__text">© 2018</span>
-          <a class="copyrights__link" href="https://github.com/skgtech/devit/graphs/contributors" target="_blank" rel="noopener">SKGTech Contributors</a><span class="copyrights__text">, Licensed under</span>
-          <a class="copyrights__link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons 4.0</a>
+        <div className="copyrights">
+          <span className="copyrights__text">© 2018</span>
+          <a className="copyrights__link" href="https://github.com/skgtech/devit/graphs/contributors" target="_blank" rel="noopener">SKGTech Contributors</a><span className="copyrights__text">, Licensed under</span>
+          <a className="copyrights__link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons 4.0</a>
         </div>
       </div>
     </footer>
