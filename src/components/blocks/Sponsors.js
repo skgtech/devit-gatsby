@@ -1,0 +1,58 @@
+import React from 'react';
+
+const Sponsors = () => {
+  return (
+    <div id="sponsors" class="cfs">
+      <div class="cfs__container text-center">
+        <div class="block__heading--dark">
+          Our sponsors
+        </div>
+        <p class="dark">
+          Thanks to all our sponsors for supporting us.
+        </p>
+
+        <div class="cfs__sponsors">
+          {% if site.data.sponsors.2018.platinum %}
+            <div class="cfs__title">Platinum</div>
+            {% include
+              components/icons-stack.html
+              items=site.data.sponsors.2018.platinum
+            %}
+          {% endif %}
+
+          {% if site.data.sponsors.2018.gold %}
+            <div class="cfs__title">Gold</div>
+            {% include
+              components/icons-stack.html
+              items=site.data.sponsors.2018.gold
+            %}
+          {% endif %}
+
+          {% if site.data.sponsors.2018.silver %}
+            <div class="cfs__title">Silver</div>
+            {% include
+              components/icons-stack.html
+              items=site.data.sponsors.2018.silver
+            %}
+          {% endif %}
+
+          {% if site.data.sponsors.2018.bronze %}
+            <div class="cfs__title">Bronze</div>
+            {% include
+              components/icons-stack.html
+              items=site.data.sponsors.2018.bronze
+            %}
+          {% endif %}
+        </div>
+
+        {% if site.data.config.sponsors.cfs %}
+          <a href="{{ site.data.config.sponsors.link_to_sponsorship }}" class="block__cta">
+            Apply to sponsor
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  );
+};
+
+export default Sponsors;
