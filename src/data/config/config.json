@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "title": "JUN 10-11, 2018, Thessaloniki",
+    "description": "Find out the latest trends and techniques for Frontend, Backend, DevOps and Mobile! Meet all the cool people! We are 360° and proud of it!",
+    "image": "/assets/images/devit-og-general.jpg?1511705959"
+  },
+  "date": "JUN 10-11, 2018",
+  "startDate": "2018-06-10",
+  "endDate": "2018-06-11",
+  "titlePostfix": " - DEVit Conference",
+  "venue": "blah blah",
+  "currentMode": "dday|nextday|nextblind|nextfull",
+  "isCFPOpen": false,
+  "sponsors": {
+    "cfs": false,
+    "link_to_sponsorship": ""
+  },
+  "tickets": {
+    "url": "https://www.eventora.com/en/Events/devit_conference_2018",
+    "enabled": true,
+    "early": true,
+    "blind": false,
+    "regular": false
+  }
+}
