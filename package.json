@@ -4,12 +4,19 @@
   "version": "1.0.0",
   "dependencies": {
     "gatsby": "^1.9.247",
+    "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sharp": "^1.6.46",
     "gatsby-source-filesystem": "^1.5.35",
+    "gatsby-transformer-sharp": "^1.6.26",
     "gatsby-transformer-yaml": "^1.5.16",
+    "install": "^0.11.0",
     "js-yaml": "^3.12.0",
     "normalize.css": "^8.0.0",
+    "npm": "^6.1.0",
+    "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.0"
   },
   "scripts": {

@@ -106,7 +106,8 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
       sponsorRow.forEach(function (sponsor) {
         createNode(SponsorNode({
           id: sponsor.name,
-          ...sponsor
+          ...sponsor,
+          type
         }))
       });
     });

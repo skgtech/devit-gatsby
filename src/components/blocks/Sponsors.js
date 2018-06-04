@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Sponsors = ({sponsors, config}) => {
+const Sponsors = ({sponsors, cfsLink}) => {
+  const platinumSponsors = sponsors.filter(sponsor => sponsor.type === 'platinum');
+  const goldSponsors = sponsors.filter(sponsor => sponsor.type === 'gold');
+  const silverSponsors = sponsors.filter(sponsor => sponsor.type === 'silver');
+  const bronzeSponsors = sponsors.filter(sponsor => sponsor.type === 'bronze');
+
   return (
     <div id="sponsors" className="cfs">
       <div className="cfs__container text-center">
@@ -13,7 +18,7 @@ const Sponsors = ({sponsors, config}) => {
 
         <div className="cfs__sponsors">
           {
-            sponsors.year2018.platinum
+            platinumSponsors.length
               ? (
                 <div className="cfs__title">Platinum</div>
                 // TODO fix icons-stack component to enable this
@@ -23,7 +28,7 @@ const Sponsors = ({sponsors, config}) => {
           }
 
           {
-            sponsors.year2018.gold
+            goldSponsors.length
             ? (
               <div className="cfs__title">Gold</div>
               // TODO fix icons-stack component to enable this
@@ -33,7 +38,7 @@ const Sponsors = ({sponsors, config}) => {
           }
 
           {
-            sponsors.year2018.silver
+            silverSponsors.length
             ? (
               <div className="cfs__title">Silver</div>
               // TODO fix icons-stack component to enable this
@@ -43,7 +48,7 @@ const Sponsors = ({sponsors, config}) => {
           }
 
           {
-            sponsors.year2018.bronze
+            bronzeSponsors.length
             ? (
               <div className="cfs__title">Bronze</div>
               // TODO fix icons-stack component to enable this
@@ -54,9 +59,9 @@ const Sponsors = ({sponsors, config}) => {
         </div>
 
         {
-          config.sponsors.cfs
+          cfsLink
           ? (
-            <a href={config.sponsors.link_to_sponsorship} className="block__cta">
+            <a href={cfsLink} className="block__cta">
               Apply to sponsor
             </a>
           )

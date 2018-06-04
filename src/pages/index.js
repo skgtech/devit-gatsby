@@ -14,18 +14,17 @@ import Subscribe from '../components/blocks/Subscribe'
 import Footer from '../components/blocks/Footer'
 
 const IndexPage = ({data, location}) => {
-  console.log(data);
 
   return (
     <div>
       <Hero config={data.config} pathname={location.pathname}></Hero>
       <Early config={data.config}/>
-      <About/>
+      <About imageSrc={data.aboutImage.childImageSharp.sizes.src}/>
       <Testimonials/>
       {/* <Speakers years='2018'/> */}
       <Venues/>
       <Plan />
-      <Sponsors config={data.config} sponsors={data.sponsors} />
+      <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
       {/* <Partners center /> */}
       {/* <Subscribe /> */}
       {/* <Footer /> */}
@@ -37,7 +36,14 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
-    config(filter: { id: { eq: "Config"} }) {
+    aboutImage: file(relativePath: { eq: "new/team.jpg" }) {
+      childImageSharp {
+        sizes {
+          src
+        }
+      }
+    }
+    config(id: { eq: "Config"}) {
       date,
       tickets {
         enabled
@@ -48,7 +54,7 @@ export const query = graphql`
         link_to_sponsorship
       }
     },
-    allSponsor(filter: { year: { eq: 2018 } }) {
+    sponsors: allSponsor(filter: { year: { eq: 2018 } }) {
       edges {
         node {
           name
