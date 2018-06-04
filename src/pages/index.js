@@ -36,18 +36,8 @@ const IndexPage = ({data, location}) => {
 export default IndexPage
 
 export const query = graphql`
-  query HeroQuery {
-    sponsors: sponsorsYaml {
-      year2018 {
-        platinum {
-          name
-        }
-        gold {
-          name
-        }
-      }
-    }
-    config: configYaml {
+  query IndexQuery {
+    config(filter: { id: { eq: "Config"} }) {
       date,
       tickets {
         enabled
@@ -57,6 +47,14 @@ export const query = graphql`
         cfs
         link_to_sponsorship
       }
-    }
+    },
+    allSponsor(filter: { year: { eq: 2018 } }) {
+      edges {
+        node {
+          name
+          year
+        }
+      }
+    },
   }
 `

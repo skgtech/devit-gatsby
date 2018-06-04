@@ -1,0 +1,396 @@
+- title: "Opti-pessimism - Design for the best case, build for the worst"
+  speaker: cheryl_platz
+  type: Talk
+  description: "<p>How can we design for the promise of the future AND build for the reality of today,
+    all while in an Agile environment? Cheryl Platz turns her experience designing for products like
+    Azure and Alexa into survival strategies for products at the cutting edge. From information
+    architecture and accessibility to emerging tech like AI and conversational UI - we'll take
+    a whirlwind tour to build a roadmap for \"opti-pessimistic\" product design.</p>"
+  tags:
+    - UX
+    - Design
+    - AI
+
+- title: "Why Software STILL Sucks"
+  description: "<p>It’s been over a decade since David S. Platt ripped the lid off the software industry sausage
+    factory with his blockbuster book Why Software Sucks. The industry has grown spectacularly in that time, with
+    the whole mobile sector, the IoT, artificial intelligence and now quantum computing. And yet it still falls far
+    short of our users’ needs, for the same reasons that it always has.</p><p>Come hear industry legend David Platt
+    describe the lessons that the industry still hasn’t learned, and needs to, even more desperately today.</p>"
+  speaker: dave_platt
+  type: Talk
+  talkId: id_01
+
+- title: "Xamarin and Azure - Build the mobile apps of tomorrow"
+  description: "<p>It’s hard to be a developer and not have heard of Xamarin. It’s now part of Microsoft’s
+    ‘Any developer, any platform’ strategy, and allows you to write C# and F# code that runs on iOS and
+    Android. Combined with the power of the cloud, you can easily build the mobile apps of tomorrow that
+    your users will love. In fact, we are so sure you are going to love Xamarin we're going to teach
+    you how build an app to share photos of happy Xamarin developers. </p><p>This workshop will take you from
+    0 to a fully working, cloud connected, AI powered mobile app. We'll get you setup with Visual Studio
+    and the Xamarin tooling on either Windows or Mac, and connect up your iPhone or Android device to
+    Xamarin Live Player ready to run an app. Once you are set up we'll cover the basics of Xamarin and
+    Xamarin.Forms, then it's heads down writing a cross-platform app - using one code base for a
+    fully-native app that runs on both iOS and Android.</p><p>The app we build will combine accessing device
+    hardware using Xamarin plugins, AI for face and emotion detection and cloud services like authentication
+    and blob storage, all built using a serverless architecture. Finally we'll go from code to production
+    ready, using Visual Studio App Center to build your app, monitor for crashes, gather analytics, and
+    prepare you app for distribution. We'll even look at wiring up push notifications so your app can be
+    notified when someone else uploads a photo. </p><p>By the end of the day you will have a production ready,
+    AI and cloud powered mobile app.</p>"
+  ticket: single
+  speaker: laurent_bugnion
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=24265&ttQuantity=1&r
+
+- title: "Xamarin and Azure - Build the mobile apps of tomorrow"
+  description: "<p>It’s hard to be a developer and not have heard of Xamarin. It’s now part of Microsoft’s
+    ‘Any developer, any platform’ strategy, and allows you to write C# and F# code that runs on iOS and
+    Android. Combined with the power of the cloud, you can easily build the mobile apps of tomorrow that
+    your users will love. In fact, we are so sure you are going to love Xamarin we're going to teach
+    you how build an app to share photos of happy Xamarin developers. </p><p>This workshop will take you from
+    0 to a fully working, cloud connected, AI powered mobile app. We'll get you setup with Visual Studio
+    and the Xamarin tooling on either Windows or Mac, and connect up your iPhone or Android device to
+    Xamarin Live Player ready to run an app. Once you are set up we'll cover the basics of Xamarin and
+    Xamarin.Forms, then it's heads down writing a cross-platform app - using one code base for a
+    fully-native app that runs on both iOS and Android.</p><p>The app we build will combine accessing device
+    hardware using Xamarin plugins, AI for face and emotion detection and cloud services like authentication
+    and blob storage, all built using a serverless architecture. Finally we'll go from code to production
+    ready, using Visual Studio App Center to build your app, monitor for crashes, gather analytics, and
+    prepare you app for distribution. We'll even look at wiring up push notifications so your app can be
+    notified when someone else uploads a photo. </p><p>By the end of the day you will have a production ready,
+    AI and cloud powered mobile app.</p>"
+  speaker: jim_bennett
+  ticket: single
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=24265&ttQuantity=1&r
+
+- title: "Modern easy IoT with JS, Docker & Resin.io"
+  description: "<p>Are you curious about how IoT development works? Or are you already an experienced hardware
+    hacker, looking to take your skills to the next level? In this workshop you'll learn how to build IoT devices
+    using powerful development tools that will be familiar to anybody comfortable with modern web development.</p>
+    <p>We'll use Docker and <a target=\"_blank\" rel=\"noopener\" href=\"https://resin.io\">Resin.io</a> to
+    write, build & deploy software for real Raspberry Pis in JavaScript, to control motion sensors,
+    LEDs and more.</p><p>For this workshop you will be using a Raspberry Pi 3, with a Sense HAT. As an attendee 
+    you'll receive all the hardware required for the workshop, to use in the workshop and to keep for yourself 
+    afterwards, so you can continue with your projects later.</p>"
+  ticket: single
+  speaker: tim_perry
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25398&ttQuantity=1&r
+  tags:
+    - IoT
+    - Docker
+
+- title: "From good to SOLID: how to become a better PHP developer?"
+  description: "<p>PHP is undervalued in the world of web development. Yet, with the rise of PHP7,
+    modern frameworks, and design principles, PHP has grown far beyond the basic scripting language it
+    started as. In this presentation, we'll focus on what distinguishes a good PHP developer from a
+    strong one. We'll learn how we can become better developers and make use of the SOLID design
+    principles to deliver scalable and extendable solutions.</p><p> Prerequisites: good understanding of
+    Object Oriented Programming and PHP; working environment with MySQL, PHP and Apache;
+    text editor or IDE of your choosing;</p>"
+  ticket: single
+  speaker: katerina_trajchevska
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25399&ttQuantity=1&r
+  tags:
+    - SOLID
+    - PHP7
+
+- title: "Delivering Serverless Experience"
+  description: "<p>Serverless has been a hot topic for years but not many companies
+    use it to deliver their main applications. In this workshop, you will learn how to
+    set up a serverless project, configure it, and scale it. The practical experience
+    will show you how easy it is to use it and will also point out some common issues
+    you may run into. You'll be able to deploy your infrastructure in minutes and
+    decide if serverless is the right fit for your projects and work environment.</p>
+    <p>You will need: very basic unix skills, at least general knowledge of yaml,
+    javascript, and web infrastructure. Node in version 6 or higher, git, editor
+    of your choice. AWS account with environment variables set up on your machine.</p>"
+  ticket: single
+  speaker: anna_doubkova
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25400&ttQuantity=1&r
+  tags:
+    - Serverless
+    - AWS
+
+- title: "Terraform and Terragrunt - Code your cloud, don't click it together"
+  description: "<p>Nowadays you shouldn't click your cloud infrastructure together anymore.
+    Whether you only manage a few servers in startup or a big fleet of cloud instances, you
+    need to code your cloud. In this talk I will present you Terraform to do this exact
+    case and how you utilize their module system to create reusable infrastructure components.
+    In the second part I'll present you how to use Terragrunt as additional tool to use Terraform
+    modules over multiple environments and link your infrastructure components together."
+  ticket: single
+  speaker: emii_khaos
+  type: Talk
+  tags:
+    - Tarraform
+    - DevOps
+  talkId: id_02
+
+- title: "Attractive Things Work Better"
+  description: "<p>As human beings, we enjoy beautiful and attractive things. But we also have
+    a notion they work better since our emotional system has a significant impact on how our
+    cognitive system operates. What as designers can we do to use that fact on our behalf and
+    improve user experiences?</p><p>In this workshops, I'll show how emotions impact product
+    success, why is essential for product team members to know how human visual perception
+    works and why details matter. I'll walk you through series of screen examples by which
+    we will see how humans perceive objects and ways in which we can apply that knowledge
+    for designing better user interfaces.</p><p>Please have with you one of the following
+    installed together with the basic knowledge of Sketch, Adobe XD, Figma or
+    InVision Studio, something for sketching and making notes, passion
+    for learning</p>"
+  ticket: single
+  speaker: ivana_milicic
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25401&ttQuantity=1&r
+  tags:
+    - UX
+    - Culture
+
+- title: "The World is our Interface"
+  description: "<p>This workshop offers a hands-on exploratory playground where we
+    rapidly prototype what we think will be the next evolution in human interaction
+    with technology. It starts with a discussion about the history of interfaces and
+    human communication and follows with selected examples of how to design post-screen,
+    drawing some specific cases from Virtual and Augmented Reality.</p><p>The workshop will
+    be fun and interactive, so bring your imagination and use the world around you. At
+    the end of the workshop, you should be able to walk away with a low fidelity
+    prototype of your choice.</p><p>Please have with you, ideally, some kind of
+    device and a selected prototyping tool of choice (Marvel, InVision, POP etc.)</p>"
+  ticket: single
+  speaker: danielle_reid
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25402&ttQuantity=1&r
+  tags:
+    - UX
+    - Design
+
+- title: "Hello from the other side"
+  speaker: ingrid_epure
+  description: "<p>Getting code into production can have consequences beyond just making your
+    customers happy.  It can wake people up in the middle of the night, bring down the
+    datastores, be a cost nightmare, and remind you ‘imposter syndrome’ is a real thing.
+    But more importantly, it can break trust , create frustrations, and burn people out. </p><p>So
+    what happens when a full-stack engineer joins an operational team and goes to war with
+    operational risks? Are there more skills to be gained besides cool war stories and
+    scars after each incident?</p>"
+  type: Talk
+
+- title: "Azure, Windows and Xamarin: Using the cloud to power your cross-platform applications"
+  speaker: laurent_bugnion
+  description: "<p>Most mobile applications are connecting to a server at some point, either to
+    get data that needs to be shown to the user, or to save data collected by the mobile
+    device. This is where Microsoft Azure has the potential of making your life as a developer
+    much easier. The cloud came a long way, and you can now build cloud infrastructure very
+    easily and for a reasonable cost. New computing models like serverless functions or
+    cloud-based devops are changing the game. What was earlier reserved to large firms
+    with an army of IT pro consultants is now available for everyone with a web browser.</p>
+    <p>In this session, Microsoft's Cloud Developer Advocate Laurent Bugnion will guide you
+    through this journey and show you how Azure Functions, Visual Studio App Center,
+    Cognitive Services can be used in your cross-platform applications.</p>"
+  type: Talk
+
+- title: "Reliving the ‘80s with Borland Turbo-C: A test case for Atomic Design"
+  speaker: amit_zur
+  description: "<p>Anyone who got to write C in the 90's on MS-DOS knows this blue
+    screen - not the blue screen of death, the blue screen of Borland Turbo
+    C/C++/Pascal. 30 years after its birth, we are going to implement it using
+    React, MobX and Node.js.</p><p>I will show you how to implement a design language and
+    think in atomic design, as well as best practices for managing state and
+    componentization. By the end of this talk you’ll have the tools to create and
+    maintain a scalable UI codebase, spiced with the sweet taste of nostalgia.</p>"
+  type: Talk
+  tags:
+    - React.js
+    - Javascript
+    - MobX
+
+- title: "Hyperledger Framework – Bringing blockchain technologies closer to tomorrow's businesses"
+  speaker: konstantinos_votis
+  description: "<p>You might not have heard of Hyperledger or not know much about
+    it, but you must have heard of the Linux Foundation and IBM. Well the Linux
+    Foundation, in 2015, announced the creation of the Hyperledger Project. This was
+    the way they thought blockchain technologies and smart contracts can be better
+    adapted to business needs and tomorrow’s digital landscape. IBM has jump into
+    the opportunity with their contributions to the Hyperledger Fabric project
+    and has thus far met unprecedented acceptance by large corporations like
+    MAERSK and Walmart, whilst the Intel-contributed Hyperledger Sawtooth is now
+    used by Huawei and T-Mobile.</p><p>Our workshop is focused on the Hyperledger Sawtooth,
+    its versatility and the advantages it brings to businesses. We will go through
+    the basics of Hyperledger frameworks and the differences between Fabric and
+    Sawtooth. Then it is hands-on all the way starting with Docker & Sawtooth
+    installation, moving to the details and how things work and closing with two
+    case studies utilizing and working on transaction families (smart contracts).
+    Can you afford to miss it?</p><p>The minimum recommended available hardware -
+    4GB Ram, 2-core CPU, 10GB free HD space. The recommended operating system
+    in order to follow all the steps - Ubuntu Linux or a virtual machine
+    running Ubuntu Linux</p><p>Supported by <a href=\"http://www.konfido-project.eu/\">KONFIDO</a>
+    an H2020 project and by <a href=\"https://www.hyperledger.org/\">
+    Hyperledger.org</a>, a <a href=\"https://www.linuxfoundation.org/projects/\">Linux
+    Foundation project</a></p><p><b>In cooperation with <a href=\"/speakers/sofia_terzi\">
+    Sofia Terzi</a></b></p>"
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25403&ttQuantity=1&r
+  tags:
+    - Hyperledger
+
+- title: "Hyperledger Framework – Bringing blockchain technologies closer to tomorrow's businesses"
+  speaker: sofia_terzi
+  description: "<p>You might not have heard of Hyperledger or not know much about
+    it, but you must have heard of the Linux Foundation and IBM. Well the Linux
+    Foundation, in 2015, announced the creation of the Hyperledger Project. This was
+    the way they thought blockchain technologies and smart contracts can be better
+    adapted to business needs and tomorrow’s digital landscape. IBM has jump into
+    the opportunity with their contributions to the Hyperledger Fabric project
+    and has thus far met unprecedented acceptance by large corporations like
+    MAERSK and Walmart, whilst the Intel-contributed Hyperledger Sawtooth is now
+    used by Huawei and T-Mobile.</p><p>Our workshop is focused on the Hyperledger Sawtooth,
+    its versatility and the advantages it brings to businesses. We will go through
+    the basics of Hyperledger frameworks and the differences between Fabric and
+    Sawtooth. Then it is hands-on all the way starting with Docker & Sawtooth
+    installation, moving to the details and how things work and closing with two
+    case studies utilizing and working on transaction families (smart contracts).
+    Can you afford to miss it?</p><p>The minimum recommended available hardware -
+    4GB Ram, 2-core CPU, 10GB free HD space. The recommended operating system
+    in order to follow all the steps - Ubuntu Linux or a virtual machine
+    running Ubuntu Linux</p><p>Supported by <a href=\"http://www.konfido-project.eu/\">KONFIDO</a>
+    an H2020 project and by <a href=\"https://www.hyperledger.org/\">
+    Hyperledger.org</a>, a <a href=\"https://www.linuxfoundation.org/projects/\">Linux
+    Foundation project</a></p><p><b>In cooperation with:
+    <a href=\"/speakers/konstantinos_votis\">Konstantinos Votis</a></b></p>"
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25403&ttQuantity=1&r
+  tags:
+    - Hyperledger
+
+- title: "Behavior Driven Development"
+  speaker: pawel_dudek
+  description: "<p>Building software systems is hard. But preserving existing functionality
+    when adding new one is even harder. In this talk you'll learn how you can avoid
+    breaking existing code by leveraging behavior driven development. This talk is
+    aimed at iOS developers, however first part is applicable to any development
+    platform.</p>"
+  type: Talk
+  tags:
+    - BDD
+    - QA
+    - Mobile
+
+- title: "Code Reviews Gone Wild"
+  speaker: lauren_robinson
+  description: "<p>Making code review sessions a part of your team's
+    development process has many benefits - increased code quality,
+    fewer bugs and errors at production, skill improvement and greater
+    knowledge exchange. Many of us have the view that a code review
+    is a purely technical activity, with its main goal being to find
+    faults with the person requesting the view's implementation
+    of a particular solution. But a code review involves so
+    much more than that. There are social and cultural implications
+    to consider once you are involved in a code review that can
+    be seen in the way we communicate throughout the process of
+    a review. What, how and when we say things can directly
+    determine the success or failure of a code review and
+    prevent us from reaping the benefits that code reviews
+    provide. Forgetting the non-technical side of code reviews
+    can cause them to spiral out of control, giving them the
+    power to even destroy relationships within teams!</p>
+    <p>There are many techniques that can be used to save code
+    reviews and even prevent this from happening in the first
+    place. This hands-on workshop will give you practical
+    tips on how to make constructive code reviews while
+    avoiding common pitfalls throughout the process.</p>
+    <br/><b>Agenda</b><ol><li>Communication (Social stuff)</li>
+    <li>The Anatomy of Code Reviews (Ooooo Anatomy…so fancy)</li>
+    <li>Writing reviewable code (What code can't be reviewed?)</li>
+    <li>The Code Review Process (Sigh…why does everything have to be a process?)</li>
+    <li>Dealing with difficult reviews (Help! Abort! ABORT!)</li>
+    <li>And a whole lot more!</li></ol><p>Be prepared to actually
+    review some pull requests in this workshop =D</p>"
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25404&ttQuantity=1&r
+  tags:
+    - Code Reviews
+    - Culture
+
+- title: "Evolving Patterns in React"
+  speaker: alex_moldovan
+  description: "<p>Let’s take a closer look at some of the patterns
+  that are emerging in the React ecosystem. These patterns improve
+  readability, code clarity, and push your code towards composition
+  and reusability.</p><p>I recently wrote this article that is
+  covering some of <a href=\"https://medium.freecodecamp.org/evolving-patterns-in-react-116140e5fe8f\">
+  the patterns.</a></p><p>The workshop will cover:</p><ul><li>Advanced
+  Component Design<ul><li>Conditional Rendering</li><li>Using ESnext Class
+  Properties</li><li>Curried Event Handlers</li><li>Stateless Components</li>
+  <li>Pure Components</li></ul></li><li>Having Fun with Props <ul><li>Children
+  Props</li><li>Pass-through Props</li><li>Destructuring Props</li></ul></li>
+  <li>Reusing and Composing in React <ul><li>Mixins</li><li>High-Order
+  Components</li><li>Render Props</li></ul></li><li>Provider Pattern <ul>
+  <li>React Context</li><li>The new Context API</li></ul></li><li>State
+  Management <ul><li>State Lifting</li><li>When is Redux needed</li></ul></li>
+  </ul></p><p>If you participate in the workshop please fill in this
+  <a href=\"https://alexmoldovan.typeform.com/to/ccDCiY\">survey</a>.</p>"
+  type: Workshop
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25405&ttQuantity=1&r
+  tags:
+    - React
+    - Patterns
+    - Clean Code
+
+- title: "Serverless: what, why, how and how"
+  speaker: joe_sepi
+  description: "<p>Let's work through what serverless is, why you would want to use it, how it
+    works and how to get started. We'll spend some time with the open source Apache
+    OpenWhisk serverless platform implementing a few example use cases. We'll all leave
+    the workshop feeling confident and ready to go build serverless applications. #ftw</p>"
+  type: Talk
+  tags:
+    - Serverless
+
+- title: "AI for developers"
+  speaker: julien_simon
+  type: Talk
+  description: "<p>AI sounds incredibly complicated… and it can be.
+    However, using high level cloud services, it’s never been easier
+    to add AI capabilities to your applications. Speech, translation,
+    image and video analysis are just an API call away. In this
+    session, we’ll show how you can get started: writing a few lines
+    of code is all it takes!</p><p> I’ll have a robot friend on stage with
+    me, so expect the unexpected!"
+  tags:
+    - AI
+    - AWS
+
+- title: "Machine Learning and Deep Learning in Python"
+  ticket: single
+  speaker: julien_simon
+  type: Workshop
+  description: "<p>Skill Level: intermediate</p><p>Prerequisites: familiarity with Linux CLI,
+  familiarity with Python/JSON/YAML, AWS account (it takes 24 hours to validate new accounts,
+  so please do this before the workshop).</p><p>Description: the goal of this coding workshop
+  is to teach you the basics of Machine Learning (ML) and Deep Learning (DL) with the Python
+  language and popular open source libraries.</p><p>The main topics we will cover:</p>
+  <ul><li>classic ML algorithms: linear regression, classification, clustering, dimensionality reduction.
+  </li><li>DL concepts: neural networks, activation functions, back propagation, optimisation.</li><li>
+  Open source libraries for ML/DL: sckit-learn, Apache MXNet, TensorFlow, Keras, Spark MLlib.</li><li>
+  Running ML/DL on AWS with Amazon SageMaker: each participant will receive $100 in AWS credits :)</li></ul>"
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=26200&ttQuantity=1&r
+
+
+- title: "Zero to Swagger in Moments"
+  ticket: single
+  description: "<p>In just a few short minutes, we'll build an API-driven Node application.
+    With the open source tool, LoopBack, we can derive interconnected models---with full
+    CRUD functionality---based on some questions about the shape and details of our data.
+    But that's just the beginning. </p><p>We'll also take our APIs further with cloud/local
+    data-stores, relationships between models, and access control lists (ACLs.) Within a
+    short time, we'll have a fully functioning platform with a number of APIs accessing
+    robust models, handled securely using member role privileges that include full-featured
+    account management (login/out, forgot password, etc).</p>"
+  buyLink: https://www.eventora.com/en/Events/devit_conference_2018/Order?ttId=25406&ttQuantity=1&r
+  speaker: joe_sepi
+  type: Workshop

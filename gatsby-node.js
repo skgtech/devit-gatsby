@@ -1,14 +1,16 @@
 const crypto = require(`crypto`)
+const yaml = require('js-yaml');
+const fs = require('fs');
 
-const config = require('./src/data/config/config.json');
-const devitweek = require('./src/data/devitweek/schedule.json');
-const scheduleTalks = require('./src/data/schedule/2018.json').talks;
-const speakers = require('./src/data/speakers/2018.json');
-const sponsors = require('./src/data/sponsors/2018.json');
-const talks = require('./src/data/talks/2018.json');
-const partners = require('./src/data/team/partners.json');
-const weSupport = require('./src/data/team/weSupport.json');
-const volunteers = require('./src/data/team/volunteers.json');
+const config = yaml.safeLoad(fs.readFileSync('./src/data/config/config.yml', 'utf8'));
+const devitweek = yaml.safeLoad(fs.readFileSync('./src/data/devitweek/schedule.yml', 'utf8'));
+const scheduleTalks = yaml.safeLoad(fs.readFileSync('./src/data/schedule/schedule.yml', 'utf8')).talks;
+const speakers = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2018.yml', 'utf8'));
+const sponsors = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2018.yml', 'utf8'));
+const talks = yaml.safeLoad(fs.readFileSync('./src/data/talks/2018.yml', 'utf8'));
+const partners = yaml.safeLoad(fs.readFileSync('./src/data/team/partners.yml', 'utf8'));
+const weSupport = yaml.safeLoad(fs.readFileSync('./src/data/team/weSupport.yml', 'utf8'));
+const volunteers = yaml.safeLoad(fs.readFileSync('./src/data/team/volunteers.yml', 'utf8'));
 
 function createNodeFactory (type) {
   return function (object, overrides) {
