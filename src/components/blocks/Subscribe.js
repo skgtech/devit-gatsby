@@ -1,13 +1,37 @@
 import React from 'react';
+import GatsbyImage from 'gatsby-image';
 
-const Subscribe = () => {
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Block from './Block';
+import {LightBlockHeading} from './BlockHeading';
+import {LightLeading} from './Leading';
+
+const Subscribe = ({imageSrc}) => {
   return (
-    <div className="subscribe-block text-center">
-      <div className="container">
-        <h2 className="block__heading">Stay informed</h2>
-        <p className="leading">
+    <Block style={{
+      textAlign: 'center',
+      position: 'relative',
+      color: 'white',
+      paddingTop: '128px',
+      paddingBottom: '128px',
+    }}>
+      <GatsbyImage
+        sizes={imageSrc}
+        style={{position: 'absolute'}}
+        css={{
+          top: '0',
+          left: '0',
+          width: '100%',
+          zIndex: '10',
+         }}
+        />
+      <Grid css={{
+        zIndex: '20',
+      }}>
+        <LightBlockHeading>Stay informed</LightBlockHeading>
+        <LightLeading>
           Register for our newsletter and stay informed about our latest news.
-        </p>
+        </LightLeading>
         <p>
           Special Offers are available exclusively to our newsletter subscribers.
         </p>
@@ -24,8 +48,8 @@ const Subscribe = () => {
           </div>
           <p className="subscribe-result hidden"></p>
         </form>
-      </div>
-    </div>
+      </Grid>
+    </Block>
   );
 };
 

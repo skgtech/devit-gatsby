@@ -1,3 +1,5 @@
+const path = require(`path`)
+const mimeDb = require(`mime-db`)
 const crypto = require(`crypto`)
 const yaml = require('js-yaml');
 const fs = require('fs');
@@ -44,6 +46,7 @@ const PartnerNode = createNodeFactory(`Partner`);
 const WeSupportNode = createNodeFactory(`WeSupport`);
 const ScheduleNode = createNodeFactory(`Schedule`);
 const ScheduleEntryNode = createNodeFactory(`ScheduleEntry`);
+const ImageNode = createNodeFactory(`SponsorImage`);
 
 module.exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators
@@ -104,9 +107,12 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
   Object.keys(sponsors).forEach(function (type) {
     sponsors[type].forEach(function (sponsorRow) {
       sponsorRow.forEach(function (sponsor) {
+        const img = sponsor.img;
+        delete sponsor.img;
         createNode(SponsorNode({
           id: sponsor.name,
           ...sponsor,
+          img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
           type
         }))
       });
@@ -115,18 +121,24 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
 
   partners.forEach(function (partnersRow) {
     partnersRow.forEach(function (partner) {
+      const img = partner.img;
+      delete partner.img;
       createNode(PartnerNode({
         id: partner.name,
-        ...partner
+        ...partner,
+        img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
       }))
     });
   })
 
   weSupport.forEach(function (weSupportRow) {
     weSupportRow.forEach(function (weSupport) {
+      const img = weSupport.img;
+      delete weSupport.img;
       createNode(WeSupportNode({
         id: weSupport.name,
-        ...weSupport
+        ...weSupport,
+        img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
       }))
     });
   })

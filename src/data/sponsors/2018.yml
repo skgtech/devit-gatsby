@@ -1,31 +1,31 @@
 platinum:
   -
     - name: Microsoft
-      img: /assets/images/sponsors/svg/microsoft.svg
+      img: sponsors/svg/microsoft.svg
       url: https://www.microsoft.com/el-gr
       year: 2018
 
 gold:
   -
     - name: Intrasoft
-      img: /assets/images/sponsors/svg/intrasoft.svg
+      img: sponsors/svg/intrasoft.svg
       url: https://www.intrasoft-intl.com/
       year: 2018
 
     - name: Resin.io
-      img: /assets/images/sponsors/svg/resinio.svg
+      img: sponsors/svg/resinio.svg
       url: https://resin.io/
       year: 2018
 
     - name: Toptal
-      img: /assets/images/sponsors/svg/toptal.svg
+      img: sponsors/svg/toptal.svg
       url: https://www.toptal.com/
       year: 2018
       override_height: 50px
 
   -
     - name: Synapsecom
-      img: /assets/images/sponsors/svg/synapsecom.svg
+      img: sponsors/svg/synapsecom.svg
       url: https://www.synapsecom.gr/
       year: 2018
       override_height: 50px
@@ -33,44 +33,44 @@ gold:
 silver:
   -
     - name: Ellinair
-      img: /assets/images/sponsors/svg/ellinair.svg
+      img: sponsors/svg/ellinair.svg
       url: https://ellinair.com
       year: 2018
       override_height: 80px
 
     - name: WAES
-      img: /assets/images/sponsors/svg/waes.svg
+      img: sponsors/svg/waes.svg
       url: https://www.wearewaes.com/
       year: 2018
       override_height: 40px
 
     - name: Nemetschek
-      img: /assets/images/sponsors/nemetschek.png
+      img: sponsors/nemetschek.png
       url: https://www.nemetschek.bg/
       year: 2018
 
   -
     - name: Niagara
-      img: /assets/images/sponsors/svg/niagara.svg
+      img: sponsors/svg/niagara.svg
       url: ""
       year: 2018
       override_height: 60px
 
     - name: Fieldscale
-      img: /assets/images/sponsors/svg/fieldscale.svg
+      img: sponsors/svg/fieldscale.svg
       url: https://fieldscale.com/
       year: 2018
       override_height: 60px
 
     - name: Trivago
-      img: /assets/images/sponsors/svg/trivago.svg
+      img: sponsors/svg/trivago.svg
       url: https://www.trivago.gr/
       year: 2018
       override_height: 60px
 
   -
     - name: ITI
-      img: /assets/images/sponsors/iti.png
+      img: sponsors/iti.png
       url: http://www.iti.gr/iti/index.html
       year: 2018
       override_height: 60px
@@ -78,19 +78,19 @@ silver:
 bronze:
   -
     - name: Workable
-      img: /assets/images/sponsors/svg/workable.svg
+      img: sponsors/svg/workable.svg
       url: https://workable.com
       year: 2018
       override_height: 50px
 
     - name: IBM
-      img: /assets/images/sponsors/svg/ibm.svg
+      img: sponsors/svg/ibm.svg
       url: https://www.ibm.com/gr-el/
       year: 2018
       override_height: 50px
 
     - name: Adeva
-      img: /assets/images/sponsors/svg/adeva.svg
+      img: sponsors/svg/adeva.svg
       url: https://adevait.com/
       year: 2018
       override_height: 50px
@@ -98,6 +98,6 @@ bronze:
 media:
   -
     - name: Insomnia
-      img: /assets/images/sponsors/insomnia.png
+      img: sponsors/insomnia.png
       url: https://insomnia.gr
       year: 2018

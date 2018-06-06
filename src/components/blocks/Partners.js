@@ -1,36 +1,47 @@
 import React, {Fragment} from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const Supporters = () => (
-  <div className={`supporters ${include.center ? 'text-center' : ''}`}>
-    <div className="container">
-      <div className="block__heading--dark">
-        We proudly support
-      </div>
-      <div className="partners__container">
-        {/* {% include components/icons-stack.html items=site.data.team.weSupport %} */}
-      </div>
-    </div>
-  </div>
-)
+import Stack from './Stack'
+import Block from './Block'
+import {DarkBlockHeading} from './BlockHeading'
 
-const Partners = () => {
+const Partners = ({partners, weSupport}) => {
   return (
-  <Fragment>
-    <div className={`partners ${include.center ? 'text-center' : ''}`}>
-      <div className="container">
-        <div className="block__heading--dark">
-          Our partners
-        </div>
-        <p>
-          We are lucky to have partnered with a lot of organizations across Thessaloniki. We want to thank them for helping us with DEVit every year.
-        </p>
-        <div className="partners__container">
-          {/* {% include components/icons-stack.html items=site.data.team.partners %} */}
-        </div>
-      </div>
+    <div>
+      <Block style={{
+        backgroundColor: '#fff',
+      }}>
+        <Grid>
+          <DarkBlockHeading>
+            Our partners
+          </DarkBlockHeading>
+          <p>
+            We are lucky to have partnered with a lot of organizations across Thessaloniki. We want to thank them for helping us with DEVit every year.
+          </p>
+          <Stack
+            style={{
+              marginTop: '72px',
+            }}
+            list={partners}
+          />
+        </Grid>
+      </Block>
+      <Block style={{
+        backgroundColor: '#f5f8fa',
+      }}>
+        <Grid>
+          <DarkBlockHeading>
+            We proudly support
+          </DarkBlockHeading>
+          <Stack
+            style={{
+              marginTop: '72px',
+            }}
+            list={weSupport}
+          />
+        </Grid>
+      </Block>
     </div>
-    <Supporters />
-  </Fragment>
   );
 };
 

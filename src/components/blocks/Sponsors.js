@@ -1,4 +1,25 @@
 import React from 'react';
+import GatsbyImage from 'gatsby-image';
+
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
+import {DarkBlockHeading} from './BlockHeading'
+import Stack from './Stack'
+
+const SponsorsStack = ({title, list}) => {
+  return list.length && (
+    <div>
+      <div css={{
+        opacity: '0.7',
+        fontSize: '1.33em',
+        fontWeight: '900',
+        textAlign: 'center',
+        color: '#57585a',
+      }}>{title}</div>
+      <Stack list={list}/>
+    </div>
+  )
+}
 
 const Sponsors = ({sponsors, cfsLink}) => {
   const platinumSponsors = sponsors.filter(sponsor => sponsor.type === 'platinum');
@@ -7,67 +28,37 @@ const Sponsors = ({sponsors, cfsLink}) => {
   const bronzeSponsors = sponsors.filter(sponsor => sponsor.type === 'bronze');
 
   return (
-    <div id="sponsors" className="cfs">
-      <div className="cfs__container text-center">
-        <div className="block__heading--dark">
+    <div
+      id="sponsors"
+      css={{
+        backgroundColor: '#F4F3F4',
+        paddingTop: '70px',
+        paddingBottom: '70px',
+      }}>
+      <Grid>
+        <DarkBlockHeading>
           Our sponsors
-        </div>
+        </DarkBlockHeading>
         <p className="dark">
           Thanks to all our sponsors for supporting us.
         </p>
-
-        <div className="cfs__sponsors">
-          {
-            platinumSponsors.length
-              ? (
-                <div className="cfs__title">Platinum</div>
-                // TODO fix icons-stack component to enable this
-                // {% include components/icons-stack.html items=sponsors.2018.platinum %}
-              )
-              : null
-          }
-
-          {
-            goldSponsors.length
-            ? (
-              <div className="cfs__title">Gold</div>
-              // TODO fix icons-stack component to enable this
-              // {% include components/icons-stack.html items=sponsors.2018.gold %}
-            )
-            : null
-          }
-
-          {
-            silverSponsors.length
-            ? (
-              <div className="cfs__title">Silver</div>
-              // TODO fix icons-stack component to enable this
-              // {% include components/icons-stack.html items=sponsors.2018.silver %}
-            )
-            : null
-          }
-
-          {
-            bronzeSponsors.length
-            ? (
-              <div className="cfs__title">Bronze</div>
-              // TODO fix icons-stack component to enable this
-              // {% include components/icons-stack.html items=sponsors.2018.bronze %}
-            )
-            : null
-          }
-        </div>
-
-        {
-          cfsLink
-          ? (
-            <a href={cfsLink} className="block__cta">
-              Apply to sponsor
-            </a>
-          )
-          : null
-        }
-      </div>
+        <SponsorsStack
+          title="Platinum"
+          list={platinumSponsors}
+        />
+        <SponsorsStack
+          title="Gold"
+          list={goldSponsors}
+        />
+        <SponsorsStack
+          title="Silver"
+          list={silverSponsors}
+        />
+        <SponsorsStack
+          title="Bronze"
+          list={bronzeSponsors}
+        />
+      </Grid>
     </div>
   );
 };

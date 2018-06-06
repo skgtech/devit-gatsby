@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "dependencies": {
     "gatsby": "^1.9.247",
-    "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.10",
@@ -26,6 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-image": "^1.0.51",
     "gatsby-node-helpers": "^0.3.0",
     "prettier": "^1.12.0"
   }
