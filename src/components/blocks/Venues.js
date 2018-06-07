@@ -1,9 +1,19 @@
 import React, {Fragment} from 'react';
 import Plan from './Plan';
 import GatsbyImage from 'gatsby-image';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import { DarkBlockHeading } from './BlockHeading';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+
+const Map = withScriptjs(withGoogleMap((({lat, long}) =>
+  <GoogleMap
+    defaultZoom={14}
+    defaultCenter={{ lat: parseFloat(lat), lng: parseFloat(long) }}
+  >
+    <Marker position={{ lat: parseFloat(lat), lng: parseFloat(long) }} />
+  </GoogleMap>
+)));
 
 const Venue = ({name, venueFor, desc, lat, long, sizes, switchOrder}) => {
   return (
@@ -39,7 +49,7 @@ const Venue = ({name, venueFor, desc, lat, long, sizes, switchOrder}) => {
       }}>
         {desc}
       </div>
-      <Row>
+      <Row reverse={switchOrder}>
         <Col xs={4}>
           <div css={{
             paddingLeft: 0,
@@ -47,7 +57,16 @@ const Venue = ({name, venueFor, desc, lat, long, sizes, switchOrder}) => {
           }}>
             <div css={{
               height: '420px',
-            }} data-long={long} data-lat={lat}></div>
+            }}>
+              <Map
+                lat={lat}
+                long={long}
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `100%` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+              />
+            </div>
           </div>
         </Col>
         <Col xs={8}>
@@ -75,15 +94,15 @@ const Venues = ({imageSrcs}) => {
         name="City College, Sunday Jun 10"
         venueFor="Workshops"
         desc="Sunday, 10th of June will be a day dedicated to workshops, with at least 11 sessions of various topics to choose from. It will be hosted at City College Thessaloniki, which offers multiple academic classrooms, an ideal space for the purpose of delivering a hands-on session."
-        lat="22.9370313"
-        long="40.6373756"
+        long="22.9370313"
+        lat="40.6373756"
         sizes={imageSrcs.cityCollege}/>
       <Venue
         name="Royal Theatre, Monday Jun 11"
         venueFor="Talks"
         desc="Monday, 11th of June will be a day dedicated to presentations, with a single track of 8 speakers. It will be hosted at the iconic Royal Theater of Thessaloniki, a spacious theatrical venue with a capacity of 683 people located at the heart of Thessaloniki, right next to the historic White Tower by the seaside."
-        lat="22.9495758"
-        long="40.6252233"
+        long="22.9495758"
+        lat="40.6252233"
         sizes={imageSrcs.royalTheatre}/>
     </div>
   );
