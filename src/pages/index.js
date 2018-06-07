@@ -35,8 +35,8 @@ const IndexPage = ({data, location}) => {
         partners={data.partners.edges.map(node => node.node)}
         weSupport={data.weSupport.edges.map(node => node.node)}
         />
-      <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} />
-      {/* <Footer /> */}
+      {/* <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} /> */}
+      <Footer />
   </div>
   )
 }

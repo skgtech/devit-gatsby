@@ -1,90 +1,183 @@
 import React from 'react';
+import css from 'react-emotion';
+
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
+import wedge from './../../images/new/wedge.svg';
+import logo from '../../images/logo/white/logo.svg';
+
+const CopyrightText = css('span')({
+  opacity: 0.7
+})
+const CopyrightLink = css('a')({
+  color: 'white'
+})
+
+const FooterMenuWrapper = css('div')({
+  marginBottom: '40px'
+})
+
+const FooterMenuHeader = css('div')({
+  color: 'white',
+  fontWeight: '900',
+  marginBottom: '10px',
+  textTransform: 'uppercase',
+})
+
+const FooterMenuList = ({children}) => {
+  return (
+    <ul css={{
+      listStyle: 'none',
+      paddingLeft: 0,
+    }}>
+    {children.length && children.map((item) => (
+      <li css={{
+        paddingTop: '5px',
+        '& a': {
+          opacity: 0.7,
+          color: 'white',
+          '&:hover, &:active, &:focus': {
+            opacity: 1,
+            textDecoration: 'none',
+          }
+        }
+      }}>{item}</li>
+    ))}
+    </ul>
+  )
+}
+
+const SocialIconsList = ({children}) => {
+  return (
+    <ul css={{
+      listStyle: 'none',
+      paddingLeft: 0,
+      fontSize: 0,
+    }}>
+    {children.length && children.map((item) => (
+      <li css={{
+        display: 'inline-block',
+        marginRight: '16px',
+        marginBottom: '16px',
+        '& a': {
+          paddingTop: '10px',
+          height: '40px',
+          width: '40px',
+          backgroundColor: '#FFFFFF',
+          fontSize: '20px',
+          textAlign: 'center',
+          borderRadius: '50%',
+          opacity: 0.7,
+          '&:hover,&:active,&:focus': {
+            opacity: 1,
+            textDecoration: 'none',
+          }
+        }
+      }}>{item}</li>
+    ))}
+    </ul>
+  )
+}
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer__container">
-        <img className="footer__logo" src="/assets/images/new/devit-logo-white.svg" alt="DEVit logo" />
-        <div className="footer-row">
-          <div className="footer-row__column">
-            <div className="footer-menu">
-              <div className="footer-menu__header">
+    <footer css={{
+      color: 'white',
+      backgroundColor: '#00629E',
+      backgroundImage: `url(${wedge})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right bottom',
+      backgroundSize: '40%',
+      paddingTop: '70px',
+      paddingBottom: '70px',
+    }}>
+      <Grid>
+        <img css={{
+          width: '100px',
+          marginBottom: '50px',
+        }} src={logo} alt="DEVit logo" />
+        <Row>
+          <Col
+            md={6}
+            lg={3}
+            css={{
+              '@media (min-width: $screen-md-min) and (max-width: $screen-lg-min)': {
+                minHeight: '350px',
+              }
+            }}
+          >
+            <FooterMenuWrapper>
+              <FooterMenuHeader>
                 ABOUT US
-              </div>
-              <ul className="footer-menu__list">
-                <li>
-                  <a href="/about">About</a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://medium.com/devitconf">Blog</a>
-                </li>
-                <li>
-                  <a href="/press">Press</a>
-                  </li>
-                <li>
-                  <a href="/code-of-conduct">Code of Conduct</a>
-                  </li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-row__column">
-            <div className="footer-menu">
-              <div className="footer-menu__header">
+              </FooterMenuHeader>
+              <FooterMenuList>
+                <a href="/about">About</a>
+                <a target="_blank" rel="noopener" href="https://medium.com/devitconf">Blog</a>
+                <a href="/press">Press</a>
+                <a href="/code-of-conduct">Code of Conduct</a>
+              </FooterMenuList>
+            </FooterMenuWrapper>
+          </Col>
+          <Col
+            md={6}
+            lg={3}
+            css={{
+              '@media (min-width: $screen-md-min) and (max-width: $screen-lg-min)': {
+                minHeight: '350px',
+              }
+            }}
+          >
+            <FooterMenuWrapper>
+              <FooterMenuHeader>
                 DEVit 2018
-              </div>
-              <ul className="footer-menu__list">
-                <li>
-                  <a target="_blank" rel="noopener" href="{{ site.data.config.tickets.url }}">Buy tickets</a>
-                </li>
-                <li>
-                  <a href="/#speakers">Speakers</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-row__column">
-            <div className="footer-menu">
-              <div className="footer-menu__header">
+              </FooterMenuHeader>
+              <FooterMenuList>
+                <a target="_blank" rel="noopener" href="{{ site.data.config.tickets.url }}">Buy tickets</a>
+                <a href="/#speakers">Speakers</a>
+              </FooterMenuList>
+            </FooterMenuWrapper>
+          </Col>
+          <Col
+            md={6}
+            lg={3}
+            css={{
+              '@media (min-width: $screen-md-min) and (max-width: $screen-lg-min)': {
+                minHeight: '350px',
+              }
+            }}
+          >
+            <FooterMenuWrapper>
+              <FooterMenuHeader>
                 PAST
-              </div>
-              <ul className="footer-menu__list">
-                <li>
-                  <a href="http://devitconf.org/2017">DEVit 2017</a>
-                </li>
-                <li>
-                  <a href="http://devitconf.org/2016">DEVit 2016</a>
-                </li>
-                <li>
-                  <a href="http://devitconf.org/2015">DEVit 2015</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-row__column">
-            <div className="footer-menu">
-              <div className="footer-menu__header">
+              </FooterMenuHeader>
+              <FooterMenuList>
+                <a href="http://devitconf.org/2017">DEVit 2017</a>
+                <a href="http://devitconf.org/2016">DEVit 2016</a>
+                <a href="http://devitconf.org/2015">DEVit 2015</a>
+              </FooterMenuList>
+            </FooterMenuWrapper>
+          </Col>
+          <Col
+            md={6}
+            lg={3}
+            css={{
+              '@media (min-width: $screen-md-min) and (max-width: $screen-lg-min)': {
+                minHeight: '350px',
+              }
+            }}
+          >
+            <FooterMenuWrapper>
+              <FooterMenuHeader>
                 Social
-              </div>
-              <ul className="social-icons">
-                <li>
-                  <a target="_blank" rel="noopener" href="https://www.facebook.com/DEVitConf" className="fab fa-facebook-f"></a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://twitter.com/devitconf" className="fab fa-twitter"></a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCrKmMv6c6oqZPYC7zzbP-RQ" className="fab fa-youtube"></a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://www.instagram.com/devitconf/" className="fab fa-instagram"></a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/11399285/" className="fab fa-linkedin"></a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="https://www.medium.com/@devitconf" className="fab fa-medium"></a>
-                </li>
-              </ul>
+              </FooterMenuHeader>
+              <SocialIconsList>
+                <a target="_blank" rel="noopener" href="https://www.facebook.com/DEVitConf" className="fab fa-facebook-f"></a>
+                <a target="_blank" rel="noopener" href="https://twitter.com/devitconf" className="fab fa-twitter"></a>
+                <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCrKmMv6c6oqZPYC7zzbP-RQ" className="fab fa-youtube"></a>
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/devitconf/" className="fab fa-instagram"></a>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/11399285/" className="fab fa-linkedin"></a>
+                <a target="_blank" rel="noopener" href="https://www.medium.com/@devitconf" className="fab fa-medium"></a>
+              </SocialIconsList>
               <div className="footer-menu__header">
                 <i className="fab fa-slack"></i> Slack
                 <form className="slack-form" method="post" action="#">
@@ -99,15 +192,16 @@ const Footer = () => {
                   <div className="slack-form__results"></div>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="copyrights">
-          <span className="copyrights__text">© 2018</span>
-          <a className="copyrights__link" href="https://github.com/skgtech/devit/graphs/contributors" target="_blank" rel="noopener">SKGTech Contributors</a><span className="copyrights__text">, Licensed under</span>
-          <a className="copyrights__link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons 4.0</a>
-        </div>
-      </div>
+            </FooterMenuWrapper>
+          </Col>
+        </Row>
+        <Row className="copyrights">
+          <CopyrightText>© 2018</CopyrightText>
+          <CopyrightLink href="https://github.com/skgtech/devit/graphs/contributors" target="_blank" rel="noopener">SKGTech Contributors</CopyrightLink>
+          <CopyrightText>, Licensed under</CopyrightText>
+          <CopyrightLink href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons 4.0</CopyrightLink>
+        </Row>
+      </Grid>
     </footer>
   );
 };
