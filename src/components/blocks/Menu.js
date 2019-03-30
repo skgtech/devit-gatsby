@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
+import { StaticQuery, graphql } from "gatsby"
 
 import { Row, Col } from 'react-flexbox-grid';
 
@@ -53,101 +54,111 @@ const MainMenuCTALink = styled.a({
 
 const Menu = ({date, tickets, pathname}) => {
   return (
-    <nav css={{
-      zIndex: 999,
-      padding: '16px 56px 16px 56px',
-      '@media (max-width: $screen-sm-min)': {
-        paddingLeft: '32px',
-        paddingRight: '32px',
-      },
-      marginBottom: '0',
-      borderRadius: '0',
-      '&.sticky--stick': {
-        paddingTop: '14px',
-        paddingBottom: '14px',
-        background: 'white',
+    <StaticQuery
+    query={graphql`{
+      config {
+        tickets {
+          enabled
+        }
       }
-    }}>
-      <Row middle="xs">
-        <Col xs css={{
-          padding: 0,
-          '@media (max-width: $screen-sm-min)': {
-            fontSize: '1.3em'
-          }
-        }}>
-          <a href="/" css={{
-            width: '4em',
-            height: '52px',
-            float: 'left',
-            backgroundImage: `url(${whiteLogo})`,
-            backgroundSize: '100%',
-            backgroundRepeat: 'no-repeat',
-            '.sticky--stick &': {
-              backgroundImage: `url(${blueLogo})`,
-            }
-          }}></a>
-          <div css={{
-            textAlign: 'left',
-            color: 'white',
-            marginLeft: '10px',
-            float: 'left',
-            lineHeight: '18px',
-            paddingTop: '5px',
-            '.sticky--stick &': {
-              color: 'black',
+    }`}
+    render={(data) => (
+      <nav css={{
+        zIndex: 999,
+        padding: '16px 56px 16px 56px',
+        '@media (max-width: $screen-sm-min)': {
+          paddingLeft: '32px',
+          paddingRight: '32px',
+        },
+        marginBottom: '0',
+        borderRadius: '0',
+        '&.sticky--stick': {
+          paddingTop: '14px',
+          paddingBottom: '14px',
+          background: 'white',
+        }
+      }}>
+        <Row middle="xs">
+          <Col xs css={{
+            padding: 0,
+            '@media (max-width: $screen-sm-min)': {
+              fontSize: '1.3em'
             }
           }}>
-            <span css={{
-              fontSize: '1em',
-              fontWeight: '900',
-            }}>{date}</span><br/>
-            <span css={{
-              fontSize: '0.77em',
-              fontWeight: 'bold',
-            }}>Thessaloniki, Greece</span>
-          </div>
-        </Col>
-        <Col xs>
-          <ul css={{
-            margin: '0',
-            paddingLeft: '0',
-            '& li': {
-              display: 'inline-block',
-            },
-            '& li + li': {
-              marginLeft: '24px',
-            }
-          }}>
-            <li>
-              <MainMenuLink href="/#about">About</MainMenuLink>
-            </li>
-            <li>
-              <MainMenuLink href="/#speakers">Speakers</MainMenuLink>
-            </li>
-            <li>
-              <MainMenuLink href="/#venue">Venue</MainMenuLink>
-            </li>
+            <a href="/" css={{
+              width: '4em',
+              height: '52px',
+              float: 'left',
+              backgroundImage: `url(${whiteLogo})`,
+              backgroundSize: '100%',
+              backgroundRepeat: 'no-repeat',
+              '.sticky--stick &': {
+                backgroundImage: `url(${blueLogo})`,
+              }
+            }}></a>
+            <div css={{
+              textAlign: 'left',
+              color: 'white',
+              marginLeft: '10px',
+              float: 'left',
+              lineHeight: '18px',
+              paddingTop: '5px',
+              '.sticky--stick &': {
+                color: 'black',
+              }
+            }}>
+              <span css={{
+                fontSize: '1em',
+                fontWeight: '900',
+              }}>{date}</span><br/>
+              <span css={{
+                fontSize: '0.77em',
+                fontWeight: 'bold',
+              }}>Thessaloniki, Greece</span>
+            </div>
+          </Col>
+          <Col xs>
+            <ul css={{
+              margin: '0',
+              paddingLeft: '0',
+              '& li': {
+                display: 'inline-block',
+              },
+              '& li + li': {
+                marginLeft: '24px',
+              }
+            }}>
               <li>
-              <MainMenuLink href="/#sponsors">Sponsors</MainMenuLink>
-            </li>
-            <li>
-              <MainMenuLink target="_blank" rel="noopener" href="https://medium.com/devitconf">Blog</MainMenuLink>
-            </li>
-            {
-              tickets.enabled
-                ? (
-                  <li>
-                    <MainMenuCTALink target="_blank" rel="noopener" className="main-menu__link--cta cta" href="{{ site.data.config.tickets.url }}">
-                      Buy tickets
-                    </MainMenuCTALink>
-                  </li>
-                )
-                : null
-            }
-          </ul>
-        </Col>
-      </Row>
-    </nav>
+                <MainMenuLink href="/#about">About</MainMenuLink>
+              </li>
+              <li>
+                <MainMenuLink href="/#speakers">Speakers</MainMenuLink>
+              </li>
+              <li>
+                <MainMenuLink href="/#venue">Venue</MainMenuLink>
+              </li>
+                <li>
+                <MainMenuLink href="/#sponsors">Sponsors</MainMenuLink>
+              </li>
+              <li>
+                <MainMenuLink target="_blank" rel="noopener" href="https://medium.com/devitconf">Blog</MainMenuLink>
+              </li>
+              {
+                data.config.tickets.enabled
+                  ? (
+                    <li>
+                      <MainMenuCTALink target="_blank" rel="noopener" className="main-menu__link--cta cta" href="{{ site.data.config.tickets.url }}">
+                        Buy tickets
+                      </MainMenuCTALink>
+                    </li>
+                  )
+                  : null
+              }
+            </ul>
+          </Col>
+        </Row>
+      </nav>
+    )}/>
   );
 };
 

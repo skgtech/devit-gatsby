@@ -13,12 +13,12 @@ import Sponsors from '../components/blocks/Sponsors'
 import Partners from '../components/blocks/Partners'
 import Subscribe from '../components/blocks/Subscribe'
 import Footer from '../components/blocks/Footer'
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 const IndexPage = ({data, location}) => {
   return (
     <StaticQuery
-     query={query}
+      query={query}
       render={data => (
         <Layout>
           <Hero config={data.config} pathname={location.pathname}></Hero>

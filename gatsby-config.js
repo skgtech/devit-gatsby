@@ -1,5 +1,4 @@
 module.exports = {
-  mapping: {},
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',

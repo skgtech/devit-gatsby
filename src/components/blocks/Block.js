@@ -3,7 +3,7 @@ import Organizers from './Organizers';
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const About = ({style, id, children}) => {
+export default ({style, id, children}) => {
   return (
     <div id={id} css={{
       paddingTop: '5.5em',
@@ -15,5 +15,3 @@ const About = ({style, id, children}) => {
     </div>
   );
 };
-
-export default About;
