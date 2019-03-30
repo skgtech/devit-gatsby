@@ -18,7 +18,7 @@ const LightLeading = ({css, children}) => {
   );
 };
 
-const DarkLeading = ({children}) => {
+const DarkLeading = ({css, children}) => {
   return (
     <p css={{
       fontSize: '1.33em',

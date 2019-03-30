@@ -1,25 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Footer from '../../components/Footer'
-import Meta from '../../components/Meta'
+import 'normalize.css'
 
-const Default = ({ children }) => {
+import Meta from './Meta';
+
+const Layout = ({ data, children, location, ...args }) => {
   return (
     <div>
       <Helmet>
         <Meta />
       </Helmet>
       <div>
-        {children()}
+        {children}
         {/* <Footer /> */}
       </div>
     </div>
-  )
+  );
 }
 
-Default.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func,
 }
 
-export default Default
+export default Layout

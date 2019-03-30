@@ -2,7 +2,7 @@ module.exports = {
   mapping: {},
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-glamor',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-image`,

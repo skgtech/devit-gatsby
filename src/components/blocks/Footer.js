@@ -1,23 +1,23 @@
 import React from 'react';
-import css from 'react-emotion';
+import styled from '@emotion/styled'
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import wedge from './../../images/new/wedge.svg';
 import logo from '../../images/logo/white/logo.svg';
 
-const CopyrightText = css('span')({
+const CopyrightText = styled.span({
   opacity: 0.7
 })
-const CopyrightLink = css('a')({
+const CopyrightLink = styled.a({
   color: 'white'
 })
 
-const FooterMenuWrapper = css('div')({
+const FooterMenuWrapper = styled.div({
   marginBottom: '40px'
 })
 
-const FooterMenuHeader = css('div')({
+const FooterMenuHeader = styled.div({
   color: 'white',
   fontWeight: '900',
   marginBottom: '10px',

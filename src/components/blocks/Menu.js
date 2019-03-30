@@ -1,5 +1,6 @@
 import React from 'react';
-import css from 'react-emotion';
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 
 import { Row, Col } from 'react-flexbox-grid';
 
@@ -24,9 +25,12 @@ const mainMenuLinkStyles = {
   }
 };
 
-const MainMenuLink = css('a')(mainMenuLinkStyles)
+const MainMenuLink = styled.a({
+  a: mainMenuLinkStyles
+});
 
-const MainMenuCTALink = css('a')(mainMenuLinkStyles, {
+const MainMenuCTALink = styled.a({
+  ...mainMenuLinkStyles,
   borderRadius: '24px',
   backgroundColor: '#00629e',
   color: 'white',

@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
+import { StaticQuery, graphql } from "gatsby"
 
 import Hero from '../components/blocks/Hero'
 import Early from '../components/blocks/Early'
@@ -12,39 +13,45 @@ import Sponsors from '../components/blocks/Sponsors'
 import Partners from '../components/blocks/Partners'
 import Subscribe from '../components/blocks/Subscribe'
 import Footer from '../components/blocks/Footer'
+import Layout from "../components/layout"
 
 const IndexPage = ({data, location}) => {
   return (
-    <div>
-      <Hero config={data.config} pathname={location.pathname}></Hero>
-      <Early config={data.config}/>
-      <About imageSrc={data.aboutImage.childImageSharp.sizes.src}/>
-      <Testimonials imageSrcs={{
-        hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
-        rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
-        leonie: data.leonieTestimonialsImage.childImageSharp.sizes
-      }}/>
-      {/* <Speakers years='2018'/> */}
-      <Venues imageSrcs={{
-        cityCollege: data.cityCollegeImage.childImageSharp.sizes,
-        royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
-      }}/>
-      <Plan sizes={data.thessalonikiImage.childImageSharp.sizes}/>
-      <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
-      <Partners
-        partners={data.partners.edges.map(node => node.node)}
-        weSupport={data.weSupport.edges.map(node => node.node)}
-        />
-      {/* <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} /> */}
-      <Footer />
-  </div>
+    <StaticQuery
+     query={query}
+      render={data => (
+        <Layout>
+          <Hero config={data.config} pathname={location.pathname}></Hero>
+          <Early config={data.config}/>
+          <About imageSrc={data.aboutImage.childImageSharp.sizes.src}/>
+          <Testimonials imageSrcs={{
+            hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
+            rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
+            leonie: data.leonieTestimonialsImage.childImageSharp.sizes
+          }}/>
+          {/* <Speakers years='2018'/> */}
+          <Venues imageSrcs={{
+            cityCollege: data.cityCollegeImage.childImageSharp.sizes,
+            royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
+          }}/>
+          <Plan sizes={data.thessalonikiImage.childImageSharp.sizes}/>
+          <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
+          <Partners
+            partners={data.partners.edges.map(node => node.node)}
+            weSupport={data.weSupport.edges.map(node => node.node)}
+            />
+          {/* <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} /> */}
+          <Footer />
+        </Layout>
+      )}
+    />
   )
 }
 
 export default IndexPage
 
 export const query = graphql`
-  query IndexQuery {
+  query {
     aboutImage: file(relativePath: { eq: "new/team.jpg" }) {
       childImageSharp {
         sizes {

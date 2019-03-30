@@ -1,6 +1,6 @@
-const path = require(`path`)
-const mimeDb = require(`mime-db`)
-const crypto = require(`crypto`)
+const path = require('path')
+const mimeDb = require('mime-db')
+const crypto = require('crypto')
 const yaml = require('js-yaml');
 const fs = require('fs');
 
@@ -48,8 +48,29 @@ const ScheduleNode = createNodeFactory(`Schedule`);
 const ScheduleEntryNode = createNodeFactory(`ScheduleEntry`);
 const ImageNode = createNodeFactory(`SponsorImage`);
 
-module.exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators
+// module.exports.createPages = async ({ actions, graphql }) => {
+//   const { createNode } = actions
+
+//   const res = await graphql(`
+//     query {
+//       site {
+//         id
+//       }
+//     }
+//   `);
+
+//   console.log(res)
+
+const imagesIndex = new Map();
+
+exports.onCreateNode = ({ node, actions }) => {
+  if (node.internal.type === 'File') {
+    imagesIndex.set(node.absolutePath, node.id);
+  }
+}
+
+module.exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions
 
   createNode(ConfigNode({
     id: 'Config',
@@ -109,10 +130,13 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
       sponsorRow.forEach(function (sponsor) {
         const img = sponsor.img;
         delete sponsor.img;
+
+        const absolutePath = path.resolve(`./src/images/${img}`);
+
         createNode(SponsorNode({
           id: sponsor.name,
           ...sponsor,
-          img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
+          img___NODE: imagesIndex.get(absolutePath),
           type
         }))
       });
@@ -123,10 +147,13 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
     partnersRow.forEach(function (partner) {
       const img = partner.img;
       delete partner.img;
+
+      const absolutePath = path.resolve(`./src/images/${img}`);
+
       createNode(PartnerNode({
         id: partner.name,
         ...partner,
-        img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
+        img___NODE: imagesIndex.get(absolutePath),
       }))
     });
   })
@@ -135,10 +162,13 @@ module.exports.sourceNodes = async ({ boundActionCreators }) => {
     weSupportRow.forEach(function (weSupport) {
       const img = weSupport.img;
       delete weSupport.img;
+
+      const absolutePath = path.resolve(`./src/images/${img}`);
+
       createNode(WeSupportNode({
         id: weSupport.name,
         ...weSupport,
-        img___NODE: `${path.resolve(`./src/images/${img}`)} absPath of file`,
+        img___NODE: imagesIndex.get(absolutePath),
       }))
     });
   })
