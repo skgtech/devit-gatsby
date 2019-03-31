@@ -1,51 +1,105 @@
 import React from 'react';
+import { StaticQuery, graphql } from "gatsby"
+import { css } from '@emotion/core';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const Speakers = () => {
+import Block from './Block';
+import Speaker from './Speaker';
+import SpeakerToBeAnounced from './SpeakerToBeAnounced';
+import { DarkBlockHeading } from './BlockHeading';
+
+const speakerOuterCss = css`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: translate3d(0, 0, 0); // (2)
+  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+
+  @media (min-width: 992px) {
+    filter: grayscale(100%);
+    margin-top: -100px; // (3)
+
+    &:hover {
+      filter: grayscale(0%);
+      transform: translate3d(0, 0, 1px); // (2)
+    }
+  }
+`;
+
+const SpeakerItem = ({children}) => <Col sm={6} md={4} css={speakerOuterCss}>{children}</Col>;
+
+export default ({ year }) => {
   return (
-    {% assign speakers = "" | split: "" %}
-    {% assign years = include.years | split: ',' %}
-    {% for year in years %}
-      {% for speaker in site.data.speakers[year].speakers %}
-        {% assign speakers = speakers | push: speaker %}
-      {% endfor %}
-    {% endfor %}
+    <StaticQuery
+      query={graphql`
+        query {
+          config {
+            isCFPOpen
+            moreSpeakersToBeAnnounced
+          }
+          allSpeaker (sort: {fields: [last_name]}) {
+            edges {
+              node {
+                first_name
+                last_name
+                url
+                img {
+                  childImageSharp {
+                    fixed(width: 280, height: 280) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+                tags
+                social {
+                  twitter
+                  homepage
+                  medium
+                  github
+                  linkedin
+                }
+                tagline
+                year
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <>
+          <Block>
+            <Grid css={css`
+              text-align: center
+            `}>
+              <DarkBlockHeading>
+                Meet our speakers
+              </DarkBlockHeading>
+              <p className="dark">
+                Each year we meticulously vet and select remarkable speakers to deliver the best talks on web development.
+              </p>
+            </Grid>
+            <Row css={css`
+              margin-top: 40px;
+              transform-style: preserve-3d;
 
-    <div id="speakers" className="speakers-container">
-      <div className="container text-center">
-        <div className="block__heading--dark">
-          Meet our speakers
-        </div>
-        <p className="dark">
-          Each year we meticulously vet and select remarkable speakers to deliver the best talks on web development.
-        </p>
-      </div>
-      <div className="speakers-list">
-        {% for speaker in speakers | sort: 'last_name' %}
-        <div className="speakers-list__item">
-          {% include components/speaker.html speaker=speaker speaker_page=false %}
-        </div>
-        {% endfor %}
-        <div className="speakers-list__item">
-          {% include components/speaker-tba.html %}
-        </div>
-      </div>
-    </div>
+              @media (min-width: 992px) {
+                padding-top: 100px;
+              }
+            `}>
+              {data.allSpeaker.edges.map(({node}) => (
+                <SpeakerItem>
+                  <Speaker speaker={node} speaker_page={false}/>
+                </SpeakerItem>
+              ))}
+              {data.config.moreSpeakersToBeAnnounced && (
+                <SpeakerItem>
+                  <SpeakerToBeAnounced/>
+                </SpeakerItem>
+              )}
+            </Row>
+          </Block>
 
-    {% if site.data.config.isCFPOpen == true %}
-    <div className="speakers__cfp">
-      <div className="block__heading">
-        Call for Papers
-      </div>
-      <p className="light">
-        Be a DEVit speaker, share your experience with hundreds of peers!
-      </p>
-      <a href="#" className="block__more-cta">
-        Apply now
-        <i className="fas fa-long-arrow-alt-right"></i>
-      </a>
-    </div>
-    {% endif %}
+          {data.config.isCFPOpen && <SpeakerToBeAnounced/>}
+        </>
+      )}/>
   );
 };
-
-export default Speakers;

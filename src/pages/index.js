@@ -6,8 +6,10 @@ import Hero from '../components/blocks/Hero'
 import Early from '../components/blocks/Early'
 import About from '../components/blocks/About'
 import Testimonials from '../components/blocks/Testimonials'
-// import Speakers from '../components/blocks/Speakers'
+import Speakers from '../components/blocks/Speakers'
 import Venues from '../components/blocks/Venues'
+import CFP from '../components/blocks/Cfp'
+import CFS from '../components/blocks/Cfs'
 import Plan from '../components/blocks/Plan'
 import Sponsors from '../components/blocks/Sponsors'
 import Partners from '../components/blocks/Partners'
@@ -29,7 +31,9 @@ const IndexPage = ({data, location}) => {
             rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
             leonie: data.leonieTestimonialsImage.childImageSharp.sizes
           }}/>
-          {/* <Speakers years='2018'/> */}
+          <Speakers years='2018'/>
+          <CFP/>
+          <CFS/>
           <Venues imageSrcs={{
             cityCollege: data.cityCollegeImage.childImageSharp.sizes,
             royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
@@ -119,13 +123,11 @@ export const query = graphql`
         link_to_sponsorship
       }
     },
-    sponsors: allSponsor(filter: { year: { eq: 2018 } }) {
+    sponsors: allSponsor {
       edges {
         node {
           name
           url
-          year
-          type
           override_height
           img {
             publicURL

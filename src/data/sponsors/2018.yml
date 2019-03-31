@@ -1,103 +1,47 @@
-platinum:
-  -
-    - name: Microsoft
-      img: sponsors/svg/microsoft.svg
-      url: https://www.microsoft.com/el-gr
-      year: 2018
-
-gold:
-  -
-    - name: Intrasoft
-      img: sponsors/svg/intrasoft.svg
-      url: https://www.intrasoft-intl.com/
-      year: 2018
-
-    - name: Resin.io
-      img: sponsors/svg/resinio.svg
-      url: https://resin.io/
-      year: 2018
-
-    - name: Toptal
-      img: sponsors/svg/toptal.svg
-      url: https://www.toptal.com/
-      year: 2018
-      override_height: 50px
-
-  -
-    - name: Synapsecom
-      img: sponsors/svg/synapsecom.svg
-      url: https://www.synapsecom.gr/
-      year: 2018
-      override_height: 50px
-
-silver:
-  -
-    - name: Ellinair
-      img: sponsors/svg/ellinair.svg
-      url: https://ellinair.com
-      year: 2018
-      override_height: 80px
-
-    - name: WAES
-      img: sponsors/svg/waes.svg
-      url: https://www.wearewaes.com/
-      year: 2018
-      override_height: 40px
-
-    - name: Nemetschek
-      img: sponsors/nemetschek.png
-      url: https://www.nemetschek.bg/
-      year: 2018
-
-  -
-    - name: Niagara
-      img: sponsors/svg/niagara.svg
-      url: ""
-      year: 2018
-      override_height: 60px
-
-    - name: Fieldscale
-      img: sponsors/svg/fieldscale.svg
-      url: https://fieldscale.com/
-      year: 2018
-      override_height: 60px
-
-    - name: Trivago
-      img: sponsors/svg/trivago.svg
-      url: https://www.trivago.gr/
-      year: 2018
-      override_height: 60px
-
-  -
-    - name: ITI
-      img: sponsors/iti.png
-      url: http://www.iti.gr/iti/index.html
-      year: 2018
-      override_height: 60px
-
-bronze:
-  -
-    - name: Workable
-      img: sponsors/svg/workable.svg
-      url: https://workable.com
-      year: 2018
-      override_height: 50px
-
-    - name: IBM
-      img: sponsors/svg/ibm.svg
-      url: https://www.ibm.com/gr-el/
-      year: 2018
-      override_height: 50px
-
-    - name: Adeva
-      img: sponsors/svg/adeva.svg
-      url: https://adevait.com/
-      year: 2018
-      override_height: 50px
-
-media:
-  -
-    - name: Insomnia
-      img: sponsors/insomnia.png
-      url: https://insomnia.gr
-      year: 2018
+- id: microsoft
+  type: platinum
+  order:
+- id: intrasoft
+  type: gold
+  order:
+- id: resinio
+  type: gold
+  order:
+- id: toptal
+  type: gold
+  order:
+- id: synapsecom
+  type: gold
+  order:
+- id: ellinair
+  type: silver
+  order:
+- id: waes
+  type: silver
+  order:
+- id: nemetschek
+  type: silver
+  order:
+- id: niagara
+  type: silver
+  order:
+- id: fieldscale
+  type: silver
+  order:
+- id: trivago
+  type: silver
+  order:
+- id: iti
+  type: silver
+  order:
+- id: workable
+  type: bronze
+  order:
+- id: ibm
+  type: bronze
+  order:
+- id: adeva
+  type: bronze
+  order:
+- id: insomnia
+  type: media

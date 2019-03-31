@@ -8,7 +8,8 @@ const configData = yaml.safeLoad(fs.readFileSync('./src/data/config/config.yml',
 const devitweekData = yaml.safeLoad(fs.readFileSync('./src/data/devitweek/schedule.yml', 'utf8'));
 const scheduleTalksData = yaml.safeLoad(fs.readFileSync('./src/data/schedule/schedule.yml', 'utf8')).talks;
 const speakersData = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2018.yml', 'utf8'));
-const sponsorsData = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2018.yml', 'utf8'));
+const sponsorsData = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/all.yml', 'utf8'));
+const sponsors2018Data = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2018.yml', 'utf8'));
 const talksData = yaml.safeLoad(fs.readFileSync('./src/data/talks/2018.yml', 'utf8'));
 const partnersData = yaml.safeLoad(fs.readFileSync('./src/data/team/partners.yml', 'utf8'));
 const weSupportData = yaml.safeLoad(fs.readFileSync('./src/data/team/weSupport.yml', 'utf8'));
@@ -38,15 +39,12 @@ function createNodeFactory (type) {
 }
 
 function createNodeWithImageFactory(createNode, imagesIndex) {
-  return function (node) {
-    const img = node.img;
+  return function (node, key) {
     delete node.img;
-
-    const absolutePath = path.resolve(`./src/images/${img}`);
 
     createNode({
       ...node,
-      img___NODE: imagesIndex.get(absolutePath),
+      img___NODE: imagesIndex.get(key),
     });
   };
 }
@@ -74,7 +72,7 @@ const ImageNode = createNodeFactory(`SponsorImage`);
 const imagesIndex = new Map();
 exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === 'File') {
-    imagesIndex.set(node.absolutePath, node.id);
+    imagesIndex.set(path.basename(node.absolutePath), node.id);
   }
 }
 
@@ -100,9 +98,9 @@ module.exports.sourceNodes = async ({ actions }) => {
       }
     })
 
-    createNode(SpeakerNode(speaker, {
+    createNodeWithImage(SpeakerNode(speaker, {
       children: children
-    }))
+    }), speaker.image_filename)
 
     talksData.forEach(function (talk) {
       if (talk.speaker === speaker.url) {
@@ -136,28 +134,22 @@ module.exports.sourceNodes = async ({ actions }) => {
     children: scheduleItems
   }))
 
-  Object.keys(sponsorsData).forEach(function (type) {
-    sponsorsData[type].forEach(function (sponsorRow) {
-      sponsorRow.forEach(item => createNodeWithImage(SponsorNode({
-        id: item.name,
-        ...item,
-        type
-      })));
-    });
-  })
+  sponsorsData.forEach(item => createNodeWithImage(SponsorNode({
+    ...item
+  }), path.basename(`./src/images/${item.img}`)));
 
   partnersData.forEach(function (partnersRow) {
     partnersRow.forEach(item => createNodeWithImage(PartnerNode({
       id: item.name,
       ...item
-    })));
+    }), path.basename(`./src/images/${item.img}`)));
   })
 
   weSupportData.forEach(function (weSupportRow) {
     weSupportRow.forEach(item => createNodeWithImage(WeSupportNode({
       id: item.name,
       ...item
-    })));
+    }), path.basename(`./src/images/${item.img}`)));
   })
 
   volunteersData.forEach(function (volunteer) {
