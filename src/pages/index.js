@@ -40,10 +40,7 @@ const IndexPage = ({data, location}) => {
           }}/>
           <Plan sizes={data.thessalonikiImage.childImageSharp.sizes}/>
           <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
-          <Partners
-            partners={data.partners.edges.map(node => node.node)}
-            weSupport={data.weSupport.edges.map(node => node.node)}
-            />
+          <Partners/>
           {/* <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} /> */}
           <Footer />
         </Layout>
@@ -124,40 +121,6 @@ export const query = graphql`
       }
     },
     sponsors: allSponsor {
-      edges {
-        node {
-          name
-          url
-          override_height
-          img {
-            publicURL
-            childImageSharp {
-              sizes(maxWidth: 500) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
-              }
-            }
-          }
-        }
-      }
-    },
-    partners: allPartner {
-      edges {
-        node {
-          name
-          url
-          override_height
-          img {
-            publicURL
-            childImageSharp {
-              sizes(maxWidth: 500) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
-              }
-            }
-          }
-        }
-      }
-    },
-    weSupport: allWeSupport {
       edges {
         node {
           name
