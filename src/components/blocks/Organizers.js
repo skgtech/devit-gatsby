@@ -1,31 +1,35 @@
-import React from 'react';
+import React from 'react'
 
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid'
 
-import skgtechLogo from './../../images/new/skgtech-logo.svg';
-import shesharpLogo from './../../images/new/shesharp-logo.svg';
-import confLogo from './../../images/new/a-truly-360-conference.svg';
+import skgtechLogo from './../../images/new/skgtech-logo.svg'
+import shesharpLogo from './../../images/new/shesharp-logo.svg'
+import confLogo from './../../images/new/a-truly-360-conference.svg'
 
 const Organizers = () => {
   return (
     <Row center="xs">
-      <Col css={{
-        lineHeight: '50px',
-      }}>
+      <Col
+        css={{
+          lineHeight: '50px',
+        }}
+      >
         <a href="https://skgtech.io/" target="_blank">
           <img src={skgtechLogo} alt="SKGTech" />
         </a>
       </Col>
-      <Col css={{
-        lineHeight: '50px',
-      }}>
+      <Col
+        css={{
+          lineHeight: '50px',
+        }}
+      >
         <a href="http://www.shesharp.org/" target="_blank">
           <img src={shesharpLogo} alt="SKGTech" />
         </a>
       </Col>
     </Row>
-  );
-};
+  )
+}
 // const Organizers = () => {
 //   return (
 //     <div css={{
@@ -70,4 +74,4 @@ const Organizers = () => {
 //   );
 // };
 
-export default Organizers;
+export default Organizers

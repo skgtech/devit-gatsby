@@ -1,26 +1,32 @@
-# gatsby-starter-default
-The default Gatsby starter.
-
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+# DEVit
+DEVit's website powered by Gatsby and other amazing open source projects.
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
+Make sure that you have install dependencies.
+
 ```sh
-npm install --global gatsby-cli
+npm install i
 ```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+Start development mode:
 
-Then you can run it by:
 ```sh
-cd gatsby-example-site
 npm run develop
 ```
 
-## Deploy
+## How to contribute
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+*Soon to come*
+
+## Conventions
+
+*Soon to come*
+
+## Documentation
+
+*Soon to come*
+
+1. Data Model
+2. Event modes
+3. Blocks

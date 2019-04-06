@@ -1,8 +1,8 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react'
 const Footer = ({ children }) => {
   return (
     <Fragment>
-      { children }
+      {children}
 
       {/* Google Analytics Code */}
       {
@@ -49,7 +49,7 @@ const Footer = ({ children }) => {
       // {% endfor %}
       // {% endif %} */}
     </Fragment>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

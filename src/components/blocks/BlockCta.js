@@ -1,36 +1,39 @@
-import React from 'react';
-import GatsbyLink from 'gatsby-link';
+import React from 'react'
+import GatsbyLink from 'gatsby-link'
 
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid'
 
-const BlockCTA = ({to, children}) => {
+const BlockCTA = ({ to, children }) => {
   return (
-    <GatsbyLink to={to} css={{
-      borderRadius: '36px',
-      backgroundColor: '#00629E',
-      textTransform: 'uppercase',
-      fontSize: '1.33em',
-      fontWeight: '900',
-      lineHeight: '1em',
-      color: 'white',
-      padding: '1em 1.33em',
-      marginTop: '1.77em',
-      '&:hover': {
-        textDecoration: 'none',
-        backgroundColor: '#003E73',
-      },
-      '&:active': {
-        textDecoration: 'none',
-        backgroundColor: '#003E73',
-      },
-      '&:focus': {
-        textDecoration: 'none',
-        backgroundColor: '#003E73',
-      },
-    }}>
+    <GatsbyLink
+      to={to}
+      css={{
+        borderRadius: '36px',
+        backgroundColor: '#00629E',
+        textTransform: 'uppercase',
+        fontSize: '1.33em',
+        fontWeight: '900',
+        lineHeight: '1em',
+        color: 'white',
+        padding: '1em 1.33em',
+        marginTop: '1.77em',
+        '&:hover': {
+          textDecoration: 'none',
+          backgroundColor: '#003E73',
+        },
+        '&:active': {
+          textDecoration: 'none',
+          backgroundColor: '#003E73',
+        },
+        '&:focus': {
+          textDecoration: 'none',
+          backgroundColor: '#003E73',
+        },
+      }}
+    >
       {children}
     </GatsbyLink>
-  );
-};
+  )
+}
 
-export default BlockCTA;
+export default BlockCTA

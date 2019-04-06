@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from 'gatsby'
 
 import Hero from '../components/blocks/Hero/Hero'
 import GetTickets from '../components/blocks/GetTickets/GetTickets'
@@ -15,9 +15,9 @@ import Sponsors from '../components/blocks/Sponsors'
 import Partners from '../components/blocks/Partners'
 import Subscribe from '../components/blocks/Subscribe'
 import Footer from '../components/blocks/Footer'
-import Layout from "../components/Layout"
+import Layout from '../components/Layout'
 
-const IndexPage = ({data, location}) => {
+const IndexPage = ({ data, location }) => {
   return (
     <StaticQuery
       query={query}
@@ -25,22 +25,26 @@ const IndexPage = ({data, location}) => {
         <Layout>
           <Hero />
           <GetTickets />
-          <About/>
-          <Testimonials imageSrcs={{
-            hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
-            rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
-            leonie: data.leonieTestimonialsImage.childImageSharp.sizes
-          }}/>
-          <Speakers years='2018'/>
-          <CFP/>
-          <CFS/>
-          <Venues imageSrcs={{
-            cityCollege: data.cityCollegeImage.childImageSharp.sizes,
-            royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
-          }}/>
-          <Plan sizes={data.thessalonikiImage.childImageSharp.sizes}/>
+          <About />
+          <Testimonials
+            imageSrcs={{
+              hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
+              rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
+              leonie: data.leonieTestimonialsImage.childImageSharp.sizes,
+            }}
+          />
+          <Speakers years="2018" />
+          <CFP />
+          <CFS />
+          <Venues
+            imageSrcs={{
+              cityCollege: data.cityCollegeImage.childImageSharp.sizes,
+              royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
+            }}
+          />
+          <Plan sizes={data.thessalonikiImage.childImageSharp.sizes} />
           <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
-          <Partners/>
+          <Partners />
           {/* <Subscribe imageSrc={data.subscribeImage.childImageSharp.sizes} /> */}
           <Footer />
         </Layout>
@@ -60,14 +64,18 @@ export const query = graphql`
         }
       }
     }
-    rhitaTestimonialsImage: file(relativePath: { eq: "new/rita-jason-683x342.jpg" }) {
+    rhitaTestimonialsImage: file(
+      relativePath: { eq: "new/rita-jason-683x342.jpg" }
+    ) {
       childImageSharp {
         sizes(maxWidth: 683) {
           ...GatsbyImageSharpSizes_withWebp_tracedSVG
         }
       }
     }
-    leonieTestimonialsImage: file(relativePath: { eq: "new/leonie-683x342.jpg" }) {
+    leonieTestimonialsImage: file(
+      relativePath: { eq: "new/leonie-683x342.jpg" }
+    ) {
       childImageSharp {
         sizes(maxWidth: 683) {
           ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -118,6 +126,6 @@ export const query = graphql`
           }
         }
       }
-    },
+    }
   }
 `

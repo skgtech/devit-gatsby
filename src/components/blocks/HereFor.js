@@ -1,5 +1,5 @@
-import React from 'react';
-import { css } from '@emotion/core';
+import React from 'react'
+import { css } from '@emotion/core'
 
 export default ({ herefor }) => {
   const styles = css`
@@ -12,24 +12,19 @@ export default ({ herefor }) => {
     display: inline-block;
     padding: 6px 8px;
     margin-top: 8px;
-  `;
+  `
 
   if (!herefor) {
-    return null;
+    return null
   }
 
   return (
     <div class="herefor">
-    {Array.isArray(herefor) ? herefor.map(item => (
-      <div css={styles}>
-        { item }
-      </div>
-    )) : (
-      <span css={styles}>
-        { herefor }
-      </span>
-    )}
-
+      {Array.isArray(herefor) ? (
+        herefor.map(item => <div css={styles}>{item}</div>)
+      ) : (
+        <span css={styles}>{herefor}</span>
+      )}
     </div>
-  );
-};
+  )
+}

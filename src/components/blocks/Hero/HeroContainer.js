@@ -1,15 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import logo from '../../../images/logo/white/logo.svg';
-import videoFrame from '../../../images/video-frame.jpg';
-import videoWebm from '../../../images/video.webm';
-import videoMp4 from '../../../images/video.mp4';
+import logo from '../../../images/logo/white/logo.svg'
+import videoFrame from '../../../images/video-frame.jpg'
+import videoWebm from '../../../images/video.webm'
+import videoMp4 from '../../../images/video.mp4'
 
-const HeroContainer = ({date, tickets, menu}) => {
+const HeroContainer = ({ date, tickets, menu }) => {
   return (
     <div
       css={{
-        backgroundImage: 'linear-gradient(rgba(0, 62, 115, 0.8), rgba(0, 62, 115, 0.8))',
+        backgroundImage:
+          'linear-gradient(rgba(0, 62, 115, 0.8), rgba(0, 62, 115, 0.8))',
         textAlign: 'center',
         paddingBottom: '8.33em',
         paddingTop: '24px',
@@ -18,11 +19,12 @@ const HeroContainer = ({date, tickets, menu}) => {
           paddingTop: '14px',
         },
         '@media (max-width: $screen-sm-min)': {
-          backgroundImage: 'linear-gradient(rgba(0, 62, 115, 0.9), rgba(0, 62, 115, 0.9)), url(/assets/images/header/screen.jpg)',
+          backgroundImage:
+            'linear-gradient(rgba(0, 62, 115, 0.9), rgba(0, 62, 115, 0.9)), url(/assets/images/header/screen.jpg)',
           backgroundPosition: 'center',
-        }
+        },
       }}
-      >
+    >
       {menu}
       <video
         playsInline
@@ -43,35 +45,47 @@ const HeroContainer = ({date, tickets, menu}) => {
           background: 'rgba(0, 62, 115, 0.9)',
           '@media (max-width: $screen-sm-min)': {
             display: 'none',
-          }
-        }}>
+          },
+        }}
+      >
         <source src={videoWebm} type="video/webm" />
         <source src={videoMp4} type="video/mp4" />
       </video>
-      <img css={{
-        paddingTop: '6em',
-        width: '250px',
-        '@media (max-width: $screen-sm-min)': {
-          paddingTop: '4em',
-        }
-      }} src={logo} alt="DEVit logo" />
-      <h1 css={{
-        margin: 0,
-        color: 'white',
-        fontWeight: '900',
-        fontSize: '3.55em',
-        lineHeight: '77px',
-        marginBottom: '8px',
-        marginTop: '40px',
-      }}>{date}</h1>
-      <h2 css={{
-        margin: 0,
-        color: 'white',
-        fontSize: '1.66em',
-      }}>Thessaloniki, Greece</h2>
+      <img
+        css={{
+          paddingTop: '6em',
+          width: '250px',
+          '@media (max-width: $screen-sm-min)': {
+            paddingTop: '4em',
+          },
+        }}
+        src={logo}
+        alt="DEVit logo"
+      />
+      <h1
+        css={{
+          margin: 0,
+          color: 'white',
+          fontWeight: '900',
+          fontSize: '3.55em',
+          lineHeight: '77px',
+          marginBottom: '8px',
+          marginTop: '40px',
+        }}
+      >
+        {date}
+      </h1>
+      <h2
+        css={{
+          margin: 0,
+          color: 'white',
+          fontSize: '1.66em',
+        }}
+      >
+        Thessaloniki, Greece
+      </h2>
     </div>
+  )
+}
 
-  );
-};
-
-export default HeroContainer;
+export default HeroContainer

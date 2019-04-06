@@ -1,32 +1,31 @@
-import React from 'react';
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
-import HeroContainer from './HeroContainer';
-import Menu from '../Menu/Menu';
+import HeroContainer from './HeroContainer'
+import Menu from '../Menu/Menu'
 
 const Hero = () => {
   return (
     <StaticQuery
       query={graphql`
-      query {
-        config(id: { eq: "Config"}) {
-          date,
-          tickets {
-            enabled
-            url
+        query {
+          config(id: { eq: "Config" }) {
+            date
+            tickets {
+              enabled
+              url
+            }
           }
-        },
-      }
+        }
       `}
-      render={data => <HeroContainer
-        date={data.config.date}
-        menu={<Menu
+      render={data => (
+        <HeroContainer
           date={data.config.date}
-          tickets={data.config.tickets}
-        />}
-      />}
+          menu={<Menu date={data.config.date} tickets={data.config.tickets} />}
+        />
+      )}
     />
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

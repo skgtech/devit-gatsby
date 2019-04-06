@@ -1,23 +1,31 @@
-import React from 'react';
-import { css }from '@emotion/core';
+import React from 'react'
+import { css } from '@emotion/core'
 
 export default ({ items }) => {
   return (
-    <div css={css`
-      margin-top: 4px;
-      font-size: 0;
-      display: flex;
-      justify-content: center;
-    `}>
-    {items && Object.keys(items).map(item => {
-      let icon;
-      let link;
-      return (
-        <a href={link} class="speaker__social__item" target="blank" rel="noopener">
-          <i class={icon}></i>
-        </a>
-      )
-    })}
+    <div
+      css={css`
+        margin-top: 4px;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+      `}
+    >
+      {items &&
+        Object.keys(items).map(item => {
+          let icon
+          let link
+          return (
+            <a
+              href={link}
+              class="speaker__social__item"
+              target="blank"
+              rel="noopener"
+            >
+              <i class={icon} />
+            </a>
+          )
+        })}
       {/* {% for social in include.social %}
         {% if social[0] == "github" %}
           {% assign icon = "fab fa-github" %}
@@ -46,6 +54,5 @@ export default ({ items }) => {
 
       {% endfor %} */}
     </div>
-
-  );
-};
+  )
+}

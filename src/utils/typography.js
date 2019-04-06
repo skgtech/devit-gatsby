@@ -1,4 +1,4 @@
-import Typography from 'typography';
+import Typography from 'typography'
 
 const typography = new Typography({
   baseFontSize: '18px',
@@ -12,14 +12,9 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Lato',
-      styles: [
-        '300',
-        '400',
-        '700',
-        '900',
-      ],
-    }
+      styles: ['300', '400', '700', '900'],
+    },
   ],
-});
+})
 
-export default typography;
+export default typography
