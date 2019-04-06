@@ -1,12 +1,11 @@
 import React from 'react';
-import Menu from './Menu';
 
-import logo from '../../images/logo/white/logo.svg';
-import videoFrame from '../../images/video-frame.jpg';
-import videoWebm from '../../images/video.webm';
-import videoMp4 from '../../images/video.mp4';
+import logo from '../../../images/logo/white/logo.svg';
+import videoFrame from '../../../images/video-frame.jpg';
+import videoWebm from '../../../images/video.webm';
+import videoMp4 from '../../../images/video.mp4';
 
-const Hero = ({config, pathname}) => {
+const HeroContainer = ({date, tickets, menu}) => {
   return (
     <div
       css={{
@@ -24,7 +23,7 @@ const Hero = ({config, pathname}) => {
         }
       }}
       >
-      <Menu date={config.date} tickets={config.tickets} pathname={pathname} />
+      {menu}
       <video
         playsInline
         autoPlay
@@ -64,7 +63,7 @@ const Hero = ({config, pathname}) => {
         lineHeight: '77px',
         marginBottom: '8px',
         marginTop: '40px',
-      }}>{config.date}</h1>
+      }}>{date}</h1>
       <h2 css={{
         margin: 0,
         color: 'white',
@@ -75,4 +74,4 @@ const Hero = ({config, pathname}) => {
   );
 };
 
-export default Hero;
+export default HeroContainer;

@@ -2,7 +2,7 @@ import React from 'react';
 import { css }from '@emotion/core';
 import { StaticQuery, graphql } from "gatsby"
 
-import Menu from './Menu';
+import Menu from './Menu/Menu';
 
 const Header = () => {
   return (

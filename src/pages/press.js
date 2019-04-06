@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Block from "../components/blocks/Block";
 import { DarkBlockHeading } from "../components/blocks/BlockHeading";
 import { DarkLeading } from "../components/blocks/Leading";
-import Menu from "../components/blocks/Menu";
+import Menu from "../components/blocks/Menu/Menu";
 import Footer from '../components/blocks/Footer'
 import Header from '../components/blocks/Header'
 

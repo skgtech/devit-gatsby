@@ -2,9 +2,9 @@ import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import { StaticQuery, graphql } from "gatsby"
 
-import Hero from '../components/blocks/Hero'
-import Early from '../components/blocks/Early'
-import About from '../components/blocks/About'
+import Hero from '../components/blocks/Hero/Hero'
+import GetTickets from '../components/blocks/GetTickets/GetTickets'
+import About from '../components/blocks/About/About'
 import Testimonials from '../components/blocks/Testimonials'
 import Speakers from '../components/blocks/Speakers'
 import Venues from '../components/blocks/Venues'
@@ -23,9 +23,9 @@ const IndexPage = ({data, location}) => {
       query={query}
       render={data => (
         <Layout>
-          <Hero config={data.config} pathname={location.pathname}></Hero>
-          <Early config={data.config}/>
-          <About imageSrc={data.aboutImage.childImageSharp.sizes.src}/>
+          <Hero />
+          <GetTickets />
+          <About/>
           <Testimonials imageSrcs={{
             hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
             rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
@@ -53,13 +53,6 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    aboutImage: file(relativePath: { eq: "new/team.jpg" }) {
-      childImageSharp {
-        sizes {
-          src
-        }
-      }
-    }
     hugoTestimonialsImage: file(relativePath: { eq: "new/hugo-342x342.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 342) {
@@ -109,17 +102,6 @@ export const query = graphql`
         }
       }
     }
-    config(id: { eq: "Config"}) {
-      date,
-      tickets {
-        enabled
-        url
-      },
-      sponsors {
-        cfs
-        link_to_sponsorship
-      }
-    },
     sponsors: allSponsor {
       edges {
         node {

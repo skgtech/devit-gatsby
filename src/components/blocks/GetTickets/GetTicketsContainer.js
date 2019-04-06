@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import {DarkBlockHeading} from './BlockHeading';
-import BlockCTA from './BlockCTA';
+import {DarkBlockHeading} from '../BlockHeading';
+import BlockCTA from '../BlockCta';
 
-import TicketsLogo from './../../images/new/tickets.svg';
+import TicketsLogo from './../../../images/new/tickets.svg';
 
-const Early = ({config}) => {
+const GetTicketsContainer = ({enabled, url}) => {
   return (
-    config.tickets.enabled
+    enabled
     ? (
       <div css={{
         backgroundColor: '#f5f8fa',
@@ -32,7 +32,7 @@ const Early = ({config}) => {
                 Whether it’s Frontend, Backend, DevOps or Mobile that you care about, join us to learn about the most modern practices and techniques. Secure your ticket now, while there is still availability.
               </p>
               <BlockCTA
-                to={config.tickets.url}>
+                to={url}>
                 Buy tickets
               </BlockCTA>
             </Col>
@@ -44,4 +44,4 @@ const Early = ({config}) => {
   );
 };
 
-export default Early;
+export default GetTicketsContainer;

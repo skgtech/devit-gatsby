@@ -1,12 +1,11 @@
 import React from 'react';
-import Organizers from './Organizers';
-
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import BlockWBackgroundImage from './BlockWBackgroundImage'
-import BlockCTA from './BlockCTA'
-import { LightBlockHeading } from './BlockHeading'
-import { LightLeading } from './Leading'
+import Organizers from '../Organizers';
+import BlockWBackgroundImage from '../BlockWBackgroundImage'
+import BlockCTA from '../BlockCta'
+import { LightBlockHeading } from '../BlockHeading'
+import { LightLeading } from '../Leading'
 
 const About = ({imageSrc}) => {
   return (
