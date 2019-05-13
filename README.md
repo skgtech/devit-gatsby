@@ -6,7 +6,7 @@ DEVit's website powered by Gatsby and other amazing open source projects.
 Make sure that you have install dependencies.
 
 ```sh
-npm install i
+npm install
 ```
 
 Start development mode:
