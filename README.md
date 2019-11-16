@@ -6,18 +6,18 @@ DEVit's website powered by Gatsby and other amazing open source projects.
 Make sure that you have install dependencies.
 
 ```sh
-npm install
+yarn
 ```
 
 Start development mode:
 
 ```sh
-npm run develop
+yarn develop
 ```
 
 ## How to contribute
 
-*Soon to come*
+Please see our current open [issues](https://github.com/skgtech/devit-gatsby/issues).
 
 ## Conventions
 
