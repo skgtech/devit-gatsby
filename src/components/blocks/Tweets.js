@@ -8,8 +8,7 @@ const Tweets = () => {
           <li className="tweet-item">
             <blockquote className="twitter-tweet" data-lang="en">
               <p lang="en" dir="ltr">
-                RFC 968 is one of my favs. &quot;Twas the Night Before
-                Start-up&quot; Enjoy!
+                RFC 968 is one of my favs. &quot;Twas the Night Before Start-up&quot; Enjoy!
                 <a href="https://t.co/VQuUqTx9Sq">https://t.co/VQuUqTx9Sq</a>
               </p>
               &mdash; Ian Philpot 🤙🏻 Casual Delivery (@tripdubroot)
@@ -32,8 +31,7 @@ const Tweets = () => {
           <li className="tweet-item">
             <blockquote className="twitter-tweet" data-lang="en">
               <p lang="en" dir="ltr">
-                RFC 968 is one of my favs. &quot;Twas the Night Before
-                Start-up&quot; Enjoy!
+                RFC 968 is one of my favs. &quot;Twas the Night Before Start-up&quot; Enjoy!
                 <a href="https://t.co/VQuUqTx9Sq">https://t.co/VQuUqTx9Sq</a>
               </p>
               &mdash; Ian Philpot 🤙🏻 Casual Delivery (@tripdubroot)

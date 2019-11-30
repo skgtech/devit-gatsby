@@ -1,27 +1,19 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import { Grid } from 'react-flexbox-grid'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
-import Block from './Block'
 import SpeakerSocial from './SpeakerSocial'
 import Tags from './Tags'
 import HereFor from './HereFor'
-import { DarkBlockHeading } from './BlockHeading'
 
-export default ({ speaker, speaker_page }) => {
-  const {
-    first_name,
-    last_name,
-    url,
-    img,
-    tags,
-    social,
-    hearFor,
-    tagline,
-    year,
-  } = speaker
+Speaker.propTypes = {
+  speaker: PropTypes.object,
+  speaker_page: PropTypes.bool,
+}
+
+const Speaker = ({ speaker, speaker_page }) => {
+  const { first_name, last_name, url, img, tags, social, hereFor, tagline } = speaker
 
   const speakerContainerHover = css`
     background-color: white;
@@ -53,9 +45,7 @@ export default ({ speaker, speaker_page }) => {
     }
   `
 
-  const speakerCss = speaker_page
-    ? css(outerCss, speakerContainerHover)
-    : outerCss
+  const speakerCss = speaker_page ? css(outerCss, speakerContainerHover) : outerCss
 
   return (
     <div css={speakerCss}>
@@ -110,7 +100,7 @@ export default ({ speaker, speaker_page }) => {
           >
             {tagline.slice(0, 60)}
           </div>
-          <HereFor herefor={`Workshop`} />
+          <HereFor herefor={hereFor} />
         </>
       )}
       <div css={speakerHiddenHover}>
@@ -120,3 +110,5 @@ export default ({ speaker, speaker_page }) => {
     </div>
   )
 }
+
+export default Speaker

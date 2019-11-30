@@ -1,7 +1,15 @@
 import React from 'react'
-import Organizers from './Organizers'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+LightLeading.propTypes = {
+  children: PropTypes.func,
+  css: PropTypes.object,
+}
+
+DarkLeading.propTypes = {
+  children: PropTypes.func,
+  css: PropTypes.object,
+}
 
 const LightLeading = ({ css, children }) => {
   return (

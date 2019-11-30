@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import React from 'react'
+import { Grid } from 'react-flexbox-grid'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Stack from './Stack'
 import Block from './Block'
 import { DarkBlockHeading } from './BlockHeading'
 
-const Partners = ({ partners, weSupport }) => {
+const Partners = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -57,9 +57,8 @@ const Partners = ({ partners, weSupport }) => {
             <Grid>
               <DarkBlockHeading>Our partners</DarkBlockHeading>
               <p>
-                We are lucky to have partnered with a lot of organizations
-                across Thessaloniki. We want to thank them for helping us with
-                DEVit every year.
+                We are lucky to have partnered with a lot of organizations across Thessaloniki. We
+                want to thank them for helping us with DEVit every year.
               </p>
               <Stack
                 style={{

@@ -17,10 +17,7 @@ const GetTickets = () => {
         }
       `}
       render={data => (
-        <GetTicketsContainer
-          enabled={data.config.tickets.enabled}
-          url={data.config.tickets.url}
-        />
+        <GetTicketsContainer enabled={data.config.tickets.enabled} url={data.config.tickets.url} />
       )}
     />
   )

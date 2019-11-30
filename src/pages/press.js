@@ -1,15 +1,19 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { StaticQuery, graphql } from 'gatsby'
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import PropTypes from 'prop-types'
 
 import Layout from '../components/Layout'
 import Block from '../components/blocks/Block'
 import { DarkBlockHeading } from '../components/blocks/BlockHeading'
 import { DarkLeading } from '../components/blocks/Leading'
-import Menu from '../components/blocks/Menu/Menu'
 import Footer from '../components/blocks/Footer'
 import Header from '../components/blocks/Header'
+
+Photo.propTypes = {
+  title: PropTypes.string,
+  url: PropTypes.string,
+}
 
 const Photo = ({ title, url }) => (
   <Col md={4}>
@@ -54,10 +58,18 @@ const MorePhotosCTA = () => (
       target="_blank"
       href="https://www.facebook.com/pg/DEVitConf/photos/"
     >
-      Browse all photos <i class="fas fa-long-arrow-alt-right" />
+      Browse all photos <i className="fas fa-long-arrow-alt-right" />
     </a>
   </Col>
 )
+
+Logo.propTypes = {
+  title: PropTypes.string,
+  svg: PropTypes.string,
+  png: PropTypes.string,
+  png2x: PropTypes.string,
+  png3x: PropTypes.string,
+}
 
 const Logo = ({ title, svg, png, png2x, png3x }) => (
   <Col md={6}>
@@ -110,7 +122,7 @@ const Logo = ({ title, svg, png, png2x, png3x }) => (
   </Col>
 )
 
-export default ({ title, description, image }) => {
+const Press = () => {
   return (
     <Layout title={`Press page`}>
       <Header />
@@ -127,10 +139,9 @@ export default ({ title, description, image }) => {
           <br />
           <DarkLeading>Short description</DarkLeading>
           <p>
-            DEVit is the 360° Web Development Conference, frontend, backend,
-            devops, mobile, we want to get you out of your comfort zone and
-            cross pollinate all arts and crafts that make today’s World Wide Web
-            possible.
+            DEVit is the 360° Web Development Conference, frontend, backend, devops, mobile, we want
+            to get you out of your comfort zone and cross pollinate all arts and crafts that make
+            today’s World Wide Web possible.
           </p>
         </Block>
         <Block
@@ -193,26 +204,11 @@ export default ({ title, description, image }) => {
         >
           <DarkBlockHeading>Photos</DarkBlockHeading>
           <Grid>
-            <Photo
-              title="DEVit 2017"
-              url="/assets/images/press/DEVit_2017_1_small.jpg"
-            />
-            <Photo
-              title="DEVit 2017"
-              url="/assets/images/press/DEVit_2017_2_small.jpg"
-            />
-            <Photo
-              title="DEVit 2017"
-              url="/assets/images/press/DEVit_2017_3_small.jpg"
-            />
-            <Photo
-              title="DEVit 2017"
-              url="/assets/images/press/DEVit_2017_4_small.jpg"
-            />
-            <Photo
-              title="DEVit 2017"
-              url="/assets/images/press/DEVit_2017_5_small.jpg"
-            />
+            <Photo title="DEVit 2017" url="/assets/images/press/DEVit_2017_1_small.jpg" />
+            <Photo title="DEVit 2017" url="/assets/images/press/DEVit_2017_2_small.jpg" />
+            <Photo title="DEVit 2017" url="/assets/images/press/DEVit_2017_3_small.jpg" />
+            <Photo title="DEVit 2017" url="/assets/images/press/DEVit_2017_4_small.jpg" />
+            <Photo title="DEVit 2017" url="/assets/images/press/DEVit_2017_5_small.jpg" />
             <MorePhotosCTA />
           </Grid>
 
@@ -225,8 +221,7 @@ export default ({ title, description, image }) => {
             >
               CC BY-SA 4.0
             </a>{' '}
-            and it is required that credits will follow them on each usage:
-            Dimitris Tsakiris,{' '}
+            and it is required that credits will follow them on each usage: Dimitris Tsakiris,{' '}
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -241,3 +236,5 @@ export default ({ title, description, image }) => {
     </Layout>
   )
 }
+
+export default Press

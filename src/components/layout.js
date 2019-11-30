@@ -3,17 +3,16 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import 'normalize.css'
+import './reset.css'
 
-const Layout = ({
-  title,
-  description,
-  image,
-  data,
-  children,
-  location,
-  ...args
-}) => {
+Layout.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  children: PropTypes.func,
+}
+
+const Layout = ({ title, description, image, children }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -43,10 +42,7 @@ const Layout = ({
             <Helmet>
               <title>{title}</title>
 
-              <meta
-                http-equiv="Content-Type"
-                content="text/html; charset=UTF-8"
-              />
+              <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
               <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -54,9 +50,9 @@ const Layout = ({
               <meta name="description" content={pageDescription} />
 
               {/* Schema.org markup for Google+ */}
-              <meta itemprop="name" content={pageTitle} />
-              <meta itemprop="description" content={pageDescription} />
-              <meta itemprop="image" content={pageImage} />
+              <meta itemProp="name" content={pageTitle} />
+              <meta itemProp="description" content={pageDescription} />
+              <meta itemProp="image" content={pageImage} />
 
               {/* Twitter Card data */}
               <meta name="twitter:card" content="summary_large_image" />
@@ -69,20 +65,13 @@ const Layout = ({
               {/* Open Graph data */}
               <meta property="og:title" content={pageTitle} />
               <meta property="og:site_name" content="devitconf.org" />
-              <meta
-                property="og:url"
-                content="http://devitconf.org{{ page.url }}"
-              />
+              <meta property="og:url" content="http://devitconf.org{{ page.url }}" />
 
               <meta property="og:description" content={pageDescription} />
               <meta property="og:image" content={pageImage} />
               <meta property="og:type" content="website" />
 
-              <link
-                href="/assets/css/main.css"
-                rel="stylesheet"
-                media="screen"
-              />
+              <link href="/assets/css/main.css" rel="stylesheet" media="screen" />
 
               <link
                 rel="apple-touch-icon"
@@ -101,19 +90,13 @@ const Layout = ({
                 href="/assets/images/favicon/favicon-16x16.png?v=GvJLOgvboj"
                 sizes="16x16"
               />
-              <link
-                rel="manifest"
-                href="/assets/images/favicon/manifest.json?v=GvJLOgvboj"
-              />
+              <link rel="manifest" href="/assets/images/favicon/manifest.json?v=GvJLOgvboj" />
               <link
                 rel="mask-icon"
                 href="/assets/images/favicon/safari-pinned-tab.svg?v=GvJLOgvboj"
                 color="#5bbad5"
               />
-              <link
-                rel="shortcut icon"
-                href="/assets/images/favicon/favicon.ico?v=GvJLOgvboj"
-              />
+              <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico?v=GvJLOgvboj" />
 
               <meta name="apple-mobile-web-app-title" content="DEVit Conf" />
               <meta name="application-name" content="DEVit Conf" />
@@ -129,10 +112,6 @@ const Layout = ({
       }}
     />
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.func,
 }
 
 export default Layout

@@ -1,11 +1,18 @@
 import React from 'react'
 import GatsbyImage from 'gatsby-image'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Row, Col } from 'react-flexbox-grid'
 
 import background from '../../images/new/wedge.svg'
 
-const Testimonial = ({ children, text, name, link }) => {
+Testimonial.propTypes = {
+  text: PropTypes.string,
+  name: PropTypes.string,
+  link: PropTypes.string,
+}
+
+const Testimonial = ({ text, name, link }) => {
   return (
     <div
       css={{
@@ -52,6 +59,10 @@ const Testimonial = ({ children, text, name, link }) => {
       </a>
     </div>
   )
+}
+
+Testimonials.propTypes = {
+  imageSrcs: PropTypes.object,
 }
 
 const Testimonials = ({ imageSrcs }) => {

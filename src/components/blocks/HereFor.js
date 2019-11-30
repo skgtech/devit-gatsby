@@ -1,7 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
 
-export default ({ herefor }) => {
+HereFor.propTypes = {
+  herefor: PropTypes.string,
+}
+
+const HereFor = ({ herefor }) => {
   const styles = css`
     border-radius: 24px;
     background-color: #e7e7e8;
@@ -19,12 +24,18 @@ export default ({ herefor }) => {
   }
 
   return (
-    <div class="herefor">
+    <div className="herefor">
       {Array.isArray(herefor) ? (
-        herefor.map(item => <div css={styles}>{item}</div>)
+        herefor.map((item, index) => (
+          <div key={index} css={styles}>
+            {item}
+          </div>
+        ))
       ) : (
         <span css={styles}>{herefor}</span>
       )}
     </div>
   )
 }
+
+export default HereFor

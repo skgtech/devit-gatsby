@@ -1,10 +1,15 @@
 import React from 'react'
-import GatsbyImage from 'gatsby-image'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid } from 'react-flexbox-grid'
 
 import { DarkBlockHeading } from './BlockHeading'
 import Stack from './Stack'
+
+SponsorsStack.propTypes = {
+  list: PropTypes.array,
+  title: PropTypes.string,
+}
 
 const SponsorsStack = ({ title, list }) => {
   return (
@@ -27,10 +32,12 @@ const SponsorsStack = ({ title, list }) => {
   )
 }
 
-const Sponsors = ({ sponsors, cfsLink }) => {
-  const platinumSponsors = sponsors.filter(
-    sponsor => sponsor.type === 'platinum'
-  )
+Sponsors.propTypes = {
+  sponsors: PropTypes.array,
+}
+
+const Sponsors = ({ sponsors }) => {
+  const platinumSponsors = sponsors.filter(sponsor => sponsor.type === 'platinum')
   const goldSponsors = sponsors.filter(sponsor => sponsor.type === 'gold')
   const silverSponsors = sponsors.filter(sponsor => sponsor.type === 'silver')
   const bronzeSponsors = sponsors.filter(sponsor => sponsor.type === 'bronze')

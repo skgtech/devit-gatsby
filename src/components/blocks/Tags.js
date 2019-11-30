@@ -1,7 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
 
-export default ({ tags }) => {
+Tags.propTypes = {
+  tags: PropTypes.array,
+}
+
+const Tags = ({ tags }) => {
   return (
     <div
       css={css`
@@ -11,8 +16,9 @@ export default ({ tags }) => {
       `}
     >
       {tags &&
-        tags.map(tag => (
+        tags.map((tag, index) => (
           <span
+            key={index}
             css={css`
               border-radius: 24px;
               background-color: #74aacd;
@@ -36,3 +42,5 @@ export default ({ tags }) => {
     </div>
   )
 }
+
+export default Tags

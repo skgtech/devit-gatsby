@@ -1,7 +1,13 @@
 import React from 'react'
-import Organizers from './Organizers'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+LightBlockHeading.propTypes = {
+  children: PropTypes.func,
+}
+
+DarkBlockHeading.propTypes = {
+  children: PropTypes.func,
+}
 
 const LightBlockHeading = ({ children }) => {
   return (

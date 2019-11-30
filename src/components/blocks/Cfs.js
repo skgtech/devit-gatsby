@@ -2,14 +2,14 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid } from 'react-flexbox-grid'
 
 import { DarkBlockHeading } from './BlockHeading'
 import BlockCta from './BlockCta'
 import { DarkLeading } from './Leading'
 import Stack from './Stack'
 
-export default () => {
+const Cfs = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -49,9 +49,8 @@ export default () => {
           >
             <DarkBlockHeading>Sponsors through the years</DarkBlockHeading>
             <DarkLeading>
-              The popularity of breakfast foods is a good reason to keep
-              dependable starters, such as eggs, bread and other staples, on
-              hand.
+              The popularity of breakfast foods is a good reason to keep dependable starters, such
+              as eggs, bread and other staples, on hand.
             </DarkLeading>
             <Stack list={data.allSponsor.edges.map(({ node }) => node)} />
             <BlockCta>Apply to sponsor</BlockCta>
@@ -61,3 +60,5 @@ export default () => {
     />
   )
 }
+
+export default Cfs

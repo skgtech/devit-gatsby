@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import AboutContainer from './AboutContainer'
 
-const About = ({ imageSrc }) => {
+const About = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -17,9 +17,7 @@ const About = ({ imageSrc }) => {
           }
         }
       `}
-      render={data => (
-        <AboutContainer imageSrc={data.aboutImage.childImageSharp.sizes.src} />
-      )}
+      render={data => <AboutContainer imageSrc={data.aboutImage.childImageSharp.sizes.src} />}
     />
   )
 }

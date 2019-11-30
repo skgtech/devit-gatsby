@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby'
 
-export default () => {
+const SpeakerToBeAnounced = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -19,7 +19,7 @@ export default () => {
       render={data =>
         data.config.isCFPOpen ? (
           <div
-            class="speaker-tba-no-hover speaker-tba"
+            className="speaker-tba-no-hover speaker-tba"
             css={css`
               position: relative;
               color: #57585a;
@@ -45,8 +45,8 @@ export default () => {
                 alt="DEVit Speaker"
               />
             </div>
-            <div class="speaker-tba__center">
-              <div class="speaker-tba__title">
+            <div className="speaker-tba__center">
+              <div className="speaker-tba__title">
                 More Speakers <br />
                 to be announced
               </div>
@@ -57,3 +57,5 @@ export default () => {
     />
   )
 }
+
+export default SpeakerToBeAnounced

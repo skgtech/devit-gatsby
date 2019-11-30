@@ -17,9 +17,7 @@ const Menu = () => {
           }
         }
       `}
-      render={data => (
-        <MenuContainer date={data.config.date} tickets={data.config.tickets} />
-      )}
+      render={data => <MenuContainer date={data.config.date} tickets={data.config.tickets} />}
     />
   )
 }

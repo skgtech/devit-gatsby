@@ -1,10 +1,15 @@
 import React from 'react'
 import GatsbyImage from 'gatsby-image'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid } from 'react-flexbox-grid'
 import Block from './Block'
 import { LightBlockHeading } from './BlockHeading'
 import { LightLeading } from './Leading'
+
+Subscribe.propTypes = {
+  imageSrc: PropTypes.string,
+}
 
 const Subscribe = ({ imageSrc }) => {
   return (
@@ -36,19 +41,11 @@ const Subscribe = ({ imageSrc }) => {
         <LightLeading>
           Register for our newsletter and stay informed about our latest news.
         </LightLeading>
-        <p>
-          Special Offers are available exclusively to our newsletter
-          subscribers.
-        </p>
+        <p>Special Offers are available exclusively to our newsletter subscribers.</p>
 
         <form className="subscribe-form" action="#" method="get">
           <input type="hidden" value="signup" name="SOURCE" />
-          <input
-            type="hidden"
-            value=""
-            name="REF_SOURCE"
-            className="js-signup-ref-source"
-          />
+          <input type="hidden" value="" name="REF_SOURCE" className="js-signup-ref-source" />
           <input
             name="FNAME"
             type="text"

@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid, Col } from 'react-flexbox-grid'
 
 import { DarkBlockHeading } from './BlockHeading'
 import SpeakerSocial from './SpeakerSocial'
@@ -64,10 +64,9 @@ const Cfp = () => {
             >
               <DarkBlockHeading>Our speakers</DarkBlockHeading>
               <p className="dark">
-                Each year we meticulously vet and select remarkable speakers to
-                deliver the best talks on web development. We are very proud of
-                the quality of the content that we offered over the years and we
-                are happy to share it with you.
+                Each year we meticulously vet and select remarkable speakers to deliver the best
+                talks on web development. We are very proud of the quality of the content that we
+                offered over the years and we are happy to share it with you.
               </p>
               <a href="#" className="block__cta">
                 All past speakers
@@ -75,7 +74,6 @@ const Cfp = () => {
             </Col>
             <Col
               md={4}
-              hidden={'xs'}
               hidden={'sm'}
               css={css`
                 @media (max-width: $screen-md-min) {
@@ -112,7 +110,6 @@ const Cfp = () => {
           <Grid css={orangeBackground}>
             <Col
               md={4}
-              hidden={'xs'}
               hidden={'sm'}
               css={css`
                 padding-left: 100px;
@@ -164,10 +161,9 @@ const Cfp = () => {
             >
               <div className="block__heading">Interested in speaking?</div>
               <p className="light">
-                Even though we do not have an open call for papers, we are
-                always looking to meet gifted speakers. If you are interested in
-                speaking in the next edition of DEVit, feel free to fill our
-                form
+                Even though we do not have an open call for papers, we are always looking to meet
+                gifted speakers. If you are interested in speaking in the next edition of DEVit,
+                feel free to fill our form
               </p>
               <a href="#" className="block__more-cta">
                 Apply to talk

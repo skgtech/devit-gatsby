@@ -1,26 +1,28 @@
-import React, { Fragment } from 'react'
-import Plan from './Plan'
+import PropTypes from 'prop-types'
+import React from 'react'
 import GatsbyImage from 'gatsby-image'
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from 'react-google-maps'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import { Row, Col } from 'react-flexbox-grid'
 
 import { DarkBlockHeading } from './BlockHeading'
 
 const Map = withScriptjs(
   withGoogleMap(({ lat, long }) => (
-    <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: parseFloat(lat), lng: parseFloat(long) }}
-    >
+    <GoogleMap defaultZoom={14} defaultCenter={{ lat: parseFloat(lat), lng: parseFloat(long) }}>
       <Marker position={{ lat: parseFloat(lat), lng: parseFloat(long) }} />
     </GoogleMap>
   ))
 )
+
+Venue.propTypes = {
+  name: PropTypes.string,
+  venueFor: PropTypes.string,
+  desc: PropTypes.string,
+  lat: PropTypes.number,
+  long: PropTypes.number,
+  sizes: PropTypes.object,
+  switchOrder: PropTypes.bool,
+}
 
 const Venue = ({ name, venueFor, desc, lat, long, sizes, switchOrder }) => {
   return (
@@ -99,6 +101,10 @@ const Venue = ({ name, venueFor, desc, lat, long, sizes, switchOrder }) => {
       </Row>
     </div>
   )
+}
+
+Venues.propTypes = {
+  imageSrcs: PropTypes.object,
 }
 
 const Venues = ({ imageSrcs }) => {

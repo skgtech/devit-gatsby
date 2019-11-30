@@ -1,24 +1,27 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import logo from '../../../images/logo/white/logo.svg'
 import videoFrame from '../../../images/video-frame.jpg'
 import videoWebm from '../../../images/video.webm'
 import videoMp4 from '../../../images/video.mp4'
 
-const HeroContainer = ({ date, tickets, menu }) => {
+HeroContainer.propTypes = {
+  date: PropTypes.string,
+  menu: PropTypes.bool,
+}
+
+const HeroContainer = ({ date, menu }) => {
   return (
     <div
       css={{
-        backgroundImage:
-          'linear-gradient(rgba(0, 62, 115, 0.8), rgba(0, 62, 115, 0.8))',
+        backgroundImage: 'linear-gradient(rgba(0, 62, 115, 0.8), rgba(0, 62, 115, 0.8))',
         textAlign: 'center',
         paddingBottom: '8.33em',
         paddingTop: '24px',
         '@media (max-width: $screen-sm-min)': {
           paddingBottom: '6em',
           paddingTop: '14px',
-        },
-        '@media (max-width: $screen-sm-min)': {
           backgroundImage:
             'linear-gradient(rgba(0, 62, 115, 0.9), rgba(0, 62, 115, 0.9)), url(/assets/images/header/screen.jpg)',
           backgroundPosition: 'center',

@@ -1,7 +1,11 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+BlockCTA.propTypes = {
+  children: PropTypes.func,
+  to: PropTypes.string,
+}
 
 const BlockCTA = ({ to, children }) => {
   return (

@@ -1,11 +1,16 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid } from 'react-flexbox-grid'
+import PropTypes from 'prop-types'
 
 import Organizers from '../Organizers'
 import BlockWBackgroundImage from '../BlockWBackgroundImage'
 import BlockCTA from '../BlockCta'
 import { LightBlockHeading } from '../BlockHeading'
 import { LightLeading } from '../Leading'
+
+About.propTypes = {
+  imageSrc: PropTypes.string,
+}
 
 const About = ({ imageSrc }) => {
   return (
@@ -14,11 +19,10 @@ const About = ({ imageSrc }) => {
         <LightBlockHeading>What is DEVit</LightBlockHeading>
 
         <LightLeading>
-          DEVit is the leading web developer conference in South East Europe.
-          Organized once per year, DEVit has become known for its top speaking
-          talent, a mixture of world-class and world-renowned developers, highly
-          specialized technology niches and developers who are on the edge of
-          technology frontiers.
+          DEVit is the leading web developer conference in South East Europe. Organized once per
+          year, DEVit has become known for its top speaking talent, a mixture of world-class and
+          world-renowned developers, highly specialized technology niches and developers who are on
+          the edge of technology frontiers.
         </LightLeading>
 
         <Organizers />

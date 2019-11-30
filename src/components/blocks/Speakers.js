@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
@@ -25,13 +26,21 @@ const speakerOuterCss = css`
   }
 `
 
+SpeakerItem.propTypes = {
+  children: PropTypes.func,
+}
+
 const SpeakerItem = ({ children }) => (
   <Col sm={6} md={4} css={speakerOuterCss}>
     {children}
   </Col>
 )
 
-export default ({ year }) => {
+Speakers.propTypes = {
+  year: PropTypes.number,
+}
+
+const Speakers = ({ year }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -78,8 +87,8 @@ export default ({ year }) => {
             >
               <DarkBlockHeading>Meet our speakers</DarkBlockHeading>
               <p className="dark">
-                Each year we meticulously vet and select remarkable speakers to
-                deliver the best talks on web development.
+                Each year we meticulously vet and select remarkable speakers to deliver the best
+                talks on web development.
               </p>
             </Grid>
             <Row
@@ -92,11 +101,13 @@ export default ({ year }) => {
                 }
               `}
             >
-              {data.allSpeaker.edges.map(({ node }) => (
-                <SpeakerItem>
-                  <Speaker speaker={node} speaker_page={false} />
-                </SpeakerItem>
-              ))}
+              {data.allSpeaker.edges
+                .filter(({ node }) => node.year === year)
+                .map(({ node }, index) => (
+                  <SpeakerItem key={index}>
+                    <Speaker speaker={node} speaker_page={false} />
+                  </SpeakerItem>
+                ))}
               {data.config.moreSpeakersToBeAnnounced && (
                 <SpeakerItem>
                   <SpeakerToBeAnounced />
@@ -111,3 +122,5 @@ export default ({ year }) => {
     />
   )
 }
+
+export default Speakers

@@ -1,11 +1,16 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
 import { DarkBlockHeading } from '../BlockHeading'
 import BlockCTA from '../BlockCta'
 
 import TicketsLogo from './../../../images/new/tickets.svg'
+
+GetTicketsContainer.propTypes = {
+  enabled: PropTypes.bool,
+  url: PropTypes.string,
+}
 
 const GetTicketsContainer = ({ enabled, url }) => {
   return enabled ? (
@@ -31,10 +36,9 @@ const GetTicketsContainer = ({ enabled, url }) => {
           <Col xs="6">
             <DarkBlockHeading>Get your tickets now!</DarkBlockHeading>
             <p className="dark">
-              Whether it’s Frontend, Backend, DevOps or Mobile that you care
-              about, join us to learn about the most modern practices and
-              techniques. Secure your ticket now, while there is still
-              availability.
+              Whether it’s Frontend, Backend, DevOps or Mobile that you care about, join us to learn
+              about the most modern practices and techniques. Secure your ticket now, while there is
+              still availability.
             </p>
             <BlockCTA to={url}>Buy tickets</BlockCTA>
           </Col>

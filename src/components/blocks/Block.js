@@ -1,9 +1,13 @@
 import React from 'react'
-import Organizers from './Organizers'
+import PropTypes from 'prop-types'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+Block.propTypes = {
+  children: PropTypes.func,
+  id: PropTypes.string,
+  style: PropTypes.object,
+}
 
-export default ({ style, id, children }) => {
+const Block = ({ style, id, children }) => {
   return (
     <div
       id={id}
@@ -18,3 +22,5 @@ export default ({ style, id, children }) => {
     </div>
   )
 }
+
+export default Block

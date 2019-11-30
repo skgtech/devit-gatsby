@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react'
-import Link from 'gatsby-link'
+import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Hero from '../components/blocks/Hero/Hero'
@@ -13,11 +12,10 @@ import CFS from '../components/blocks/Cfs'
 import Plan from '../components/blocks/Plan'
 import Sponsors from '../components/blocks/Sponsors'
 import Partners from '../components/blocks/Partners'
-import Subscribe from '../components/blocks/Subscribe'
 import Footer from '../components/blocks/Footer'
 import Layout from '../components/Layout'
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = () => {
   return (
     <StaticQuery
       query={query}
@@ -64,18 +62,14 @@ export const query = graphql`
         }
       }
     }
-    rhitaTestimonialsImage: file(
-      relativePath: { eq: "new/rita-jason-683x342.jpg" }
-    ) {
+    rhitaTestimonialsImage: file(relativePath: { eq: "new/rita-jason-683x342.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 683) {
           ...GatsbyImageSharpSizes_withWebp_tracedSVG
         }
       }
     }
-    leonieTestimonialsImage: file(
-      relativePath: { eq: "new/leonie-683x342.jpg" }
-    ) {
+    leonieTestimonialsImage: file(relativePath: { eq: "new/leonie-683x342.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 683) {
           ...GatsbyImageSharpSizes_withWebp_tracedSVG

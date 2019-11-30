@@ -1,7 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
 
-export default ({ items }) => {
+SpeakerSocial.propTypes = {
+  items: PropTypes.array,
+}
+
+const SpeakerSocial = ({ items }) => {
   return (
     <div
       css={css`
@@ -12,17 +17,18 @@ export default ({ items }) => {
       `}
     >
       {items &&
-        Object.keys(items).map(item => {
+        Object.keys(items).map((item, index) => {
           let icon
-          let link
+          const link = items[item]
           return (
             <a
+              key={index}
               href={link}
-              class="speaker__social__item"
+              className="speaker__social__item"
               target="blank"
               rel="noopener"
             >
-              <i class={icon} />
+              <i className={icon} />
             </a>
           )
         })}
@@ -56,3 +62,5 @@ export default ({ items }) => {
     </div>
   )
 }
+
+export default SpeakerSocial

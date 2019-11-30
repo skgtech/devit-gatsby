@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Row, Col } from 'react-flexbox-grid'
 
 import skgtechLogo from './../../images/new/skgtech-logo.svg'
 import shesharpLogo from './../../images/new/shesharp-logo.svg'
-import confLogo from './../../images/new/a-truly-360-conference.svg'
 
 const Organizers = () => {
   return (
@@ -14,7 +13,7 @@ const Organizers = () => {
           lineHeight: '50px',
         }}
       >
-        <a href="https://skgtech.io/" target="_blank">
+        <a rel="noopener noreferrer" href="https://skgtech.io/" target="_blank">
           <img src={skgtechLogo} alt="SKGTech" />
         </a>
       </Col>
@@ -23,7 +22,7 @@ const Organizers = () => {
           lineHeight: '50px',
         }}
       >
-        <a href="http://www.shesharp.org/" target="_blank">
+        <a rel="noopener noreferrer" href="http://www.shesharp.org/" target="_blank">
           <img src={shesharpLogo} alt="SKGTech" />
         </a>
       </Col>

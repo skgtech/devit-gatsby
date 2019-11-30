@@ -1,7 +1,6 @@
+import PropTypes from 'prop-types'
 import React from 'react'
-import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import { StaticQuery, graphql } from 'gatsby'
 import { Location } from '@reach/router'
 
 import { Row, Col } from 'react-flexbox-grid'
@@ -53,10 +52,15 @@ const MainMenuCTALink = styled.a({
   },
 })
 
+MenuContainer.propTypes = {
+  date: PropTypes.string,
+  tickets: PropTypes.bool,
+}
+
 const MenuContainer = ({ date, tickets }) => {
   return (
     <Location>
-      {({ pathname }) => (
+      {() => (
         <nav
           css={{
             zIndex: 999,
@@ -156,11 +160,7 @@ const MenuContainer = ({ date, tickets }) => {
                   <MainMenuLink href="/#sponsors">Sponsors</MainMenuLink>
                 </li>
                 <li>
-                  <MainMenuLink
-                    target="_blank"
-                    rel="noopener"
-                    href="https://medium.com/devitconf"
-                  >
+                  <MainMenuLink target="_blank" rel="noopener" href="https://medium.com/devitconf">
                     Blog
                   </MainMenuLink>
                 </li>

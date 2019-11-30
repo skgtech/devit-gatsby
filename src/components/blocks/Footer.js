@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from '@emotion/styled'
 
@@ -24,6 +25,10 @@ const FooterMenuHeader = styled.div({
   textTransform: 'uppercase',
 })
 
+FooterMenuList.propTypes = {
+  children: PropTypes.func,
+}
+
 const FooterMenuList = ({ children }) => {
   return (
     <ul
@@ -33,8 +38,9 @@ const FooterMenuList = ({ children }) => {
       }}
     >
       {children.length &&
-        children.map(item => (
+        children.map((item, index) => (
           <li
+            key={index}
             css={{
               paddingTop: '5px',
               '& a': {
@@ -54,6 +60,10 @@ const FooterMenuList = ({ children }) => {
   )
 }
 
+SocialIconsList.propTypes = {
+  children: PropTypes.func,
+}
+
 const SocialIconsList = ({ children }) => {
   return (
     <ul
@@ -64,8 +74,9 @@ const SocialIconsList = ({ children }) => {
       }}
     >
       {children.length &&
-        children.map(item => (
+        children.map((item, index) => (
           <li
+            key={index}
             css={{
               display: 'inline-block',
               marginRight: '16px',
@@ -130,11 +141,7 @@ const Footer = () => {
               <FooterMenuHeader>ABOUT US</FooterMenuHeader>
               <FooterMenuList>
                 <a href="/about">About</a>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://medium.com/devitconf"
-                >
+                <a target="_blank" rel="noopener noreferrer" href="https://medium.com/devitconf">
                   Blog
                 </a>
                 <a href="/press">Press</a>
@@ -156,7 +163,7 @@ const Footer = () => {
               <FooterMenuList>
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="{{ site.data.config.tickets.url }}"
                 >
                   Buy tickets
@@ -197,37 +204,37 @@ const Footer = () => {
               <SocialIconsList>
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/DEVitConf"
                   className="fab fa-facebook-f"
                 />
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://twitter.com/devitconf"
                   className="fab fa-twitter"
                 />
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.youtube.com/channel/UCrKmMv6c6oqZPYC7zzbP-RQ"
                   className="fab fa-youtube"
                 />
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.instagram.com/devitconf/"
                   className="fab fa-instagram"
                 />
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/company/11399285/"
                   className="fab fa-linkedin"
                 />
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.medium.com/@devitconf"
                   className="fab fa-medium"
                 />
@@ -259,7 +266,7 @@ const Footer = () => {
           <CopyrightLink
             href="https://github.com/skgtech/devit/graphs/contributors"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             SKGTech Contributors
           </CopyrightLink>
@@ -267,7 +274,7 @@ const Footer = () => {
           <CopyrightLink
             href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Creative Commons 4.0
           </CopyrightLink>

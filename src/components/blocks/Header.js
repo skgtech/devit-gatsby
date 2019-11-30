@@ -18,10 +18,7 @@ const Header = () => {
       render={data => (
         <header
           css={css`
-            background-image: linear-gradient(
-                rgba(0, 62, 115, 0.9),
-                rgba(0, 62, 115, 0.9)
-              ),
+            background-image: linear-gradient(rgba(0, 62, 115, 0.9), rgba(0, 62, 115, 0.9)),
               url(${data.file.publicURL});
             background-size: cover;
             background-position: center top;
