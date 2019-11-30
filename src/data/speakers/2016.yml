@@ -1,6 +1,6 @@
 speakers:
   - url: laura_kalbag
-    hearFor: Talk
+    hereFor: Talk
     year: 2016
     first_name: "Laura"
     last_name: "Kalbag"
@@ -13,7 +13,7 @@ speakers:
       that respects human rights. Co-founder of <a href="https://ind.ie/" target=_blank>Ind.ie.</a>
   - url: soledad_penades
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Soledad"
     last_name: "Penades"
     image_filename: "Soledad_Penades.png"
@@ -27,7 +27,7 @@ speakers:
       half the browsers in the process. It's fun!
   - url: hugo_giraudel
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Hugo"
     last_name: "Giraudel"
     image_filename: "Hugo_Giraudel.png"
@@ -44,7 +44,7 @@ speakers:
       <a href="https://thenetawards.com/vote/developer/hugo-giraudel/" target=_blank>Net Awards</a> nominee.
   - url: forbes_lindesay
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Forbes"
     last_name: "Lindesay"
     image_filename: "Forbes_Lindesay.png"
@@ -58,7 +58,7 @@ speakers:
       <a href="https://www.facebook.com/" target=_blank>Facebook</a>.
   - url: michał_budzyński
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Michał"
     last_name: "Budzyński"
     image_filename: "Michal_Budzynski.png"
@@ -74,7 +74,7 @@ speakers:
       target=_blank>Mozilla</a>.
   - url: alexandre_morgaut
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Alexandre"
     last_name: "Morgaut"
     image_filename: "Alexandre_Morgaut.png"
@@ -87,7 +87,7 @@ speakers:
       target=_blank>NantesJS</a>. Former W3C member.
   - url: etienne_margraff
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Etienne"
     last_name: "Margraff"
     image_filename: "Etienne_Margraff.png"
@@ -100,7 +100,7 @@ speakers:
       tool to debug websites and node.js processes.
   - url: yegor_bugayenko
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Yegor"
     last_name: "Bugayenko"
     image_filename: "Yegor_Bugayenko.png"
@@ -113,7 +113,7 @@ speakers:
       <a href="http://www.takes.org/" target=_blank>takes.org</a>
   - url: dan_cuellar
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Dan"
     last_name: "Cuellar"
     image_filename: "Dan_Cuellar.png"
@@ -125,7 +125,7 @@ speakers:
       at <a href="http://www.foodit.com/" target=_blank>FOODit</a> in London.
   - url: carlo_sciolla
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Carlo"
     last_name: "Sciolla"
     image_filename: "Carlo_Sciolla.png"
@@ -139,7 +139,7 @@ speakers:
       Amsterdam Clojure meetup</a> since 2010.
   - url: karina_popova
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Karina"
     last_name: "Popova"
     image_filename: "Karina_Popova.png"
@@ -151,7 +151,7 @@ speakers:
       institutions & agile companies.
   - url: kostas_pantos
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Kostas"
     last_name: "Pantos"
     image_filename: "Kostas_Pantos.png"
@@ -165,7 +165,7 @@ speakers:
       Kostas has worked for many major Greek software companies.
   - url: simona_cotin
     year: 2016
-    hearFor: Talk
+    hereFor: Talk
     first_name: "Simona"
     last_name: "Cotin"
     image_filename: "Simona_Cotin.png"

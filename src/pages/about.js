@@ -4,13 +4,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Grid } from 'react-flexbox-grid'
 
 import Layout from '../components/Layout'
-import Organizers from '../components/blocks/Organizers'
-import Partners from '../components/blocks/Partners'
-import Block from '../components/blocks/Block'
-import { DarkBlockHeading } from '../components/blocks/BlockHeading'
-import { DarkLeading } from '../components/blocks/Leading'
-import Footer from '../components/blocks/Footer'
-import Header from '../components/blocks/Header'
+import Organizers from '../components/Organizers'
+import Partners from '../components/Partners'
+import Block from '../components/Block'
+import { DarkBlockHeading } from '../components/BlockHeading'
+import { DarkLeading } from '../components/Leading'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const About = () => {
   return (

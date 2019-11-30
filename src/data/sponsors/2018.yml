@@ -1,47 +1,83 @@
-- id: microsoft
+- name: Microsoft
   type: platinum
-  order:
-- id: intrasoft
+  featured: true
+  img: sponsors/svg/microsoft.svg
+  url: https://www.microsoft.com/el-gr
+- name: Intrasoft
   type: gold
-  order:
-- id: resinio
+  featured: true
+  img: sponsors/svg/intrasoft.svg
+  url: https://www.intrasoft-intl.com/
+- name: Resin.io
   type: gold
-  order:
-- id: toptal
+  featured: true
+  img: sponsors/svg/resinio.svg
+  url: https://resin.io/
+- name: Toptal
   type: gold
-  order:
-- id: synapsecom
+  img: sponsors/svg/toptal.svg
+  url: https://www.toptal.com/
+  override_height: 50px
+- name: Synapsecom
   type: gold
-  order:
-- id: ellinair
+  img: sponsors/svg/synapsecom.svg
+  url: https://www.synapsecom.gr/
+  override_height: 50px
+- name: Ellinair
   type: silver
-  order:
-- id: waes
+  img: sponsors/svg/ellinair.svg
+  url: https://ellinair.com
+  override_height: 80px
+- name: WAES
   type: silver
-  order:
-- id: nemetschek
+  img: sponsors/svg/waes.svg
+  url: https://www.wearewaes.com/
+  override_height: 40px
+- name: Nemetschek
   type: silver
-  order:
-- id: niagara
+  img: sponsors/nemetschek.png
+  url: https://www.nemetschek.bg/
+- name: Niagara
   type: silver
-  order:
-- id: fieldscale
+  img: sponsors/svg/niagara.svg
+  url: ""
+  override_height: 60px
+- name: Fieldscale
   type: silver
-  order:
-- id: trivago
+  img: sponsors/svg/fieldscale.svg
+  url: https://fieldscale.com/
+  override_height: 60px
+- name: Trivago
   type: silver
-  order:
-- id: iti
+  img: sponsors/svg/trivago.svg
+  url: https://www.trivago.gr/
+  override_height: 60px
+- name: ITI
   type: silver
-  order:
-- id: workable
+  img: sponsors/iti.png
+  url: http://www.iti.gr/iti/index.html
+  override_height: 60px
+- name: Workable
   type: bronze
-  order:
-- id: ibm
+  img: sponsors/svg/workable.svg
+  url: https://workable.com
+  override_height: 50px
+- name: IBM
   type: bronze
-  order:
-- id: adeva
+  img: sponsors/svg/ibm.svg
+  url: https://www.ibm.com/gr-el/
+  override_height: 50px
+- name: Adeva
   type: bronze
-  order:
-- id: insomnia
+  img: sponsors/svg/adeva.svg
+  url: https://adevait.com/
+  override_height: 50px
+- name: SlashData
+  type: bronze
+  img: sponsors/slashdata.png
+  url: https://www.slashdata.co/
+  override_height: 50px
+- name: Insomnia
   type: media
+  img: sponsors/insomnia.png
+  url: https://insomnia.gr

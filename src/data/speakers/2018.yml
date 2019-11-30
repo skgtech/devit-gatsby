@@ -1,6 +1,6 @@
 - url: cheryl_platz
   year: 2018
-  hearFor: Talk
+  hereFor: Talk
   tags:
     - Design
     - UX
@@ -33,7 +33,7 @@
 
 - url: julien_simon
   year: 2018
-  hearFor:
+  hereFor:
     - Talk
     - Workshop
   tags:
@@ -62,7 +62,7 @@
 
 - url: dave_platt
   year: 2018
-  hearFor: Talk
+  hereFor: Talk
   tags:
     - Software
     - UX
@@ -85,7 +85,7 @@
 
 - url: joe_sepi
   year: 2018
-  hearFor:
+  hereFor:
     - Talk
     - Workshop
   tags:
@@ -108,7 +108,7 @@
 
 - url: laurent_bugnion
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Mobile
     - Azure
@@ -135,7 +135,7 @@
 
 - url: danielle_reid
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Design
     - UX
@@ -162,7 +162,7 @@
 
 - url: jim_bennett
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Mobile
     - Azure
@@ -185,7 +185,7 @@
 
 - url: tim_perry
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - JavaScript
     - IoT
@@ -211,7 +211,7 @@
 
 - url: katerina_trajchevska
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - SOLID
     - PHP7
@@ -241,7 +241,7 @@
 
 - url: pawel_dudek
   year: 2018
-  hearFor: Talk
+  hereFor: Talk
   tags:
     - iOS
     - Mobile
@@ -263,7 +263,7 @@
 
 - url: anna_doubkova
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - DevOps
     - Serverless
@@ -291,7 +291,7 @@
 
 - url: ivana_milicic
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Perception
     - UX
@@ -317,7 +317,7 @@
 
 - url: sofia_terzi
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Blockchain
     - Hyperledger
@@ -338,7 +338,7 @@
 
 - url: ingrid_epure
   year: 2018
-  hearFor: Talk
+  hereFor: Talk
   tags:
     - Culture
   first_name: Ingrid
@@ -356,7 +356,7 @@
 
 - url: amit_zur
   year: 2018
-  hearFor: Talk
+  hereFor: Talk
   tags:
     - Atomic Design
     - React
@@ -380,7 +380,7 @@
 
 - url: alex_moldovan
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Javascript
     - Clean Code
@@ -403,7 +403,7 @@
 
 - url: lauren_robinson
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Code Review
     - Quality
@@ -430,7 +430,7 @@
 
 - url: konstantinos_votis
   year: 2018
-  hearFor: Workshop
+  hereFor: Workshop
   tags:
     - Blockchain
     - Hyperledger

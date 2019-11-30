@@ -1,4 +1,21 @@
-import { configure } from '@storybook/react';
+import React, { Fragment } from 'react';
+import { configure, addDecorator } from '@storybook/react';
+import { Global, css } from '@emotion/core'
+import { GoogleFont } from "react-typography"
+
+import Typography from './../src/utils/typography';
+
+addDecorator((story) => (
+  <Fragment>
+    <GoogleFont typography={Typography} />
+    <Global
+      styles={css`
+        ${Typography.toString()}
+      `}
+    />
+    {story()}
+  </Fragment>
+));
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../src", true, /.stories.js$/)

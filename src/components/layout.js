@@ -3,14 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import './reset.css'
-
-Layout.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  children: PropTypes.func,
-}
+// import './reset.css'
 
 const Layout = ({ title, description, image, children }) => {
   return (
@@ -112,6 +105,13 @@ const Layout = ({ title, description, image, children }) => {
       }}
     />
   )
+}
+
+Layout.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  children: PropTypes.array,
 }
 
 export default Layout

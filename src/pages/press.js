@@ -4,16 +4,11 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/Layout'
-import Block from '../components/blocks/Block'
-import { DarkBlockHeading } from '../components/blocks/BlockHeading'
-import { DarkLeading } from '../components/blocks/Leading'
-import Footer from '../components/blocks/Footer'
-import Header from '../components/blocks/Header'
-
-Photo.propTypes = {
-  title: PropTypes.string,
-  url: PropTypes.string,
-}
+import Block from '../components/Block'
+import { DarkBlockHeading } from '../components/BlockHeading'
+import { DarkLeading } from '../components/Leading'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const Photo = ({ title, url }) => (
   <Col md={4}>
@@ -26,6 +21,11 @@ const Photo = ({ title, url }) => (
     />
   </Col>
 )
+
+Photo.propTypes = {
+  title: PropTypes.string,
+  url: PropTypes.string,
+}
 
 const MorePhotosCTA = () => (
   <Col
@@ -62,14 +62,6 @@ const MorePhotosCTA = () => (
     </a>
   </Col>
 )
-
-Logo.propTypes = {
-  title: PropTypes.string,
-  svg: PropTypes.string,
-  png: PropTypes.string,
-  png2x: PropTypes.string,
-  png3x: PropTypes.string,
-}
 
 const Logo = ({ title, svg, png, png2x, png3x }) => (
   <Col md={6}>
@@ -121,6 +113,14 @@ const Logo = ({ title, svg, png, png2x, png3x }) => (
     </div>
   </Col>
 )
+
+Logo.propTypes = {
+  title: PropTypes.string,
+  svg: PropTypes.string,
+  png: PropTypes.string,
+  png2x: PropTypes.string,
+  png3x: PropTypes.string,
+}
 
 const Press = () => {
   return (
