@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import Subscribe from '../components/Subscribe'
 import Layout from '../components/Layout'
 
-const TalksPage = () => {
+const WorkshkopsPage = () => {
   return (
     <StaticQuery
       query={query}
@@ -21,16 +21,15 @@ const TalksPage = () => {
             <Header />
             <Grid>
               <Block>
-                <DarkBlockHeading>Talks</DarkBlockHeading>
+                <DarkBlockHeading>Workshops</DarkBlockHeading>
                 <p>
-                  Our main event will took place on 10th of June. This is a list of and the talks
-                  you will have the opportunity to watch to and all the great speakers you will
-                  meat. The Talks day is the heart of the DEVit conference and each year we strive
-                  to make it better. Join us.
+                  The 9th of June will be a day dedicated on workshops. View all our sessions below
+                  along with their respective instructors and join us for a full day of hands-on
+                  experience.
                 </p>
               </Block>
               <Block>
-                {data.talks.edges.map(({ node }, index) => (
+                {data.workshops.edges.map(({ node }, index) => (
                   <Session key={index} session={node} />
                 ))}
               </Block>
@@ -45,11 +44,11 @@ const TalksPage = () => {
   )
 }
 
-export default TalksPage
+export default WorkshkopsPage
 
 export const query = graphql`
   query {
-    talks: allTalk(filter: { year: { eq: 2018 }, type: { eq: "Talk" } }) {
+    workshops: allTalk(filter: { year: { eq: 2018 }, type: { eq: "Workshop" } }) {
       edges {
         node {
           id

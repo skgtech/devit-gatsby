@@ -3,28 +3,31 @@ const crypto = require('crypto')
 const yaml = require('js-yaml')
 const fs = require('fs')
 
-const configData = yaml.safeLoad(fs.readFileSync('./src/data/config/config.yml', 'utf8'))
-const scheduleTalksData = yaml.safeLoad(fs.readFileSync('./src/data/schedule/schedule.yml', 'utf8'))
-  .talks
+const landingTemplate = path.resolve('./src/templates/landing.js')
 
-const speakers2015Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2015.yml', 'utf8'))
-const speakers2016Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2016.yml', 'utf8'))
-const speakers2017Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2017.yml', 'utf8'))
-const speakers2018Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2018.yml', 'utf8'))
-const speakers2019Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2019.yml', 'utf8'))
+const loadYaml = file => yaml.safeLoad(fs.readFileSync(`./src/data/${file}`, 'utf8'))
 
-const sponsors2018Data = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2018.yml', 'utf8'))
-const sponsors2019Data = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2019.yml', 'utf8'))
+const configData = loadYaml('config/config.yml')
+const scheduleTalksData = loadYaml('schedule/schedule.yml').talks
 
-const talks2015Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2015.yml', 'utf8'))
-const talks2016Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2016.yml', 'utf8'))
-const talks2017Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2017.yml', 'utf8'))
-const talks2018Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2018.yml', 'utf8'))
-const talks2019Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2019.yml', 'utf8'))
+const speakers2015Data = loadYaml('speakers/2015.yml')
+const speakers2016Data = loadYaml('speakers/2016.yml')
+const speakers2017Data = loadYaml('speakers/2017.yml')
+const speakers2018Data = loadYaml('speakers/2018.yml')
+const speakers2019Data = loadYaml('speakers/2019.yml')
 
-const partnersData = yaml.safeLoad(fs.readFileSync('./src/data/team/partners.yml', 'utf8'))
-const weSupportData = yaml.safeLoad(fs.readFileSync('./src/data/team/weSupport.yml', 'utf8'))
-const volunteersData = yaml.safeLoad(fs.readFileSync('./src/data/team/volunteers.yml', 'utf8'))
+const sponsors2018Data = loadYaml('sponsors/2018.yml')
+const sponsors2019Data = loadYaml('sponsors/2019.yml')
+
+const talks2015Data = loadYaml('talks/2015.yml')
+const talks2016Data = loadYaml('talks/2016.yml')
+const talks2017Data = loadYaml('talks/2017.yml')
+const talks2018Data = loadYaml('talks/2018.yml')
+const talks2019Data = loadYaml('talks/2019.yml')
+
+const partnersData = loadYaml('team/partners.yml')
+const weSupportData = loadYaml('team/weSupport.yml')
+const volunteersData = loadYaml('team/volunteers.yml')
 
 function createNodeFactory(type) {
   return function(object, overrides) {
@@ -85,6 +88,18 @@ exports.onCreateNode = ({ node }) => {
   if (node.internal.type === 'File') {
     imagesIndex.set(path.basename(node.absolutePath), node.id)
   }
+}
+
+module.exports.createPages = async ({ actions }) => {
+  const { createPage } = actions
+
+  createPage({
+    path: `/`,
+    component: landingTemplate,
+    context: {
+      year: 2018,
+    },
+  })
 }
 
 module.exports.sourceNodes = async ({ actions }) => {

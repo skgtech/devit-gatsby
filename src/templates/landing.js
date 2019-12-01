@@ -1,5 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
 import Hero from '../components/Hero'
 import GetTickets from '../components/GetTickets'
@@ -16,48 +17,45 @@ import Footer from '../components/Footer'
 import Subscribe from '../components/Subscribe'
 import Layout from '../components/Layout'
 
-const IndexPage = () => {
+const LandingPageTemplate = ({ data }) => {
   return (
-    <StaticQuery
-      query={query}
-      render={data => {
-        return (
-          <Layout>
-            <Hero />
-            <GetTickets />
-            <About />
-            <Testimonials
-              imageSrcs={{
-                hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
-                rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
-                leonie: data.leonieTestimonialsImage.childImageSharp.sizes,
-              }}
-            />
-            <Speakers year={2018} />
-            <CallForPapers />
-            <CallForSponsors />
-            <Venues
-              imageSrcs={{
-                cityCollege: data.cityCollegeImage.childImageSharp.sizes,
-                royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
-              }}
-            />
-            <Plan sizes={data.thessalonikiImage.childImageSharp.sizes} />
-            <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
-            <Partners />
-            <Subscribe />
-            <Footer />
-          </Layout>
-        )
-      }}
-    />
+    <Layout>
+      <Hero />
+      <GetTickets />
+      <About />
+      <Testimonials
+        imageSrcs={{
+          hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
+          rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
+          leonie: data.leonieTestimonialsImage.childImageSharp.sizes,
+        }}
+      />
+      <Speakers speakers={data.speakers.edges.map(({ node }) => node)} />
+      <CallForPapers />
+      <CallForSponsors />
+      <Venues
+        imageSrcs={{
+          cityCollege: data.cityCollegeImage.childImageSharp.sizes,
+          royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
+        }}
+      />
+      <Plan sizes={data.thessalonikiImage.childImageSharp.sizes} />
+      <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
+      <Partners />
+      <Subscribe />
+      <Footer />
+    </Layout>
   )
 }
 
-export default IndexPage
+LandingPageTemplate.propTypes = {
+  data: PropTypes.object,
+}
 
-export const query = graphql`
-  query {
+export default LandingPageTemplate
+
+export const pageQuery = graphql`
+  query LandingPageQuery($year: Int!) {
     hugoTestimonialsImage: file(relativePath: { eq: "new/hugo-342x342.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 342) {
@@ -100,7 +98,7 @@ export const query = graphql`
         }
       }
     }
-    sponsors: allSponsor(filter: { year: { eq: 2018 } }) {
+    sponsors: allSponsor(filter: { year: { eq: $year } }) {
       edges {
         node {
           name
@@ -115,6 +113,32 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    speakers: allSpeaker(sort: { fields: [last_name] }, filter: { year: { eq: $year } }) {
+      edges {
+        node {
+          first_name
+          last_name
+          url
+          img {
+            childImageSharp {
+              fixed(width: 280, height: 280) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          tags
+          social {
+            twitter
+            homepage
+            medium
+            github
+            linkedin
+          }
+          tagline
+          year
         }
       }
     }

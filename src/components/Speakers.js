@@ -36,7 +36,7 @@ SpeakerItem.propTypes = {
   children: PropTypes.string,
 }
 
-const Speakers = ({ year }) => {
+const Speakers = ({ speakers }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -45,41 +45,9 @@ const Speakers = ({ year }) => {
             isCFPOpen
             moreSpeakersToBeAnnounced
           }
-          allSpeaker(sort: { fields: [last_name] }) {
-            edges {
-              node {
-                first_name
-                last_name
-                url
-                img {
-                  childImageSharp {
-                    fixed(width: 280, height: 280) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
-                tags
-                social {
-                  twitter
-                  homepage
-                  medium
-                  github
-                  linkedin
-                }
-                tagline
-                year
-              }
-            }
-          }
         }
       `}
       render={data => {
-        let speakers = data.allSpeaker.edges
-
-        if (year) {
-          speakers = speakers.filter(({ node }) => node.year === year)
-        }
-
         return (
           <>
             <Block>
@@ -104,9 +72,9 @@ const Speakers = ({ year }) => {
                   }
                 `}
               >
-                {speakers.map(({ node }, index) => (
+                {speakers.map((speaker, index) => (
                   <SpeakerItem key={index}>
-                    <Speaker speaker={node} speaker_page={false} />
+                    <Speaker speaker={speaker} speaker_page={false} />
                   </SpeakerItem>
                 ))}
 
@@ -127,7 +95,7 @@ const Speakers = ({ year }) => {
 }
 
 Speakers.propTypes = {
-  year: PropTypes.number,
+  speakers: PropTypes.array,
 }
 
 export default Speakers

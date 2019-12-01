@@ -50,17 +50,19 @@ const Speaker = ({ speaker, speaker_page }) => {
         `}
         href={url}
       >
-        <Img
-          css={css`
-            width: 100%;
-            height: 100%;
-            max-width: 240px;
-            max-height: 240px;
-            border-radius: 50%;
-          `}
-          fixed={img.childImageSharp.fixed}
-          alt={`${first_name} ${last_name}`}
-        />
+        {img && (
+          <Img
+            css={css`
+              width: 100%;
+              height: 100%;
+              max-width: 240px;
+              max-height: 240px;
+              border-radius: 50%;
+            `}
+            fixed={img.childImageSharp.fixed}
+            alt={`${first_name} ${last_name}`}
+          />
+        )}
       </a>
       {!speaker_page && (
         <>
