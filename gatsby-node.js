@@ -9,7 +9,7 @@ const previousTemplate = path.resolve('./src/templates/previous.js')
 const loadYaml = file => yaml.safeLoad(fs.readFileSync(`./src/data/${file}`, 'utf8'))
 
 const configData = loadYaml('config/config.yml')
-const scheduleTalksData = loadYaml('schedule/schedule.yml').talks
+const scheduleTalksData = loadYaml('schedule/schedule.yml')
 
 const albumPhotos2018Data = loadYaml('albumphotos/2018.yml')
 
@@ -76,7 +76,6 @@ const SponsorNode = createNodeFactory(`Sponsor`)
 const VolunteerNode = createNodeFactory(`Volunteer`)
 const PartnerNode = createNodeFactory(`Partner`)
 const WeSupportNode = createNodeFactory(`WeSupport`)
-const ScheduleNode = createNodeFactory(`Schedule`)
 const ScheduleEntryNode = createNodeFactory(`ScheduleEntry`)
 // const ImageNode = createNodeFactory(`SponsorImage`)
 
@@ -144,13 +143,12 @@ module.exports.sourceNodes = async ({ actions }) => {
     .concat(speakers2019Data.map(t => ({ ...t, year: 2019 })))
 
   speakersData.forEach(function(speaker) {
-    let i = 0
-    speaker.id = speaker.url
+    speaker.id = `${speaker.year}-${speaker.url}`
+
     const children = []
     talksData.forEach(function(talk) {
       if (talk.speaker === speaker.url) {
-        talk.id = `${i}-${speaker.url}`
-        i = i + 1
+        talk.id = `${talk.year}-${speaker.url}-${talk.type}`
         children.push(talk.id)
       }
     })
@@ -178,33 +176,20 @@ module.exports.sourceNodes = async ({ actions }) => {
     })
   })
 
-  const scheduleItems = []
-  let i = 0
+  const currentYear = 2018
   scheduleTalksData.forEach(function(entry) {
-    if (entry.type === 'talk') {
-      talksData.forEach(function(talk) {
-        if (talk.speaker === entry.speaker) {
-          scheduleItems.push(talk.id)
-        }
-      })
+    entry.id = `${entry.type}-${entry.time}`
+    if (entry.type === 'Talk' || entry.type === 'Workshop') {
+      createNode(
+        ScheduleEntryNode(entry, {
+          speaker___NODE: `${currentYear}-${entry.speaker}`,
+          talk___NODE: `${currentYear}-${entry.speaker}-${entry.type}`,
+        })
+      )
     } else {
-      entry.id = `${i}-${entry.type}`
       createNode(ScheduleEntryNode(entry))
-      scheduleItems.push(`${i}-${entry.type}`)
-      i = i + 1
     }
   })
-
-  createNode(
-    ScheduleNode(
-      {
-        id: `2018`,
-      },
-      {
-        children: scheduleItems,
-      }
-    )
-  )
 
   albumPhotos2018Data.forEach(item =>
     createNodeWithImage(

@@ -29,6 +29,7 @@
     "react-dom": "^16.8.6",
     "react-flexbox-grid": "*",
     "react-helmet": "*",
+    "react-tabs": "^3.0.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19"
   },
