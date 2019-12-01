@@ -4,11 +4,16 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 
 const landingTemplate = path.resolve('./src/templates/landing.js')
+const previousTemplate = path.resolve('./src/templates/previous.js')
 
 const loadYaml = file => yaml.safeLoad(fs.readFileSync(`./src/data/${file}`, 'utf8'))
 
 const configData = loadYaml('config/config.yml')
 const scheduleTalksData = loadYaml('schedule/schedule.yml').talks
+
+const albumPhotos2018Data = loadYaml('albumphotos/2018.yml')
+
+const previous2018Data = loadYaml('previous/2018.yml')
 
 const speakers2015Data = loadYaml('speakers/2015.yml')
 const speakers2016Data = loadYaml('speakers/2016.yml')
@@ -65,6 +70,7 @@ function createNodeWithImageFactory(createNode, imagesIndex) {
 
 const ConfigNode = createNodeFactory(`Config`)
 const SpeakerNode = createNodeFactory(`Speaker`)
+const AlbumPhotoNode = createNodeFactory(`AlbumPhoto`)
 const TalkNode = createNodeFactory(`Talk`)
 const SponsorNode = createNodeFactory(`Sponsor`)
 const VolunteerNode = createNodeFactory(`Volunteer`)
@@ -98,6 +104,15 @@ module.exports.createPages = async ({ actions }) => {
     component: landingTemplate,
     context: {
       year: 2018,
+    },
+  })
+
+  createPage({
+    path: `2018`,
+    component: previousTemplate,
+    context: {
+      year: 2018,
+      ...previous2018Data,
     },
   })
 }
@@ -191,6 +206,15 @@ module.exports.sourceNodes = async ({ actions }) => {
     )
   )
 
+  albumPhotos2018Data.forEach(item =>
+    createNodeWithImage(
+      AlbumPhotoNode({
+        year: 2018,
+        ...item,
+      }),
+      path.basename(`./src/images/${item.id}`)
+    )
+  )
   sponsors2018Data.forEach(item =>
     createNodeWithImage(
       SponsorNode({

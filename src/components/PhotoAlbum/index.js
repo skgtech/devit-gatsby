@@ -62,6 +62,10 @@ AlbumTwoItem.propTypes = {
 }
 
 const PhotoAlbum = ({ images }) => {
+  console.log(images)
+  const singleImages = images.filter(i => i.size === 'single')
+  const doubleImages = images.filter(i => i.size === 'double')
+
   return (
     <div
       css={css`
@@ -82,50 +86,55 @@ const PhotoAlbum = ({ images }) => {
         `}
       >
         <AlbumOneItem>
-          <GatsbyImage sizes={images['file342x1']} />
+          <GatsbyImage sizes={singleImages[0].img.childImageSharp.sizes} />
         </AlbumOneItem>
         <AlbumOneItem>
-          <GatsbyImage sizes={images['file342x4']} />
+          <GatsbyImage sizes={singleImages[1].img.childImageSharp.sizes} />
         </AlbumOneItem>
         <AlbumTwoItem>
           <div
             css={css`
-              padding: 40px 40px 0 40px;
               position: relative;
-              color: #ffffff;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background-color: rgba(0, 62, 115, 0.9);
             `}
           >
-            <Heading>Tag you very much</Heading>
             <div
               css={css`
-                opacity: 0.7;
-                font-size: 1.05em;
-                line-height: 23px;
+                padding: 40px 40px 0 40px;
+                color: #ffffff;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 62, 115, 0.9);
+              `}
+            >
+              <Heading>Tag you very much</Heading>
+              <div
+                css={css`
+                  opacity: 0.7;
+                  font-size: 1.05em;
+                  line-height: 23px;
 
-                @media (min-width: $screen-lg-min) {
-                  max-width: 400px;
-                }
-              `}
-            >
-              Spot your face and tag your friends Spot your face and tag your friends Spot your.
+                  @media (min-width: $screen-lg-min) {
+                    max-width: 400px;
+                  }
+                `}
+              >
+                Spot your face and tag your friends Spot your face and tag your friends Spot your.
+              </div>
+              <button
+                css={css`
+                  border-radius: 40px;
+                  background-color: #ffffff;
+                  color: #003e73;
+                `}
+              >
+                Go
+              </button>
             </div>
-            <button
-              css={css`
-                border-radius: 40px;
-                background-color: #ffffff;
-                color: #003e73;
-              `}
-            >
-              Go
-            </button>
+            {/* <GatsbyImage sizes={doubleImages[0].img.childImageSharp.sizes} /> */}
           </div>
-          <GatsbyImage sizes={images['file683x1']} />
         </AlbumTwoItem>
       </Row>
       <Row
@@ -135,13 +144,13 @@ const PhotoAlbum = ({ images }) => {
         `}
       >
         <AlbumOneItem>
-          <GatsbyImage sizes={images['file342x3']} />
+          <GatsbyImage sizes={singleImages[2].img.childImageSharp.sizes} />
         </AlbumOneItem>
         <AlbumTwoItem>
-          <GatsbyImage sizes={images['file683x2']} />
+          <GatsbyImage sizes={doubleImages[1].img.childImageSharp.sizes} />
         </AlbumTwoItem>
         <AlbumOneItem>
-          <GatsbyImage sizes={images['file342x2']} />
+          <GatsbyImage sizes={singleImages[3].img.childImageSharp.sizes} />
         </AlbumOneItem>
       </Row>
     </div>
