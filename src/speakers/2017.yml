@@ -1,0 +1,377 @@
+speakers:
+  - url: natasha_murashev
+    hereFor: Talk
+    year: 2017
+    tags:
+      - iOS
+      - Mobile
+    first_name: Natasha
+    last_name: Murashev
+    nickname: TheRobot
+    image_filename: Natasha_Murashev.png
+    tagline: Addicted to learning. iOS Engineer and robot
+    social:
+      twitter: natashatherobot
+      github: NatashaTheRobot
+    bio: |
+      Natasha is an iOS developer by day and a robot by night.<br />
+      She blogs about Swift, watchOS, and iOS development on her
+      <a href="http://natashatherobot.com" target="_blank">blog</a>, curates a fast-growing weekly Swift newsletter,
+      <a href="https://swiftnews.curated.co" target="_blank">This Week in Swift</a>, and organizes the
+      <a href="http://www.tryswiftconf.com/en" target="_blank">try! Swift Conference</a>
+      around the world (the next one is in Tokyo!).
+
+  - url: hugo_giraudel
+    hereFor: Talk & Workshop
+    year: 2017
+    first_name: Hugo
+    last_name: Giraudel
+    nickname: CSS-in-JS kitten
+    image_filename: Hugo_Giraudel.png
+    social:
+      twitter: HugoGiraudel
+      github: HugoGiraudel
+    bio : |
+      Hugo is an accessibility advocate and front-end developer at <a href="https://n26.com" target="_blank">N26</a> in Berlin.
+      Open-source contributor and serial writer. OSS toolbelt: <a href="http://sassdoc.com" target="_blank">SassDoc</a> &
+      <a href="https://sass-guidelin.es" target="_blank">Sass Guidelines</a>.
+      Co-author of <a href="https://www.sitepoint.com/premium/books/jump-start-sass" target="_blank">Jump Start Sass</a>. Net Awards nominee.
+
+  - url: james_halliday
+    hereFor: Talk
+    year: 2017
+    first_name: James
+    last_name: Halliday
+    nickname: substack
+    image_filename: James_Halliday.png
+    social:
+      twitter: substack
+      github: substack
+    bio: |
+      James uses the web and the javascript ecosystem to build p2p offline tools, maps, and webgl visuals.
+      He is the author of <a href="http://browserify.org/" target="_blank">browserify</a> and a prominent
+      member of the Node community with more than 750 packages at <a href="https://www.npmjs.com/~substack" target="_blank">npm</a>.
+
+  - url: harry_roberts
+    hereFor: Workshop
+    year: 2017
+    first_name: Harry
+    last_name: Roberts
+    nickname: CSS Wizardry
+    image_filename: Harry_Roberts.png
+    social:
+      twitter: csswizardry
+      github: csswizardry
+    bio: |
+      With a client list including Google, Unilever, and the United Nations,
+      Harry is an award-winning Consultant Front-end Architect who helps organisations
+      and teams across the globe to plan, build, and maintain product-scale UIs.
+      A Google Developer Expert, he writes on the subjects of CSS architecture, performance,
+      and scalability at <a href="http://csswizardry.com" target="_blank">csswizardry.com</a>;
+      develops and maintains <a href="https://github.com/inuitcss" target="_blank">inuitcss</a>;
+      authored <a href="http://cssguidelin.es" target="_blank">CSS Guidelines</a>; and Tweets at
+      <a href="https://twitter.com/csswizardry" target="_blank">@csswizardry</a>.
+
+  - url: zaharenia_atzitzikaki
+    hereFor: Workshop
+    year: 2017
+    first_name: Zaharenia
+    last_name: Atzitzikaki
+    nickname: sugarenia
+    image_filename: Zaharenia_Atzitzikaki.png
+    social:
+      twitter: sugarenia
+      github: sugarenia
+    bio: |
+      Zaharenia cmd-tabs from Sketch to Sublime Text and vice versa all the time.
+      As the Lead Designer at <a href="http://www.workable.com" target="_blank">
+      Workable</a>, she mentors a team of talented designers and helps them design
+      a recruiting tool hiring teams actually like to use. She’s passionate about scalable
+      design systems and has a secret agenda to convert all developers to designers.
+      She writes about design at her <a href="http://sugarenia.com" target="_blank">
+      blog</a> and rambles at Twitter as <a href="http://twitter.com/sugarenia"
+      target="_blank">@sugarenia</a>
+
+  - url: bodil_stokke
+    hereFor: Talk
+    year: 2017
+    first_name: Bodil
+    last_name: Stokke
+    image_filename: Bodil_Stokke.png
+    social:
+      twitter: bodil
+      github: bodil
+    bio: |
+      Born into an aristocratic Russian-German family, Bodil traveled widely around the
+      Soviet Union as a child. Largely self-educated, she developed an interest in
+      computer science during her teenage years. According to her later claims, in
+      1989 she embarked on a series of world travels, visiting Europe, the Americas,
+      and India. She alleged that during this period she encountered a group of
+      mathematical adepts, the "Haskell Language and Library Committee," who sent
+      her to Glasgow, Scotland, where they trained her to develop her powers of
+      category theory. Both contemporary critics and later biographers have argued
+      that some or all of these foreign visits were fictitious, and that she spent this
+      period writing JavaScript.
+
+  - url: julien_simon
+    hereFor: Talk
+    year: 2017
+    first_name: Julien
+    last_name: Simon
+    image_filename: Julien_Simon.png
+    social:
+      twitter: julsimon
+      github: juliensimon
+    bio: |
+      Principal Technical Evangelist at Amazon Web Services. Before joining AWS,
+      Julien served for 10 years as CTO/VP Engineering in top-tier web startups.
+      Thus, he’s particularly interested in all things architecture, deployment,
+      performance, scalability and data. As a Principal Technical Evangelist, Julien
+      speaks very frequently at conferences and technical workshops, where he
+      meets developers and enterprises to help them bring their ideas to life thanks to
+      the Amazon Web Services infrastructure.
+
+  - url: florian_schaffler
+    hereFor: Workshop
+    year: 2017
+    first_name: Florian
+    last_name: Schaffler
+    image_filename: Florian_Schaffler.png
+    social:
+      github: fschaeffler
+    bio: |
+      Μy name is Florian and I grew up in a small town in Bavaria, Germany.
+      During and after my B.Sc. in Computer Networking, I started doing software development
+      in Cape Town and Munich. In the time following, I did a M.Eng. in Software Engineering
+      next to my job. This had also been when I started my own little company, with which I
+      did e.g. build up the whole IT-infrastructure of a startup that recently got valued
+      at 4.5M Euro. Right now I'm Head of IT for a startup (HiKey Resources / hikey.io), who is
+      developing software for the mining industry. In addition to that, I'm a private lecturer
+      on "Scalable Web-Applications in the Cloud" at a German university for a Master in Software
+      Engineering. If I need to sum up my professional background in three expressions, it would be
+      AWS Enthusiast, Software Lover, Process Coach.
+
+  - url: vladimir_grinenko
+    hereFor: Workshop
+    year: 2017
+    first_name: Vladimir
+    last_name: Grinenko
+    image_filename: Vladimir_Grinenko.png
+    social:
+      twitter: tadatuta
+      github: tadatuta
+    bio: |
+      Team leader in Yandex, frontend developer, <a href="https://en.bem.info/" target="_blank">BEM</a> evangelist.
+      Answers BEM questions 24/7, speaker at numerous international IT conferences.
+
+  - url: rita_zhang
+    hereFor: Talk
+    year: 2017
+    first_name: Rita
+    last_name: Zhang
+    image_filename: Rita_Zhang.png
+    social:
+      twitter: ritazzhang
+      github: ritazh
+    bio: |
+     Rita Zhang is an Open Source Engineer at Microsoft in San Francisco. She spends most of her days hacking
+     away on GitHub.
+
+  - url: antonio_peric
+    hereFor: Workshop
+    year: 2017
+    first_name: Antonio
+    last_name: Peric
+    image_filename: Antonio_Peric.png
+    social:
+      twitter: antonioperic
+      github: antonioperic
+    bio: |
+      Antonio is CEO at Locastic, a development agency based in Croatia. For the last 10 years he has been developing
+      web applications, and for more then 6 years he's been using Symfony as his main tool. During that time, he helped
+      a lot of various clients to build amazing products and applications. In his free time he is working on a PhD in
+      Computer Science.
+
+  - url: andy_grunwald
+    hereFor: Talk
+    year: 2017
+    first_name: Andy
+    last_name: Grunwald
+    image_filename: Andy_Grunwald.png
+    social:
+      twitter: andygrunwald
+      github: andygrunwald
+    bio: |
+      Software Engineer at <a href="http://tech.trivago.com/" target="_blank">trivago</a>, organizer of <a href="https://twitter.com/webengdus" target="_blank">@WebEngDUS</a>, loves open source and working with motivated people
+
+  - url: mete_atamel
+    hereFor: Talk
+    year: 2017
+    first_name: Mete
+    last_name: Atamel
+    image_filename: Mete_Atamel.png
+    social:
+      twitter: meteatamel
+      github: meteatamel
+    bio: |
+      I'm a Developer Advocate at Google, currently focused on helping developers with Google Cloud Platform. As a
+      long-time Java and a recent C# developer, I like to compare the two ecosystems. Prior to Google, I worked at
+      Microsoft, Skype, Adobe, EMC, and Nokia building apps and services on various web, mobile and cloud platforms.
+
+  - url: ivo_neskovic
+    hereFor: Workshop
+    year: 2017
+    first_name: Ivo
+    last_name: Neskovic
+    image_filename: Ivo_Neskovic.png
+    social:
+      twitter: trumpets
+      github: trumpets
+    bio: |
+      A really passionate dev, dabbling in engineering since my early ages. After getting both my BSc and my MSc I
+      immediately jumped into enterprise applications development, focusing on the full stack, from the back end to the
+      front end. Throughout the years my focus shifted more towards the back end but also I was one of the early adopters
+      of Android, working on it since the 1.4 days :) Somewhere during that journey I decided to read for a PhD and along
+      the same time I shifted my professional career in gaming, especially mobile gaming and been working with Unity3D
+      ever since.
+
+  - url: jason_poon
+    hereFor: Talk
+    year: 2017
+    first_name: Jason
+    last_name: Poon
+    image_filename: Jason_Poon.png
+    social:
+      twitter: jasonthepoon
+      github: jpoon
+    bio: |
+      Raised in the snowbanks of Canada, Jason feeds on code, satisfying that daily appetite as an open source developer
+      at Microsoft.ions.
+
+  - url: melanie_patrick
+    hereFor: Talk
+    year: 2017
+    first_name: Melanie
+    last_name: Patrick
+    image_filename: Melanie_Patrick.png
+    social:
+      twitter: mgapatrick
+    bio: |
+      Former secretary, now developer at <a href="http://tech.trivago.com/" target="_blank">trivago</a>. Passionate about learning, travelling, and likes her steak medium rare.
+
+  - url: mike_smart
+    hereFor: Workshop
+    year: 2017
+    first_name: Mike
+    last_name: Smart
+    image_filename: Mike_Smart.png
+    social:
+      twitter: smartmike
+      github: smartmike
+    bio: |
+      Mike is a digital designer turned frontend developer, from England, now based in Berlin, building the next bank
+      at <a href="https://n26.com/" target="_blank">N26</a>.
+
+  - url: jason_lengstorf
+    hereFor: Talk
+    year: 2017
+    first_name: Jason
+    last_name: Lengstorf
+    image_filename: Jason_Lengstorf.png
+    social:
+      twitter: jlengstorf
+      github: jlengstorf
+    bio: |
+      Jason Lengstorf is a developer, designer, author, and friendly bear. He's worked in nearly every role in an agency
+      and uses his 14+ years of experience to offer a unique, cross-functional approach to solving complex problems. He
+      has written several books and dozens of tutorials about development, built and sold a successful web agency, and
+      created award-winning web projects for companies including PlayStation, Intel, and Precision Nutrition.
+
+      Jason is passionate about building better careers by first focusing on building better lives. He focuses on work-life
+      balance, efficiency, processes, and productivity to help people get more done in less time — so they can spend more
+      time on the things that matter most. Jason recently joined IBM Design as a senior front-end developer and mentor to new
+      hires, where he hopes to scale this philosophy throughout one of the largest companies in the world.
+
+      He lives in Austin, TX, spends most of his disposable income on food and travel, and can often be spotted in the forest
+      foraging for nuts and berries.
+
+  - url: leonie_watson
+    hereFor: Talk
+    year: 2017
+    first_name: Leonie
+    last_name: Watson
+    image_filename: Leonie_Watson.png
+    social:
+      twitter: LeonieWatson
+      github: LJWatson
+    bio: |
+      Léonie Watson (AKA Tink) began using the internet in 1993, turned it into a web design career in 1997, and (despite losing her
+      eyesight along the way) has been enjoying herself thoroughly ever since. Léonie is Communications director and Principal engineer
+      at <a href="http://paciellogroup.com/" target="_blank">The Paciello Group (TPG)</a>, and also works with <a href="http://gov.uk/" target="_blank">Government Digital Service (GDS)</a>
+      on the GOV.UK platform. As a member of the <a href="https://www.w3.org/2002/ab/" target="_blank">W3C Advisory Board</a>,
+      and co-chair of the <a href="https://www.w3.org/WebPlatform/WG/" target="_blank">W3C Web Platform WG</a> (working on specs like HTML5),
+      Léonie is closely involved with the web standards community. She is frequently asked to talk about web standards and/or accessibility
+      at <a href="http://ljwatson.github.io/decks/" target="_blank">conferences</a>.In her spare time Léonie blogs on tink.uk, writes for
+      tech journals like <a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">Smashing magazine</a>,
+      <a href="https://www.sitepoint.com/tips-accessible-svg/">SitePoint.com</a> and <a href="http://www.creativebloq.com/netmag/l-onie-watson-giving-damn-about-what-youre-building-8135487">Net magazine</a>.
+      She also loves cooking, dancing and drinking tequila (although not necessarily in that order).
+
+  - url: marisa_morby
+    hereFor: Talk
+    year: 2017
+    first_name: Marisa
+    last_name: Morby
+    image_filename: Marisa_Morby.png
+    social:
+      twitter: marisamorby
+    bio: |
+      Marisa Morby has a background in User Experience copywriting, and marketing. She specializes in digital optimization, user research, and user experience flow for web and mobile applications.<br> She's worked with clients to create a more personal approach to marketing, used data to optimize businesses, and helped her clients connect with customers on a human level.<br> When she's not writing or reading about psychology, she can be found in the wild doing all sorts of things like eating her way around the world, perfecting a chocolate chip cookie recipe, or sitting in the park doing some serious people watching.
+
+  - url: forbes_lindesay
+    hereFor: Workshop
+    year: 2017
+    first_name: Forbes
+    last_name: Lindesay
+    image_filename: Forbes_Lindesay.png
+    social:
+      twitter: forbeslindesay
+      github: ForbesLindesay
+    bio: |
+      Open source JavaScript developer and Software Engineer at Facebook. Maintainer of pug (formerly jade), cabbie.js, browserify-middleware,
+      bicycle.js, open source enthusiast and fan of all things React.
+
+  - url: dennis_stavroyiannopoulos
+    hereFor: Workshop
+    year: 2017
+    first_name: Dennis
+    last_name: Stavroyiannopoulos
+    small: true
+    image_filename: Dennis_Stavroyiannopoulos.png
+    social:
+      twitter: DennisStav
+    bio: |
+     Dionysis Stavroyiannopoulos joined IBM in 2006. He is currently a Senior Software Architect in IBM Greece, responsible for analyzing customers'
+     needs and proposing appropriate solutions. He has worked in several technical positions in the software industry for the last 15 years and has
+     extensive experience in telecom and mobile solutions. He holds a MSc in Space Science from University College London.
+  - url: constantinos_ziazios
+    year: 2017
+    hereFor: Workshop
+    first_name: Constantinos
+    last_name: Ziazios
+    small: true
+    image_filename: Constantinos_Ziazios.png
+    social:
+      twitter: ziazios
+    bio: |
+      Long time C#/.NET developer with roots in C++. He has developed ASP.NET (WebForms and MVC) web apps for many years. He has recently started developing applications for Android and iPhone and has started to put a focus on mobile application development. Konstantinos has spent many years working as a consultant for many different projects and has deep ties to the agile community. He is also very interested in automated testing using tools like WatiN or Selenium. On any given day he could be programming in C#, Javascript, Objective-C, Java or all of them. (C# is his favorite language though.)
+  - url: panagiotis_tsilopoulos
+    year: 2017
+    hereFor: Workshop
+    first_name: Panagiotis
+    last_name: Tsilopoulos
+    small: true
+    image_filename: Panagiotis_Tsilopoulos.png
+    social:
+      twitter: tsilopoulos
+    bio: |
+      Software Engineer, with a focus on design & implementation of applications. Passionate about software development methodologies and improvement of the software processes for the better use of people & resources within a group's disposal. Strong analytic skills, will strive to break down problems to simpler bits by using abstract layers. Natural leader and a team player, always looking to enhance project goals through team-work & cooperation. Highly intrigued by challenging problems, Panos strives to provide insightful views & sophisticated code. Industrious & resourceful, he is pursuing a career as a Software Engineer.

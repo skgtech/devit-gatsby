@@ -20,34 +20,36 @@ const IndexPage = () => {
   return (
     <StaticQuery
       query={query}
-      render={data => (
-        <Layout>
-          <Hero />
-          <GetTickets />
-          <About />
-          <Testimonials
-            imageSrcs={{
-              hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
-              rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
-              leonie: data.leonieTestimonialsImage.childImageSharp.sizes,
-            }}
-          />
-          <Speakers year={2018} />
-          <CallForPapers />
-          <CallForSponsors />
-          <Venues
-            imageSrcs={{
-              cityCollege: data.cityCollegeImage.childImageSharp.sizes,
-              royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
-            }}
-          />
-          <Plan sizes={data.thessalonikiImage.childImageSharp.sizes} />
-          <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
-          <Partners />
-          <Subscribe />
-          <Footer />
-        </Layout>
-      )}
+      render={data => {
+        return (
+          <Layout>
+            <Hero />
+            <GetTickets />
+            <About />
+            <Testimonials
+              imageSrcs={{
+                hugo: data.hugoTestimonialsImage.childImageSharp.sizes,
+                rhita: data.rhitaTestimonialsImage.childImageSharp.sizes,
+                leonie: data.leonieTestimonialsImage.childImageSharp.sizes,
+              }}
+            />
+            <Speakers year={2018} />
+            <CallForPapers />
+            <CallForSponsors />
+            <Venues
+              imageSrcs={{
+                cityCollege: data.cityCollegeImage.childImageSharp.sizes,
+                royalTheatre: data.royalTheatreImage.childImageSharp.sizes,
+              }}
+            />
+            <Plan sizes={data.thessalonikiImage.childImageSharp.sizes} />
+            <Sponsors sponsors={data.sponsors.edges.map(node => node.node)} />
+            <Partners />
+            <Subscribe />
+            <Footer />
+          </Layout>
+        )
+      }}
     />
   )
 }

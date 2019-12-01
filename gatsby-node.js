@@ -6,10 +6,22 @@ const fs = require('fs')
 const configData = yaml.safeLoad(fs.readFileSync('./src/data/config/config.yml', 'utf8'))
 const scheduleTalksData = yaml.safeLoad(fs.readFileSync('./src/data/schedule/schedule.yml', 'utf8'))
   .talks
-const speakersData = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2018.yml', 'utf8'))
+
+const speakers2015Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2015.yml', 'utf8'))
+const speakers2016Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2016.yml', 'utf8'))
+const speakers2017Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2017.yml', 'utf8'))
+const speakers2018Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2018.yml', 'utf8'))
+const speakers2019Data = yaml.safeLoad(fs.readFileSync('./src/data/speakers/2019.yml', 'utf8'))
+
 const sponsors2018Data = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2018.yml', 'utf8'))
 const sponsors2019Data = yaml.safeLoad(fs.readFileSync('./src/data/sponsors/2019.yml', 'utf8'))
-const talksData = yaml.safeLoad(fs.readFileSync('./src/data/talks/2018.yml', 'utf8'))
+
+const talks2015Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2015.yml', 'utf8'))
+const talks2016Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2016.yml', 'utf8'))
+const talks2017Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2017.yml', 'utf8'))
+const talks2018Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2018.yml', 'utf8'))
+const talks2019Data = yaml.safeLoad(fs.readFileSync('./src/data/talks/2019.yml', 'utf8'))
+
 const partnersData = yaml.safeLoad(fs.readFileSync('./src/data/team/partners.yml', 'utf8'))
 const weSupportData = yaml.safeLoad(fs.readFileSync('./src/data/team/weSupport.yml', 'utf8'))
 const volunteersData = yaml.safeLoad(fs.readFileSync('./src/data/team/volunteers.yml', 'utf8'))
@@ -87,6 +99,20 @@ module.exports.sourceNodes = async ({ actions }) => {
     })
   )
 
+  const talksData = talks2015Data
+    .map(t => ({ ...t, year: 2015 }))
+    .concat(talks2016Data.map(t => ({ ...t, year: 2016 })))
+    .concat(talks2017Data.map(t => ({ ...t, year: 2017 })))
+    .concat(talks2018Data.map(t => ({ ...t, year: 2018 })))
+    .concat(talks2019Data.map(t => ({ ...t, year: 2019 })))
+
+  const speakersData = speakers2015Data
+    .map(t => ({ ...t, year: 2015 }))
+    .concat(speakers2016Data.map(t => ({ ...t, year: 2016 })))
+    .concat(speakers2017Data.map(t => ({ ...t, year: 2017 })))
+    .concat(speakers2018Data.map(t => ({ ...t, year: 2018 })))
+    .concat(speakers2019Data.map(t => ({ ...t, year: 2019 })))
+
   speakersData.forEach(function(speaker) {
     let i = 0
     speaker.id = speaker.url
@@ -107,7 +133,7 @@ module.exports.sourceNodes = async ({ actions }) => {
       SpeakerNode(speaker, {
         children: children,
       }),
-      speaker.image_filename
+      path.basename(`./src/images/speakers/${speaker.year}/${speaker.image_filename}`)
     )
 
     talksData.forEach(function(talk) {
@@ -115,6 +141,7 @@ module.exports.sourceNodes = async ({ actions }) => {
         createNode(
           TalkNode(talk, {
             parent: speaker.id,
+            speaker___NODE: speaker.id,
           })
         )
       }

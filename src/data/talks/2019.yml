@@ -1,0 +1,179 @@
+- title: "Quantum Computing and the Future of Software Development"
+  speaker: jerry_nixon
+  type: Talk
+  description: "<p>The age of Silicon is ending, revealing we have hit a wall. Specifically, we cannot compute. Science cannot compute the massive-scale algorithms needed to reach humanity's goals: space travel, climate control, clean power, nanodevices, and even the cure to cancer. The brilliance and emerging scale of cloud computing is overshadowing our real problem. As we continue to celebrate our baby steps, the leaps and bounds necessary are so far out of reach, most scientists ignore the reality of it. But a new age is emerging. An age of multi-dimensional, unlimited parallel-universe quantum processing.</p><p>Right out of Star Trek and the best science fiction, the quantum age is man's best hope to achieve our lofty goals. Tomorrow's software developers are today's software developers, evolved. They will enable us to reach the small and the stars. Humanity will answer questions we haven't even asked.</p><p>But to get there, classical software developers - that's you - will need to understand what's happening and why, and the amazing opportunities breathing down our necks.</p>"
+  tags:
+    - .NET
+    - Machine Learning
+    - Cloud Computing
+    - Quantum
+
+- title: "2 Years GraphQL in Production at Product Hunt"
+  speaker: radoslav_stankov
+  type: Talk
+  description: "<p>Show all mistakes and solution to problems, I have encountered during the last year and a half when replacing Product Hunt REST API with GraphQL. Show how GraphQL can improve the application structure of a Rails application. So it is effortless for backend developers to develop and maintain features.<ul><li>integrating GraphQL with Rails</li><li>GraphQL schema design</li><li>application structure</li><li>authorization</li><li>optimization and performance</li><li>monitoring</li></ul></p>"
+  tags:
+    - GraphQL
+    - Ruby on Rails
+    - Backend
+
+- title: "It’s about time to embrace Streams"
+  speaker: luciano_mammino
+  type: Workshop
+  description: "<p>Let's shed some light on Node.js streams! With very practical examples we'll learn when and how to use streams in Node.js and in the Browser. At the end of this talk, you will be able to take full advantage from Streams and write elegant JavaScript applications that are much more memory efficient!</p><p>This talk has the ambition to shed some light on Node.js streams. It will provide very practical examples about when and how you should be using streams and it will progress into more in-depth stream topics. Don't worry, if you want to use Node.js streams in the browser, I'll have you covered as well! At the end of this talk you will be able to understand streams better and not fear them anymore!</p><p>In my experience with JavaScript/Node.js devs I find out that Streams is a topic still mostly unexplored and sometimes even feared. This is probably one of the most beautiful features of Node.js and it can be adopted also in the browser. Once you grasp the fundamentals, you'll be able to solve some ordinary programming challenges in a much more elegant and efficient way, so this is a very interesting topic. In this talk, I will cover the following topics:</p><p><ul><li>Streams: when and how</li><li>Different types of streams</li><li>Built-in and custom streams</li><li>Composability</li><li>Stream utils</li><li>Streams in the browser</li></ul></p>"
+  tags:
+    - Node.js
+    - JavaScript
+    - Streams
+    - Performance
+
+- title: "DevOps ICU: Improving DevOps Results by (Correctly) Integrating UX"
+  speaker: debbie_levitt
+  type: Talk
+  description: "<p>Software development methodologies lack the details of how UX fits into organizations, teams, and projects. Some suggest that a Product Manager describing features is enough for developers, UX should train others to do their specialized jobs, or excluding UX experts solves them being “too siloed” and “not collaborative.” This happens with no other role in software development. It’s hurting culture, efficiency, and productivity, and creating poor products for customers.</p><p>Learn how the UX process fits into Lean and Agile; augments DevOps goals; increases customer satisfaction; and saves time, money, and sanity before developers write a line of code.</p>"
+  tags:
+    - UX
+    - Product
+    - Culture
+    - Processes
+
+- title: "Deep Dive in Asp Core"
+  speaker: irina_scurtu
+  type: Workshop
+  description: "<p>If you heard about all the fuss around .Net Core but you didn’t use it on a project, or you think you didn’t squeeze everything out of the platform, then this workshop is for you.</p><p>In this workshop you’ll learn about the latest improvements in 2.2 version and how to build APIs using them, as well as the upcoming changes in 3.0</p><p><b>Prerequisite</b>:<br>
+Familiarity with .Net and C#
+</p><p>
+<b>Topics covered</b>:
+<ul><li>Storing secrets in development and production</li>
+<li>Configuration options</li>
+<li>Middlewares</li>
+<li>Logging</li>
+<li>Input Formatters, Output Formatters</li>
+<li>Custom Media types</li>
+<li>Managing data using Entity Framework Core</li>
+<li>Running background tasks in your application</li>
+<li>HttpClientFactory</li>
+<li>Hosting Options</li>
+<li>HSTS, CSP, HPKP, Switching to HTTP/2, HealthChecks</li>
+<li>TagHelpers</li>
+<li>ViewComponents</li></ul></p><p><b>Requirements to attend the workshop</b>:
+<ul><li>Visual Studio</li>
+<li>.NET Core SDK <a href=\"https://dotnet.microsoft.com/download/dotnet-core/2.2\" target=\"_blank\">2.2</a> or later</li></p>"
+  tags:
+    - .NET
+    - Backend
+    - API
+
+- title: "More Than You Ever Wanted to Know About Resource Hints"
+  speaker: harry_roberts
+  type: Talk
+  description: "<p>Resource Hints are a great way for developers to make their web pages faster by allowing us to be a little bit smarter than the browser. Although not a new specification—they’ve been around in some form or another for years!—are we truly getting the most out of them? And do we understand them thoroughly enough to use them most effectively? Heck, do we even know what a ‘Resource Hint’ is?! Well, by the end of this talk, we’ll all be experts.</p><p>Let’s take a look at all of the different Resource Hints we have available to us, real-world examples of how best to use them, and learn about some of the more obscure intricacies and gotchas that we need to be aware of if we want to really get the best out of them (and to make sure that we really are being smarter than the browser).</p>"
+  tags:
+    - resourcehints
+    - webperf
+    - perfmatters
+
+- title: "Building an Every-Framework Component Library"
+  speaker: bonnie_zhou
+  type: Talk
+  description: "<p>There are a lot of JavaScript frameworks out there today: React, Angular, Polymer, Vue, etc. How do you build a robust, true-to-spec component library that's compatible with any framework? Learn how the Material Design team solves this problem by extracting component business logic from an interface to be wrapped in any framework.</p>"
+  tags:
+    - JavaScript
+    - Frontend
+    - Web
+    - Frameworks
+
+- title: "Data Science is not Rocket Science: Creating Machine Learning Models with Python on Azure"
+  speaker: orhan_celik
+  type: Workshop
+  description: "<p>Artificial Intelligence is being used from the search engines to movie &product recommendations, or from credit scoring to social media news feeds. Many companies want to utilize AI and many cases this means developing custom ML models for their specific use cases.</p><p>In this workshop you will learn and practice building customer ML models and operationalizing them. We will start with basic data science concepts, and will learn how to build advance analytics models with machine learning algorithms for predicting values and outcomes on various use cases. These use cases can be on predicting how much a taxi ride will cost considering start & end locations and time of the day: using historical data on similar rides. Another use case can be identifying the number shown in an image from a hand-writing.</p><p><b>Prerequisite:</b><br/><ul><li>Interest in data science.</li><li>Familiarity with a programming language would be good.</li><li>Python language knowledge would be very useful, though not a pre-requisite.</li></ul></p><p><b>Data Science concepts:</b></br><ul><li>Predictions, Regression vs Classification</li><li>Prediction 101: How we could predict value of a diamond using its carat, prediction error concept, linear regression</li><li>Building a model for predicting continuous variables, such as predicting a taxi fare</li><li>Building a model for classification, such as predicting which number is shown in an image</li><li>Operationalizing a model for real-time scoring: for real time predictions</li></ul></p>"
+  tags:
+    - AI
+    - ML
+    - Python
+    - Azure
+
+- title: "Forget about HTTP requests"
+  speaker: irina_scurtu
+  type: Talk
+  description: "<p>Microservices should be autonomous and independent, but what happens when your business domain doesn’t allow it, and you need to get data from other microservices? You’ll soon realize that simple HTTP calls are not enough anymore, or that your app is more brittle than ever and then you switch to messaging. With messaging you need to have a different mindset and be willing to embrace new challenges.</p>"
+  tags:
+    - Micro Services
+    - Queues
+    - NOHTTP
+    - ASP.NET
+
+- title: "Progressive Web Apps: Future of web development"
+  speaker: maciej_treder
+  type: Talk
+  description: "<p>Welcome to the web applications of 21st century! Give your users a native-like app experience: instant load, offline experience and push notifications. During this talk, you will get a high level overview of Progressive Web Application concept, how to get started with it in Angular CLI and WorkBox, potential pitfalls and how to address them.</p>"
+  tags:
+    - PWA
+    - Mobile
+    - JavaScript
+    - Angular
+
+- title: "Unbundling the JavaScript module bundler"
+  speaker: luciano_mammino
+  type: Talk
+  description: "<p>Today we all use Webpack (right?), but I remember a time when you had to manually copy-paste JavaScript files to create a package of libraries you could use in your frontend application. Many years have passed since then and the landscape of module bundlers evolved significantly along with the evolution of JavaScript and Node.js. In this talk, I will try to uncover some JavaScript module history and illustrate how a module bundler actually works, so that the next time you will use Webpack you will be able to understand what's going on behind the scenes.</p>"
+  tags:
+    - Webpack
+    - JavaScript
+    - Bundling
+
+- title: "Migrating a data intensive microservice from Python to Go"
+  speaker: nikolay_stoitsev
+  type: Talk
+  description: "<p>As Uber is hyper-growing as a company so does our need for scalable and resilient systems. In this talk, I’m going to tell the story of how my team migrated from Python to Go, a microservice that processes millions of events every day. First, we are going to start with the rationale behind the migration. Then we are going to go over the Python and Go tech stacks that we use. Last but not least, I’m also going to share our approach for migrating the service while running in production, adding new features and making sure there are no regressions.</p>"
+  tags:
+    - Micro Services
+    - Go
+    - Python
+    - BigData
+
+- title: "Serverless React PWA on AWS"
+  speaker: gianluca_casati
+  type: Workshop
+  description: "<p>How to create a serverless Progressive Web App, using React, Redux, React Router on frontend and AWS Lambda, Cloudfront, Amazon SES, API Gateway for a zero maintenance required backend.</p>
+  <h3>First part</h3>
+  <p>We are going to create a minimal Progressive Web App. We are going to create a GitHub organization or repository that will host it. The goal is to visit your website from a mobile phone and see the “Add it to your Home” prompt.</p>
+  <h4>Topics covered</h4>
+  <p>LightHouse and PWA requirements:
+    <ul>
+    <li>Create your brand</li>
+    <li>The app shell</li>
+    <li>Service Workers and Cache API</li>
+    <li>The manifest.json</li>
+    </ul></p>
+  <h4>Requirements</h4>
+  <p>
+    <ul>
+    <li>A GitHub account and your favourite editor</li>
+    </ul></p>
+  <h3>Second part</h3>
+  <p>We are going to create a React app with React Router and Redux. The app will be hosted on AWS using serverless architecture. We will setup an API, in particular for user registration/login via email.
+<br>Both client and server code will be written in TypeScript.</p>
+<h4>Topics covered</h4>
+  <p>
+    <ul>
+    <li>React & TypeScript boilerplate</li>
+    <li>AWS Lambda using no framework (just aws-cli and npm scripts)</li>
+    <li>S3 and Cloudfront</li>
+    <li>Route53 and SSL certificates setup</li>
+    <li>API Gateway</li>
+    <li>AWS SES</li>
+    <li>Cloudwatch an monitoring</li>
+    <li>Last but not least: The routing trick!</li>
+    </ul></p>
+  <h4>Requirements</h4>
+  <p>
+    <ul>
+    <li>Node.js</li>
+    <li>Optional but recommended: an AWS account and a domain name (possibly a dot com)</li>
+    </ul></p>"
+  tags:
+    - React
+    - AWS
+    - PWA
+    - serverless
