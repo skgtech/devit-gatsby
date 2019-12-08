@@ -4,28 +4,30 @@ DEVit's website is powered by Gatsby and other amazing open source projects.
 
 ## How to contribute
 
-### Install
+### Gatsby Documentation
 
 The site is made with [Gatsby](https://www.gatsbyjs.org).
 
-You need `node`, `gatsby` and `yarn` installed in order to build the site.
+The following links may be helpful to get you started with Gatsby:
+* [https://www.gatsbyjs.org/docs/cheat-sheet/](https://www.gatsbyjs.org/docs/cheat-sheet/)
+* [https://www.gatsbyjs.org/docs/gatsby-project-structure/](https://www.gatsbyjs.org/docs/gatsby-project-structure/)
+* [https://www.gatsbyjs.org/docs/gatsby-internals-terminology/](https://www.gatsbyjs.org/docs/gatsby-internals-terminology/)
+* [https://www.gatsbyjs.org/docs/preparing-your-environment/](https://www.gatsbyjs.org/docs/preparing-your-environment/)
 
-To check if you have the necessary programs mentioned above installed and to see their version you can run on a terminal:
-`<PROGRAM> --version`, e.g. *node --version*
+### Install
+
+You need `node` and `yarn` installed in order to build the site.
+
+To verify whether you have the necessary software mentioned above installed you can run the following commands in your terminal:
+`node --version`
+`yarn --version`
 
 * Install `node`
 To install node you can visit [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-
- * Install `gatsby`
-```
-npm  install -g gatsby-cli
-```
-*npm is installed with Node.js, which means that when you install node, you automatically get npm installed on your computer*
-
-For more about setting up your development environment with Gatsby visit [https://www.gatsbyjs.org/tutorial/part-zero/](https://www.gatsbyjs.org/tutorial/part-zero/).
+The required version you need to install is *v12.13.1*.
 
  * Install `yarn`
-To install yarn you can visit [https://yarnpkg.com/lang/en/docs/install/#windows-stable](https://yarnpkg.com/lang/en/docs/install/#windows-stable).
+To install yarn you can visit [https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/).
  
 ### Setup Environment
 
@@ -42,7 +44,7 @@ To install yarn you can visit [https://yarnpkg.com/lang/en/docs/install/#windows
 yarn
 ```
 
-* Start development mode
+* Run in development mode
 
 ```sh
 yarn develop
