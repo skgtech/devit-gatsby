@@ -6,14 +6,17 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 
-import Layout from '../components/Layout'
-import Block from '../components/Block'
-import Tags from '../components/Tags'
-import { DarkBlockHeading } from '../components/BlockHeading'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Layout from '../../components/Layout'
+import ScheduleHeader from '../../components/ScheduleHeader'
+import Block from '../../components/Block'
+import Tags from '../../components/Tags'
+import { DarkBlockHeading } from '../../components/BlockHeading'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
 
 const SpaceTime = ({ entry, showspace = false }) => {
+  const hour = `${entry.time}`.slice(0, 2)
+  const minutes = `${entry.time}`.slice(2)
   const roomsIndex = {
     room_01: 'Room 1',
     room_02: 'Room 2',
@@ -32,7 +35,7 @@ const SpaceTime = ({ entry, showspace = false }) => {
         padding-top: 25px;
       `}
     >
-      {`${entry.hours}:${entry.mins}`}
+      {`${hour}:${minutes}`}
       {showspace && <ScheduleItemSubTitle>{roomsIndex[entry.room]}</ScheduleItemSubTitle>}
     </div>
   )
@@ -85,18 +88,19 @@ ScheduleItemSubTitle.propTypes = {
   children: PropTypes.func,
 }
 
-const ScheduleItem = ({ talk, speaker, entry, subtitle }) => {
+const ScheduleItem = ({ entry }) => {
+  const { talk, speaker, subtitle = '', ...rest } = entry
   return (
-    <Row>
-      <div
-        css={css`
-          background-color: #f5f8fa;
-          padding: 24px;
-          margin-bottom: 8px;
-        `}
-      >
+    <div
+      css={css`
+        background-color: #f5f8fa;
+        padding: 24px;
+        margin-bottom: 8px;
+      `}
+    >
+      <Row>
         <Col md="1">
-          <SpaceTime entry={entry} />
+          <SpaceTime entry={rest} />
         </Col>
         {/* {% include components/workshop/image.html entry=entry speaker=speaker %} */}
 
@@ -123,14 +127,14 @@ const ScheduleItem = ({ talk, speaker, entry, subtitle }) => {
             )}
             {subtitle && (
               <>
-                <ScheduleItemSubTitle>{{ subtitle }}</ScheduleItemSubTitle>
+                <ScheduleItemSubTitle>{subtitle}</ScheduleItemSubTitle>
                 <ScheduleItemTitle>{entry.title}</ScheduleItemTitle>
               </>
             )}
             {!speaker && !subtitle && (
               <>
-                <ScheduleItemTitle style="padding-top: 10px;">{entry.title}</ScheduleItemTitle>
-                {entry.title === 'After Party' && (
+                <ScheduleItemTitle style="padding-top: 10px;">{rest.title}</ScheduleItemTitle>
+                {rest.title === 'After Party' && (
                   <ScheduleItemSubTitle>
                     <a
                       href="https://www.facebook.com/xarchakoslivebar/"
@@ -145,8 +149,8 @@ const ScheduleItem = ({ talk, speaker, entry, subtitle }) => {
             )}
           </div>
         </Col>
-      </div>
-    </Row>
+      </Row>
+    </div>
   )
 }
 
@@ -186,10 +190,10 @@ const Schedule = () => {
           ) {
             edges {
               node {
+                title
                 room
                 type
                 time
-                title
                 talk {
                   title
                 }
@@ -198,133 +202,51 @@ const Schedule = () => {
           }
         }
       `}
-      render={() => (
+      render={({ talks }) => (
         <Layout title={`Schedule`} description={'Upcomming DEVit schedule'}>
           <Header />
           <Grid>
             <Block>
               <DarkBlockHeading>Schedule</DarkBlockHeading>
             </Block>
-            <Tabs>
+            <ScheduleHeader />
+            <div
+              css={css`
+                background: white;
+              `}
+            >
               <div
                 css={css`
                   background-color: #f5f8fa;
                 `}
               >
-                <ul
-                  css={css`
-                    margin: 0;
-                    padding: 0;
-                    margin-bottom: 0;
-                    padding-top: 40px;
-                    padding-bottom: 80px;
-                    text-align: center;
+                <Tabs>
+                  <TabList>
+                    <Tab>Room 1</Tab>
+                    <Tab>Room 2</Tab>
+                    <Tab>Room 3</Tab>
+                    <Tab>Room 4</Tab>
+                  </TabList>
 
-                    li {
-                      display: inline-block;
-                      margin: 0;
-                      opacity: 0.5;
-
-                      &.active {
-                        opacity: 1;
-                      }
-
-                      &.separator {
-                        border: 0;
-                        padding: 16px;
-                        width: 32px;
-                        position: relative;
-
-                        &:after {
-                          content: '';
-                          position: absolute;
-                          left: 0;
-                          top: -10px;
-                          width: 32px;
-                          height: 4px;
-                          border-radius: 24px;
-                          background-color: #d9d9d9;
-                        }
-                      }
-
-                      & > div {
-                        font-size: 14px;
-                        text-align: center;
-                        color: #57585a;
-                      }
-
-                      & > a {
-                        padding: 0;
-                        line-height: 1em;
-                        font-size: 24px;
-                        font-weight: 900;
-                        text-align: center;
-                        color: #57585a;
-                        padding: 16px 40px;
-                        border-radius: 32px;
-                        border: solid 2px #b1b2b4;
-                        display: inline-block;
-                      }
-
-                      &:not(.active) > a {
-                        color: #57585a;
-                      }
-                    }
-                  `}
-                >
-                  <li>
-                    <a href="#workshops" aria-controls="workshops" role="tab" data-toggle="tab">
-                      Workshops
-                    </a>
-                    <div>June 09</div>
-                  </li>
-                  <li className="separator"></li>
-                  <li role="talks">
-                    <a href="#talks" aria-controls="talks" role="tab" data-toggle="tab">
-                      Talks
-                    </a>
-                    <div>June 10</div>
-                  </li>
-                </ul>
+                  <TabPanel>
+                    <h2>Any content 1</h2>
+                  </TabPanel>
+                  <TabPanel>
+                    <h2>Any content 2</h2>
+                  </TabPanel>
+                </Tabs>
               </div>
               <div
                 css={css`
-                  background: white;
+                  padding-top: 50px;
+                  padding-bottom: 5.5em;
                 `}
               >
-                <TabPanel>
-                  <div
-                    css={css`
-                      background-color: #f5f8fa;
-                    `}
-                  >
-                    <Tabs>
-                      <TabList>
-                        <Tab>Room 1</Tab>
-                        <Tab>Room 2</Tab>
-                        <Tab>Room 3</Tab>
-                        <Tab>Room 4</Tab>
-                      </TabList>
-
-                      <TabPanel>
-                        <h2>Any content 1</h2>
-                      </TabPanel>
-                      <TabPanel>
-                        <h2>Any content 2</h2>
-                      </TabPanel>
-                    </Tabs>
-                  </div>
-                </TabPanel>
-                <TabPanel>
-                  <div
-                    css={css`
-                      padding-top: 50px;
-                      padding-bottom: 5.5em;
-                    `}
-                  ></div>
-                </TabPanel>
+                {talks.edges.map(({ node }, index) => (
+                  <ScheduleItem key={index} entry={node} />
+                ))}
               </div>
-            </Tabs>
+            </div>
           </Grid>
           <Footer />
         </Layout>
