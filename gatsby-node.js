@@ -5,6 +5,7 @@ const fs = require('fs')
 
 const landingTemplate = path.resolve('./src/templates/landing.js')
 const previousTemplate = path.resolve('./src/templates/previous.js')
+const speakerTemplate = path.resolve('./src/templates/speaker.js')
 
 const loadYaml = file => yaml.safeLoad(fs.readFileSync(`./src/data/${file}`, 'utf8'))
 
@@ -114,6 +115,23 @@ module.exports.createPages = async ({ actions }) => {
       ...previous2018Data,
     },
   })
+
+  const speakersData = speakers2015Data
+    .map(t => ({ ...t, year: 2015 }))
+    .concat(speakers2016Data.map(t => ({ ...t, year: 2016 })))
+    .concat(speakers2017Data.map(t => ({ ...t, year: 2017 })))
+    .concat(speakers2018Data.map(t => ({ ...t, year: 2018 })))
+    .concat(speakers2019Data.map(t => ({ ...t, year: 2019 })))
+
+  speakersData.forEach(function(speaker) {
+    createPage({
+      path: speaker.url,
+      component: speakerTemplate,
+      context: {
+        ...speaker,
+      },
+    })
+  })
 }
 
 module.exports.sourceNodes = async ({ actions }) => {
@@ -160,6 +178,7 @@ module.exports.sourceNodes = async ({ actions }) => {
     createNodeWithImage(
       SpeakerNode(speaker, {
         children: children,
+        talk___NODE: children,
       }),
       path.basename(`./src/images/speakers/${speaker.year}/${speaker.image_filename}`)
     )

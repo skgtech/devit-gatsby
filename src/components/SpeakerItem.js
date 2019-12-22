@@ -10,20 +10,14 @@ import HereFor from './HereFor'
 const Speaker = ({ speaker, speaker_page }) => {
   const { first_name, last_name, url, img, tags, social, hereFor, tagline } = speaker
 
-  const speakerContainerHover = css`
-    background-color: white;
+  const speakerContainerHoverCss = css`
+    background-color: white !important;
     box-shadow: 0 0 10px 0 rgba(0, 62, 115, 0.1);
-  `
-  const speakerHiddenHover = css`
-    opacity: 1;
-
     @media (min-width: 992px) {
-      .speaker__hover {
-        opacity: 1;
-      }
+      margin-top: -130px;
     }
   `
-  const outerCss = css`
+  const speakerContainerCss = css`
     height: auto;
     text-align: center;
     background-color: white;
@@ -32,15 +26,21 @@ const Speaker = ({ speaker, speaker_page }) => {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
     @media (min-width: 992px) {
-      .speaker {
-        background-color: white;
-        box-shadow: 0 0 10px 0 rgba(0, 62, 115, 0.1);
-        padding: 32px;
-      }
+      background-color: transparent;
     }
+
+    // @media (min-width: 992px) {
+    //   .speaker {
+    //     background-color: white;
+    //     box-shadow: 0 0 10px 0 rgba(0, 62, 115, 0.1);
+    //     padding: 32px;
+    //   }
+    // }
   `
 
-  const speakerCss = speaker_page ? css(outerCss, speakerContainerHover) : outerCss
+  const speakerCss = speaker_page
+    ? css(speakerContainerCss, speakerContainerHoverCss)
+    : speakerContainerCss
 
   return (
     <div css={speakerCss}>
@@ -95,12 +95,21 @@ const Speaker = ({ speaker, speaker_page }) => {
               align-items: center;
             `}
           >
-            {tagline.slice(0, 60)}
+            {tagline && tagline.slice(0, 60)}
           </div>
           <HereFor herefor={hereFor} />
         </>
       )}
-      <div css={speakerHiddenHover}>
+      <div
+        css={css`
+          opacity: 1;
+
+          @media (min-width: 992px) {
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+          }
+        `}
+      >
         <Tags tags={tags} />
         <SpeakerSocial items={social} />
       </div>

@@ -9,6 +9,7 @@ import blueLogo from '../../images/logo/blue/logo.svg'
 import whiteLogo from '../../images/logo/white/logo.svg'
 
 const mainMenuLinkStyles = {
+  textDecoration: 'none',
   fontWeight: 'bold',
   textTransform: 'uppercase',
   color: 'rgba(255,255,255,0.7)',
@@ -26,9 +27,7 @@ const mainMenuLinkStyles = {
   },
 }
 
-const MainMenuLink = styled.a({
-  a: mainMenuLinkStyles,
-})
+const MainMenuLink = styled.a(mainMenuLinkStyles)
 
 const MainMenuCTALink = styled.a({
   ...mainMenuLinkStyles,

@@ -76,7 +76,7 @@ const Partners = () => {
             <Grid>
               <DarkBlockHeading>We proudly support</DarkBlockHeading>
               <Stack
-                style={{
+                css={{
                   marginTop: '72px',
                 }}
                 list={data.weSupport.edges.map(node => node.node)}

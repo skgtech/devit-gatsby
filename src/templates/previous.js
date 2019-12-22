@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import Hero from '../components/Hero'
 import PhotoAlbum from '../components/PhotoAlbum'
-import Speakers from '../components/Speakers'
+import Speakers from '../components/SpeakersList'
 import Footer from '../components/Footer'
 import Subscribe from '../components/Subscribe'
 import Layout from '../components/Layout'

@@ -30,7 +30,8 @@ const FooterMenuList = ({ children }) => {
     <ul
       css={{
         listStyle: 'none',
-        paddingLeft: 0,
+        padding: 0,
+        margin: 0,
       }}
     >
       {children.length &&
@@ -42,9 +43,9 @@ const FooterMenuList = ({ children }) => {
               '& a': {
                 opacity: 0.7,
                 color: 'white',
+                textDecoration: 'none',
                 '&:hover, &:active, &:focus': {
                   opacity: 1,
-                  textDecoration: 'none',
                 },
               },
             }}

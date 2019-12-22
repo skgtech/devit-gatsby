@@ -16,6 +16,8 @@ const BlockCTA = ({ to, children }) => {
         color: 'white',
         padding: '1em 1.33em',
         marginTop: '1.77em',
+        display: 'inline-block',
+        textDecoration: 'none',
         '&:hover': {
           textDecoration: 'none',
           backgroundColor: '#003E73',

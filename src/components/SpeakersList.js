@@ -5,7 +5,7 @@ import { css } from '@emotion/core'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
 import Block from './Block'
-import Speaker from './Speaker'
+import Speaker from './SpeakerItem'
 import SpeakerToBeAnounced from './SpeakerToBeAnounced'
 import { DarkBlockHeading } from './BlockHeading'
 
@@ -23,6 +23,16 @@ const speakerOuterCss = css`
       filter: grayscale(0%);
       transform: translate3d(0, 0, 1px); // (2)
     }
+
+    .speaker {
+      background-color: white;
+      box-shadow: 0 0 10px 0 rgba(0, 62, 115, 0.1);
+      padding: 32px;
+    }
+
+    .speaker__hover {
+      opacity: 1;
+    }
   }
 `
 
@@ -36,7 +46,7 @@ SpeakerItem.propTypes = {
   children: PropTypes.string,
 }
 
-const Speakers = ({ speakers }) => {
+const Speakers = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -45,9 +55,36 @@ const Speakers = ({ speakers }) => {
             isCFPOpen
             moreSpeakersToBeAnnounced
           }
+          speakers: allSpeaker {
+            edges {
+              node {
+                first_name
+                last_name
+                tagline
+                url
+                img {
+                  childImageSharp {
+                    fixed(width: 280, height: 280) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+                tags
+                social {
+                  twitter
+                  homepage
+                  medium
+                  github
+                  linkedin
+                }
+              }
+            }
+          }
         }
       `}
       render={data => {
+        const speakers = data.speakers.edges.map(({ node }) => node)
+
         return (
           <>
             <Block>

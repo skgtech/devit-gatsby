@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
-import Speakers from '../components/Speakers'
+import Speakers from '../components/SpeakersList'
 import Header from '../components/Header'
 
 const AllSpeakers = () => {
